@@ -1,0 +1,3 @@
+configuration {
+ theme: "dt-center.rasi";
+}
