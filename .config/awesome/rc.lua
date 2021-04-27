@@ -548,6 +548,11 @@ globalkeys = my_table.join(
 	    awful.spawn('i3lock-fancy')
     	end),
 
+    awful.key({ modkey }, "F1",
+    	function()
+	    awful.spawn('/home/jackson/.local/bin/randomwallpapers.py')
+	end),
+
     -- Copy primary to clipboard (terminals to gtk)
 --    awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
 --              {description = "copy terminal to gtk", group = "hotkeys"}),

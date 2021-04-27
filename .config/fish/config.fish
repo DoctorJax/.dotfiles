@@ -51,6 +51,8 @@ alias emacs='emacs -nw'
 alias gds-start='sudo systemctl start openvpn-client@gds'
 alias gds-stop='sudo systemctl stop openvpn-client@gds'
 
+alias q='exit'
+
 # Breaking things last minute is always fun
 set fish_greeting
 set -gx EDITOR vim
