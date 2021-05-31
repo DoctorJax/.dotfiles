@@ -60,7 +60,7 @@ local themes = {
 }
 
 -- choose your theme here
-local chosen_theme = themes[1]
+local chosen_theme = themes[3]
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
 
@@ -880,7 +880,7 @@ client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 --awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("/usr/bin/python /home/jackson/.local/bin/randomwallpapers.py")
+--awful.spawn.with_shell("/usr/bin/python /home/jackson/.local/bin/randomwallpapers.py")
 awful.spawn.with_shell("picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
