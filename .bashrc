@@ -12,6 +12,12 @@ fi
 
 PS1='[\u@\h \W]\$ '
 
+# Bash insulter
+
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
+
 eval "$(starship init bash)"
 
 pfetch | lolcat

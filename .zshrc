@@ -57,6 +57,11 @@ bindkey -v
 # For PyWal
 # (cat ~/.cache/wal/sequences &)
 
+# Bash Insulter
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
+
 # Commands before prompt
 pfetch | lolcat
 
