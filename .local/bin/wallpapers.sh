@@ -37,7 +37,7 @@ while getopts "hdrim" opt; do
         i) restore ;;
         r) random ;;
         d) setbg ;;
-	*) printf "## Invalid option ##\nType -i for restore, -d to set new, or -r for random" ;;
+	*) printf "### Invalid option: type -i for restore, -d to set new, or -r for random ###" ;;
     esac
     noOpt=0
 done

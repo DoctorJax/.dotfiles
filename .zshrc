@@ -30,8 +30,10 @@ HISTFILE=~/.cache/zshhistory
 setopt appendhistory
 
 # Basic auto/tab complete:
-autoload -U compinit
-zstyle ':completion:*' menu select
+#autoload -U compinit
+#zstyle ':completion:*' menu select
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)               # Include hidden files.

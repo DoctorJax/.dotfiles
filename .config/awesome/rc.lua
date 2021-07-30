@@ -82,7 +82,7 @@ local virtualmachine    = "virtualbox"
 -- awesome variables
 awful.util.terminal = terminal
 --awful.util.tagnames = {  " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  }
-awful.util.tagnames = { " TERM ", " WWW ", " EDIT ", " FILE ", " MUS ", " GAME ", " PIC ", " VBOX ", " DEV " }
+awful.util.tagnames = { " TERM ", " WWW ", " EDIT ", " FILE ", " MUS ", " GAME ", " PIC ", " VIRT ", " DEV " }
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
     awful.layout.suit.fair,
@@ -182,7 +182,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
         { "Log out", function() awesome.quit() end },
         { "Sleep", "systemctl suspend" },
         { "Restart", "systemctl reboot" },
-        { "Exit", "systemctl poweroff" },
+        { "Shutdown", "systemctl poweroff" },
         -- other triads can be put here
     }
 })
