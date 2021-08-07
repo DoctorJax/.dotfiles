@@ -57,10 +57,11 @@ local themes = {
     "powerarrow-blue", -- 1
     "powerarrow",      -- 2
     "multicolor",      -- 3
+    "jackson",
 }
 
 -- choose your theme here
-local chosen_theme = themes[3]
+local chosen_theme = themes[4]
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
 
@@ -81,8 +82,8 @@ local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
---awful.util.tagnames = {  " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  }
-awful.util.tagnames = { " TERM ", " WWW ", " EDIT ", " FILE ", " MUS ", " GAME ", " PIC ", " VIRT ", " DEV " }
+awful.util.tagnames = {  " ", " ", " ", " ", " ", " ", " ", " ", " "  }
+--awful.util.tagnames = { " TERM ", " WWW ", " EDIT ", " FILE ", " MUS ", " GAME ", " PIC ", " VIRT ", " DEV " }
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
     awful.layout.suit.fair,
@@ -90,11 +91,11 @@ awful.layout.layouts = {
     --awful.layout.suit.tile.left,
     --awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
-    awful.layout.suit.floating,
-    awful.layout.suit.fair.horizontal,
+    --awful.layout.suit.floating,
+    --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
+    --awful.layout.suit.spiral.dwindle,
+    --awful.layout.suit.max,
     --awful.layout.suit.max.fullscreen,
     --awful.layout.suit.magnifier,
     --awful.layout.suit.corner.nw,
@@ -712,6 +713,10 @@ awful.rules.rules = {
 
     -- Set applications to always map on the tag 1 on screen 1.
     -- find class or role via xprop command
+   
+    { rule = { class = "Polybar" },
+        properties = { border_width = 0 } },
+
     --{ rule = { class = browser1 },
       --properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
@@ -883,7 +888,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("/home/jackson/.local/bin/wallpapers.sh -i")
 awful.spawn.with_shell("picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("/home/jackson/.local/bin/fixscreens.sh")
 awful.spawn.with_shell("/home/jackson/.local/bin/keepscreenon.sh")
 -- awful.spawn.with_shell("polychromatic-tray-applet")
