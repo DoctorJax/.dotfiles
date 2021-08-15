@@ -242,7 +242,7 @@ globalkeys = my_table.join(
         {description = "cmus" , group = "terminal apps" }),
     awful.key({ modkey, altkey }, "e", function () awful.util.spawn( "emacsclient -a 'emacs' -c" ) end,
         {description = "emacs client" , group = "gui apps" }),
-    awful.key({ modkey, altkey  }, "f", function () awful.util.spawn( terminal.." -e sh ./.config/vifm/scripts/vifmrun" ) end,
+    awful.key({ modkey, altkey  }, "f", function () awful.util.spawn( terminal.." -e vifm" ) end,
         {description = "vifm" , group = "terminal apps" }),
     awful.key({ modkey, altkey  }, "i", function () awful.util.spawn( terminal.." -e irssi" ) end,
         {description = "irssi" , group = "terminal apps" }),
