@@ -11,6 +11,7 @@ call plug#end()
 set encoding=UTF-8 splitbelow splitright nu wildmode=longest,full
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
 set cursorline
+set clipboard=unnamedplus
 
 "Key-bindings
 let mapleader=" "
@@ -22,6 +23,8 @@ nnoremap <leader>p :CtrlP<CR>
 nnoremap <leader><C-n> :set nofoldenable<CR>
 nnoremap <leader><C-i> :set foldmethod=indent<CR>
 nnoremap <leader><C-s> :set foldmethod=syntax<CR>
+nnoremap <leader><C-m> :set foldmethod=marker<CR>
+nnoremap <leader><C-f> :foldclose<CR>
 
 nnoremap Q <nop>
 
