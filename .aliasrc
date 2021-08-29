@@ -26,11 +26,9 @@ ex ()
 
 export EDITOR=nvim
 
-export PATH="$PATH:/home/jackson/.cargo/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
-alias pacman-update='sudo pacman-mirrors --geoip'
-
-alias ls='/home/jackson/.cargo/bin/exa --group-directories-first'
+alias ls='$HOME/.cargo/bin/exa --group-directories-first'
 alias ll='ls -alh'
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias l='ls -lFh'     #size,show type,human readable

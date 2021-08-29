@@ -166,7 +166,7 @@ beautiful.init(string.format(gears.filesystem.get_configuration_dir() .. "/theme
 local myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
     { "manual", terminal .. " -e 'man awesome'" },
-    { "edit config", terminal.." -e 'vim /home/jackson/.config/awesome/rc.lua'" },
+    { "edit config", terminal.." -e 'vim $HOME/.config/awesome/rc.lua'" },
     { "arandr", "arandr" },
     { "restart", awesome.restart },
 }
@@ -536,12 +536,12 @@ globalkeys = my_table.join(
     -- I got my own keybindings too, especially for my mic
     awful.key({ "Shift", "Control", altkey, modkey }, "m",
     	function()
-	    awful.spawn('/home/jackson/.local/bin/micmute.sh')
+	    awful.spawn('$HOME/.local/bin/micmute.sh')
     	end),
 
     awful.key({ "Shift", "Control", altkey, modkey }, "d",
     	function()
-	    awful.spawn('/home/jackson/.local/bin/stream_deck.py')
+	    awful.spawn('$HOME/.local/bin/stream_deck.py')
     	end),
 
     awful.key({ "Shift", "Control", altkey, modkey }, "l",
@@ -551,7 +551,7 @@ globalkeys = my_table.join(
 
     awful.key({ modkey }, "F1",
     	function()
-	    awful.spawn('/home/jackson/.local/bin/wallpapers.sh -r')
+	    awful.spawn('$HOME/.local/bin/wallpapers.sh -r')
 	end),
 
     -- Copy primary to clipboard (terminals to gtk)
@@ -885,23 +885,23 @@ client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 --awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("/home/jackson/.local/bin/wallpapers.sh -i")
-awful.spawn.with_shell("picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf")
+awful.spawn.with_shell("$HOME/.local/bin/wallpapers.sh -i")
+awful.spawn.with_shell("picom -b --experimental-backends --dbus --config $HOME/.config/picom/picom.conf")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("/home/jackson/.local/bin/fixscreens.sh")
-awful.spawn.with_shell("/home/jackson/.local/bin/keepscreenon.sh")
+awful.spawn.with_shell("$HOME/.local/bin/fixscreens.sh")
+awful.spawn.with_shell("$HOME/.local/bin/keepscreenon.sh")
 -- awful.spawn.with_shell("polychromatic-tray-applet")
 -- awful.spawn.with_shell("xfce4-clipman")
 
 startup = {
 --	"nitrogen --restore",
---	"picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf",
+--	"picom -b --experimental-backends --dbus --config $HOME/.config/picom/picom.conf",
 --	"nm-applet",
 --	"volumeicon",
 
 	-- Scripts that do stuff
---	"/home/jackson/.local/bin/fixscreens.sh",
---	"/home/jackson/.local/bin/keepscreenon.sh",
+--	"$HOME/.local/bin/fixscreens.sh",
+--	"$HOME/.local/bin/keepscreenon.sh",
 	
 	-- Useful things
 	"xfce4-clipman",

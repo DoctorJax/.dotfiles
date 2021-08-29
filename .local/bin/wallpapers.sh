@@ -29,7 +29,7 @@ setbg() {
 }
 
 help() {
-    printf "Type -i for restore, -s to set new, or -r for random"
+    printf "\n Type -i for restore, -s to set new, or -r for random \n"
 }
 
 case "$1" in
