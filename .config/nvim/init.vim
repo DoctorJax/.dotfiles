@@ -3,7 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
-Plug 'itchyny/lightline.vim' | Plug 'vifm/vifm.vim' | Plug 'vimwiki/vimwiki'
+Plug 'itchyny/lightline.vim' | Plug 'vifm/vifm.vim'
 Plug 'dense-analysis/ale'
 call plug#end()
 
@@ -32,9 +32,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-nnoremap <S-t> :tabnew<CR>
-nnoremap <S-Tab> :tabnext<CR>
 
 "" My Status Line
 "set statusline=
