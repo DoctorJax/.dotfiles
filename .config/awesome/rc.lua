@@ -908,11 +908,9 @@ awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("/home/jackson/.local/bin/fixscreens.sh")
 awful.spawn.with_shell("/home/jackson/.local/bin/keepscreenon.sh")
 
+awful.spawn.with_shell("mpd /home/jackson/.config/mpd/mpd.conf && /home/jackson/go/bin/mpd-mpris")
+
 startup = {
-    -- Music things
-    "mpd",
-    "mpd-mpris",
-    
 	-- Useful things
 	"xfce4-clipman",
 	"mailspring",
