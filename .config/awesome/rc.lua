@@ -13,7 +13,7 @@ local beautiful     = require("beautiful")
 
 -- Notification library
 local naughty       = require("naughty")
-naughty.config.defaults['icon_size'] = 100
+naughty.config.defaults['icon_size'] = 30
 
 local lain          = require("lain")
 local freedesktop   = require("freedesktop")
@@ -534,6 +534,22 @@ globalkeys = my_table.join(
     	function ()
 	    awful.spawn('playerctl play-pause')
     	end),
+    
+    -- Having to fix things for mpc
+    awful.key({ "Control" }, "XF86AudioNext",
+    	function ()
+	    awful.spawn('mpc next')
+    	end),
+
+    awful.key({ "Control" }, "XF86AudioPrev",
+    	function ()
+	    awful.spawn('mpc previous')
+    	end),
+
+    awful.key({ "Control" }, "XF86AudioPlay",
+    	function ()
+	    awful.spawn('mpc toggle')
+    	end),
 
     -- I got my own keybindings too, especially for my mic
     awful.key({ "Shift", "Control", altkey, modkey }, "m",
@@ -886,25 +902,17 @@ client.connect_signal("focus", border_adjust)
 client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
---awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("/home/jackson/.local/bin/wallpapers.sh -i")
 awful.spawn.with_shell("picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("/home/jackson/.local/bin/fixscreens.sh")
 awful.spawn.with_shell("/home/jackson/.local/bin/keepscreenon.sh")
--- awful.spawn.with_shell("polychromatic-tray-applet")
--- awful.spawn.with_shell("xfce4-clipman")
 
 startup = {
---	"nitrogen --restore",
---	"picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf",
---	"nm-applet",
---	"volumeicon",
-
-	-- Scripts that do stuff
---	"/home/jackson/.local/bin/fixscreens.sh",
---	"/home/jackson/.local/bin/keepscreenon.sh",
-	
+    -- Music things
+    "mpd",
+    "mpd-mpris",
+    
 	-- Useful things
 	"xfce4-clipman",
 	"mailspring",
