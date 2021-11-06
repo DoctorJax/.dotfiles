@@ -534,7 +534,7 @@ globalkeys = my_table.join(
     	function ()
 	    awful.spawn('playerctl play-pause')
     	end),
-    
+
     -- Having to fix things for mpc
     awful.key({ "Control" }, "XF86AudioNext",
     	function ()
@@ -543,12 +543,23 @@ globalkeys = my_table.join(
 
     awful.key({ "Control" }, "XF86AudioPrev",
     	function ()
-	    awful.spawn('mpc previous')
+	    awful.spawn('mpc prev')
     	end),
 
     awful.key({ "Control" }, "XF86AudioPlay",
     	function ()
 	    awful.spawn('mpc toggle')
+    	end),
+
+    -- Volume Controls for MPD/MPC
+    awful.key({ "Shift" }, "XF86AudioNext",
+    	function ()
+	    awful.spawn('mpc volume +5')
+    	end),
+
+    awful.key({ "Shift" }, "XF86AudioPrev",
+    	function ()
+	    awful.spawn('mpc volume -5')
     	end),
 
     -- I got my own keybindings too, especially for my mic
@@ -902,16 +913,21 @@ client.connect_signal("focus", border_adjust)
 client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
+-- Launching things via commands cause the startup thingy can be weird
 awful.spawn.with_shell("/home/jackson/.local/bin/wallpapers.sh -i")
 awful.spawn.with_shell("picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf")
 awful.spawn.with_shell("nm-applet")
+
+-- My custom scripts because yes
 awful.spawn.with_shell("/home/jackson/.local/bin/fixscreens.sh")
 awful.spawn.with_shell("/home/jackson/.local/bin/keepscreenon.sh")
 
+-- Still launching things
 awful.spawn.with_shell("mpd /home/jackson/.config/mpd/mpd.conf && /home/jackson/go/bin/mpd-mpris")
+awful.spawn.with_shell("/usr/bin/emacs --daemon &")
 
+-- This is just to make sure there aren't multiple that get started
 startup = {
-	-- Useful things
 	"xfce4-clipman",
 	"mailspring",
 	"discord-canary",

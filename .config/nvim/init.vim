@@ -8,10 +8,12 @@ Plug 'dense-analysis/ale'
 call plug#end()
 
 "General Settings
-set encoding=UTF-8 splitbelow splitright nu wildmode=longest,full
+set encoding=UTF-8 splitbelow splitright nu wildmode=longest,list,full
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
 set cursorline
 set clipboard=unnamedplus
+set mouse=a
+syntax on
 
 "Key-bindings
 let mapleader=" "
@@ -25,6 +27,8 @@ nnoremap <leader><C-i> :set foldmethod=indent<CR>
 nnoremap <leader><C-s> :set foldmethod=syntax<CR>
 nnoremap <leader><C-m> :set foldmethod=marker<CR>
 nnoremap <leader><C-f> :foldclose<CR>
+
+nnoremap <leader><S-s> :set spell<CR>
 
 nnoremap Q <nop>
 
