@@ -526,3 +526,7 @@
 (setq gc-cons-threshold (* 2 1000 1000))
 
 (use-package writeroom-mode)
+
+;; Packages not installed with DT's config
+(use-package pacmacs)
+(use-package yaml-mode)
