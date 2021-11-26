@@ -13,6 +13,9 @@ set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
 set cursorline
 set clipboard=unnamedplus
 set mouse=a
+
+set nocompatible
+filetype plugin on
 syntax on
 
 "Key-bindings
