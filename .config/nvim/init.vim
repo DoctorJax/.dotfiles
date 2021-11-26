@@ -3,7 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
-Plug 'itchyny/lightline.vim' | Plug 'vifm/vifm.vim'
+Plug 'itchyny/lightline.vim' | Plug 'vifm/vifm.vim' | Plug 'vimwiki/vimwiki'
 Plug 'dense-analysis/ale'
 call plug#end()
 
