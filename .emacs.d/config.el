@@ -527,6 +527,9 @@
 
 (use-package writeroom-mode)
 
+;; Turning off backup files
+(setq make-backup-files nil)
+
 ;; Packages not installed with DT's config
 (use-package pacmacs)
 (use-package yaml-mode)
