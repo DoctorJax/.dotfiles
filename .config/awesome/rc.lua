@@ -54,14 +54,14 @@ end
 run_once({ "unclutter -root" }) -- entries must be comma-separated
 
 local themes = {
-    "powerarrow-blue", -- 1
-    "multicolor",      -- 3
+    "powerarrow-blue",
+    "multicolor",
     "jackson",
     "fancybar",
 }
 
 -- choose your theme here
-local chosen_theme = themes[3]
+local chosen_theme = themes[4]
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
 

@@ -4,6 +4,9 @@ local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local pywaltheme = require("beautiful").xresources.get_current_theme()
+local helpers = require("helpers")
+
+local dpi = require("beautiful.xresources").apply_dpi
 
 local math, string, os = math, string, os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
@@ -19,7 +22,7 @@ theme.bg_normal                                 = "#282a36"
 theme.bg_focus                                  = "#282a36"
 theme.bg_urgent                                 = "#3F3F3F"
 theme.taglist_fg_focus                          = pywaltheme.color1
-theme.tasklist_bg_focus                         = "#1d1f27"
+theme.tasklist_bg_focus                         = "#282a36"
 theme.tasklist_fg_focus                         = pywaltheme.color1
 theme.border_width                              = 2
 theme.border_normal                             = "#282a36"
@@ -247,10 +250,10 @@ function theme.at_screen_connect(s)
     s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons)
 
     -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
+    s.mytasklist = awful.widget.tasklist({ screen = s, filter = awful.widget.tasklist.filter.currenttags, buttons = awful.util.tasklist_buttons })
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 20, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, bg = "#FFFFFF00", height = 20, margins = dpi(10) })
     --s.mywibox.visible = false
 
     -- Add widgets to the wibox
@@ -258,32 +261,60 @@ function theme.at_screen_connect(s)
         layout = wibox.layout.align.horizontal,
         expand = "none",
         { -- Left widgets
-            layout = wibox.layout.fixed.horizontal,
-            s.mylayoutbox,
-            s.mypromptbox,
-            s.mytasklist,
+        {
+            {
+	        layout = wibox.layout.fixed.horizontal,
+		s.mylayoutbox,
+		s.mypromptbox,
+                s.mytasklist,
+            },
+            widget = wibox.container.margin,
+            left = dpi(10),
+            right = dpi(10),
         },
-        -- Middle widget
-        s.mytaglist,
-        { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            
-            volicon,
-            theme.volume.widget,
-            wibox.widget{ markup = '|', font = 'mononoki Regular Nerd Font 20', widget = wibox.widget.textbox },
-            memicon,
-            mem.widget,
-            wibox.widget{ markup = '|', font = 'mononoki Regular Nerd Font 20', widget = wibox.widget.textbox },
-            cpuicon,
-            cpu.widget,
-           -- wibox.widget{ markup = '|', font = 'mononoki Regular Nerd Font 20', widget = wibox.widget.textbox },
-           -- neticon,
-           -- net.widget,
-            wibox.widget{ markup = '|', font = 'mononoki Regular Nerd Font 20', widget = wibox.widget.textbox },
-            clock,
-            wibox.widget{ markup = '|', font = 'mononoki Regular Nerd Font 20', widget = wibox.widget.textbox },
-            wibox.widget.systray(),
+        widget = wibox.container.background,
+        shape = helpers.rrect(dpi(20)),
+        bg = "#282a36",
+    },
+    -- Middle widget
+    {
+        {
+            {
+                layout = wibox.layout.fixed.horizontal,
+                spacing = dpi(15),
+                s.mytaglist,
+            },
+            widget = wibox.container.margin,
+            left = dpi(10),
+            right = dpi(10)
         },
+        widget = wibox.container.background,
+        shape = helpers.rrect(dpi(20)),
+        bg = "#282a36",
+    },
+    -- Right widgets
+    {
+        {
+            {
+                layout = wibox.layout.fixed.horizontal,
+                spacing = dpi(10),
+		volicon,
+		theme.volume.widget,
+		memicon,
+                mem.widget,
+		cpuicon,
+                cpu.widget,
+		clock,
+		wibox.widget.systray(),
+            },
+            widget = wibox.container.margin,
+            left = dpi(10),
+            right = dpi(10)
+        },
+        widget = wibox.container.background,
+        shape = helpers.rrect(dpi(20)),
+        bg = "#282a36",
+    },
     }
 end
 
