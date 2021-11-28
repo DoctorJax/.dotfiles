@@ -74,7 +74,8 @@ theme.widget_task                               = theme.dir .. "/icons/task.png"
 theme.widget_scissors                           = theme.dir .. "/icons/scissors.png"
 theme.widget_weather                            = theme.dir .. "/icons/dish.png"
 theme.tasklist_plain_task_name                  = true
-theme.tasklist_disable_icon                     = true
+theme.tasklist_disable_icon                     = false
+--theme.tasklist_disable_task_name                = true
 theme.useless_gap                               = 2
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
@@ -250,10 +251,16 @@ function theme.at_screen_connect(s)
     s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons)
 
     -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist({ screen = s, filter = awful.widget.tasklist.filter.currenttags, buttons = awful.util.tasklist_buttons })
+    local common = require("awful.widget.common")
+    local function list_update(w, buttons, label, data, objects)
+        common.list_update(w, buttons, label, data, objects)
+        w:set_max_widget_size(dpi(400))
+    end
+
+    s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons, nil, list_update, wibox.layout.flex.horizontal())
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, bg = "#FFFFFF00", height = 20, margins = dpi(10) })
+    s.mywibox = awful.wibar({ position = "top", screen = s, bg = "#FFFFFF00", height = 20, margins = dpi(10), border_width = 2 })
     --s.mywibox.visible = false
 
     -- Add widgets to the wibox
@@ -274,7 +281,7 @@ function theme.at_screen_connect(s)
         },
         widget = wibox.container.background,
         shape = helpers.rrect(dpi(20)),
-        bg = "#282a36",
+        bg = theme.bg_normal,
     },
     -- Middle widget
     {
@@ -290,14 +297,14 @@ function theme.at_screen_connect(s)
         },
         widget = wibox.container.background,
         shape = helpers.rrect(dpi(20)),
-        bg = "#282a36",
+        bg = theme.bg_normal,
     },
     -- Right widgets
     {
         {
             {
                 layout = wibox.layout.fixed.horizontal,
-                spacing = dpi(10),
+                spacing = dpi(2),
 	    	    volicon,
 	    	    theme.volume.widget,
 	    	    memicon,
@@ -313,7 +320,7 @@ function theme.at_screen_connect(s)
         },
         widget = wibox.container.background,
         shape = helpers.rrect(dpi(20)),
-        bg = "#282a36",
+        bg = theme.bg_normal,
     },
     }
 end
