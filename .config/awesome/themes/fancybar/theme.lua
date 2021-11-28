@@ -263,9 +263,9 @@ function theme.at_screen_connect(s)
         { -- Left widgets
         {
             {
-	        layout = wibox.layout.fixed.horizontal,
-		s.mylayoutbox,
-		s.mypromptbox,
+	            layout = wibox.layout.fixed.horizontal,
+		        s.mylayoutbox,
+		        s.mypromptbox,
                 s.mytasklist,
             },
             widget = wibox.container.margin,
@@ -298,14 +298,14 @@ function theme.at_screen_connect(s)
             {
                 layout = wibox.layout.fixed.horizontal,
                 spacing = dpi(10),
-		volicon,
-		theme.volume.widget,
-		memicon,
+	    	    volicon,
+	    	    theme.volume.widget,
+	    	    memicon,
                 mem.widget,
-		cpuicon,
+		        cpuicon,
                 cpu.widget,
-		clock,
-		wibox.widget.systray(),
+		        clock,
+		        wibox.widget.systray(),
             },
             widget = wibox.container.margin,
             left = dpi(10),

@@ -5,6 +5,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
 Plug 'itchyny/lightline.vim' | Plug 'vifm/vifm.vim' | Plug 'vimwiki/vimwiki'
 Plug 'dense-analysis/ale'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 "General Settings
@@ -30,6 +31,8 @@ nnoremap <leader><C-i> :set foldmethod=indent<CR>
 nnoremap <leader><C-s> :set foldmethod=syntax<CR>
 nnoremap <leader><C-m> :set foldmethod=marker<CR>
 nnoremap <leader><C-f> :foldclose<CR>
+
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 nnoremap <leader><S-s> :set spell<CR>
 
