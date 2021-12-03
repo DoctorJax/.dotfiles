@@ -1,3 +1,1 @@
-configuration {
- theme: "dt-center.rasi";
-}
+@theme "dt-center.rasi"
