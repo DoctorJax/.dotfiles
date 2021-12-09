@@ -15,9 +15,11 @@ set cursorline
 set clipboard=unnamedplus
 set mouse=a
 
+"Vimwiki stuff
 set nocompatible
 filetype plugin on
 syntax on
+let g:vimwiki_ext2syntax = {}
 
 "Key-bindings
 let mapleader=" "

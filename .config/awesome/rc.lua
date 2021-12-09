@@ -931,6 +931,7 @@ startup = {
 	"xfce4-clipman",
 	"mailspring",
 	"discord-canary",
+    "fcitx",
 
 	-- Authentication Agent
 	'/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &' ..
