@@ -555,11 +555,13 @@ globalkeys = my_table.join(
     awful.key({ "Shift" }, "XF86AudioNext",
     	function ()
 	    awful.spawn('mpc volume +5')
+        awful.spawn('.local/bin/mpdvolumenotif.sh')
     	end),
 
     awful.key({ "Shift" }, "XF86AudioPrev",
     	function ()
 	    awful.spawn('mpc volume -5')
+        awful.spawn('.local/bin/mpdvolumenotif.sh')
     	end),
 
     -- I got my own keybindings too, especially for my mic
