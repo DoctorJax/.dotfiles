@@ -6,7 +6,7 @@ random() {
     nitrogen --head=1 --set-zoom-fill "$randomwall"
     wal -n -i "$randomwall" &> /dev/null
     echo "$randomwall" > "$HOME"/.cache/randomwall
-    echo 'awesome.restart()' | awesome-client
+#    echo 'awesome.restart()' | awesome-client
     printf "Random background has been chosen."
 }
 
@@ -24,7 +24,7 @@ setbg() {
     nitrogen --head=1 --set-zoom-fill "$setwall"
     wal -n -i "$setwall" &> /dev/null
     echo "$setwall" > "$HOME"/.cache/randomwall
-    echo 'awesome.restart()' | awesome-client
+#    echo 'awesome.restart()' | awesome-client
     printf "Background has been set to $setwall."
 }
 
