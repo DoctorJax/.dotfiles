@@ -555,24 +555,19 @@ globalkeys = my_table.join(
     awful.key({ "Shift" }, "XF86AudioNext",
     	function ()
 	    awful.spawn('mpc volume +5')
-        awful.spawn('.local/bin/mpdvolumenotif.sh')
+        awful.spawn('.scripts/mpdvolumenotif.sh')
     	end),
 
     awful.key({ "Shift" }, "XF86AudioPrev",
     	function ()
 	    awful.spawn('mpc volume -5')
-        awful.spawn('.local/bin/mpdvolumenotif.sh')
+        awful.spawn('.scripts/mpdvolumenotif.sh')
     	end),
 
     -- I got my own keybindings too, especially for my mic
     awful.key({ "Shift", "Control", altkey, modkey }, "m",
     	function()
-	    awful.spawn('/home/jackson/.local/bin/micmute.sh')
-    	end),
-
-    awful.key({ "Shift", "Control", altkey, modkey }, "d",
-    	function()
-	    awful.spawn('home/jackson/.local/bin/stream_deck.py')
+	    awful.spawn('/home/jackson/.scripts/micmute.sh')
     	end),
 
     awful.key({ "Shift", "Control", altkey, modkey }, "l",
@@ -582,7 +577,7 @@ globalkeys = my_table.join(
 
     awful.key({ modkey }, "F1",
     	function()
-	    awful.spawn('/home/jackson/.local/bin/wallpapers.sh -r')
+	    awful.spawn('/home/jackson/.scripts/wallpapers.sh -r')
 	end),
 
     -- Copy primary to clipboard (terminals to gtk)
@@ -916,13 +911,13 @@ client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- Launching things via commands cause the startup thingy can be weird
-awful.spawn.with_shell("/home/jackson/.local/bin/wallpapers.sh -i")
+awful.spawn.with_shell("/home/jackson/.scripts/wallpapers.sh -i")
 awful.spawn.with_shell("picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf")
 awful.spawn.with_shell("nm-applet")
 
 -- My custom scripts because yes
-awful.spawn.with_shell("/home/jackson/.local/bin/fixscreens.sh")
-awful.spawn.with_shell("/home/jackson/.local/bin/keepscreenon.sh")
+awful.spawn.with_shell("/home/jackson/.scripts/fixscreens.sh")
+awful.spawn.with_shell("/home/jackson/.scripts/keepscreenon.sh")
 
 -- Still launching things
 awful.spawn.with_shell("mpd /home/jackson/.config/mpd/mpd.conf && /home/jackson/go/bin/mpd-mpris")
