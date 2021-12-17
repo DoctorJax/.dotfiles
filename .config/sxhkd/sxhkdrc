@@ -26,6 +26,10 @@ super + shift + f
 super + shift + e
     nemo
 
+# screenshots
+super + shift + s
+    /home/jackson/.scripts/screenshot.sh
+
 # emacs
 super + alt + e
     emacsclient -a 'emacs' -c
