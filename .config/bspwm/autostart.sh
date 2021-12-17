@@ -5,8 +5,8 @@ nm-applet &
 dunst &
 
 # MPD Stuff
-mpd /home/jackson/.config/mpd/mpd.conf &
-/home/jackson/go/bin/mpd-mpris &
+pgrep -x mpd > /dev/null || mpd /home/jackson/.config/mpd/mpd.conf &
+pgrep -x mpd-mpris > /dev/null || /home/jackson/go/bin/mpd-mpris &
 
 # My Scripts
 /home/jackson/.scripts/wallpapers.sh -i &

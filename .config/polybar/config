@@ -17,11 +17,9 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #000000
-background-alt = #000000
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+background = #282a36
+background-alt = #1d1f27
+foreground = #ffffff
 foreground-alt = #dfdfdf
 primary = #ffb52a
 secondary = #e60053
@@ -39,39 +37,32 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 0
 line-color = #f00
 
 border-size = 0
 border-color = #000000
 
-padding-left = 0
+padding-left = 2
 padding-right = 2
 
-module-margin-left = 1
+module-margin-left = 2
 module-margin-right = 2
 
-font-0 = DajaVu Sans:pixelsize=11;1
-font-1 = mononoki Nerd Font:pixelsize=11;1
-font-2 = Material Icons:pixelsize=10;1
+font-0 = Roboto:weight=bold:pixelsize=11;2
+font-1 = mononoki Nerd Font:pixelsize=14;2
+font-2 = Material Icons:pixelsize=10;2
 
-modules-right = pulseaudio memory cpu filesystem eth date 
-modules-left = bspwm
+modules-right = pulseaudio memory cpu date
+modules-center = bspwm
+modules-left = xwindow
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
 
 wm-restack = bspwm
-;wm-restack = i3
 
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -109,25 +100,36 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused = %icon%
+label-focused-foreground = "#d08770"
 label-focused-padding = 2
 
-label-occupied = %index%
-label-occupied-background = "#282a36"
+label-occupied = %icon%
+label-occupied-foreground = "#5e81ac"
 label-occupied-padding = 2
 
-label-urgent = %index%!
+label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %index%
+label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
+
 ; Separator in between workspaces
-; label-separator = |
+label-separator = "  "
 
 [module/i3]
 type = internal/i3
@@ -205,7 +207,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -273,29 +275,29 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <label-volume>
+label-volume = 墳   %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = muted
 label-muted-foreground = #666
 
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+# bar-volume-width = 10
+# bar-volume-foreground-0 = #55aa55
+# bar-volume-foreground-1 = #55aa55
+# bar-volume-foreground-2 = #55aa55
+# bar-volume-foreground-3 = #55aa55
+# bar-volume-foreground-4 = #55aa55
+# bar-volume-foreground-5 = #f5a70a
+# bar-volume-foreground-6 = #ff5555
+# bar-volume-gradient = false
+# bar-volume-indicator = |
+# bar-volume-indicator-font = 2
+# bar-volume-fill = ─
+# bar-volume-fill-font = 2
+# bar-volume-empty = ─
+# bar-volume-empty-font = 2
+# bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/alsa]
 type = internal/alsa
