@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
 # terminal emulator
 ctrl + grave
 	alacritty
@@ -10,9 +14,65 @@ ctrl + grave
 super + e
 	rofi -show run
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+# brave
+super + shift + b
+    brave
+
+# firefox
+super + shift + f
+    firefox
+
+# file browser
+super + shift + e
+    nemo
+
+# emacs
+super + alt + e
+    emacsclient -a 'emacs' -c
+
+# audio controls
+XF86AudioRaiseVolume
+    amixer -q set Master 1%+
+
+XF86AudioLowerVolume
+    amixer -q set Master 1%-
+
+XF86AudioMute
+    amixer -q set Master toggle
+
+# music controls
+XF86AudioNext
+    playerctl next
+
+XF86AudioPrev
+    playerctl previous
+
+XF86AudioPlay
+    playerctl play-pause
+
+# mpc controls
+ctrl + XF86AudioNext
+    mpc next
+
+ctrl + XF86AudioPrev
+    mpc prev
+
+ctrl + XF86AudioPlay
+    mpc toggle
+
+shift + XF86AudioNext
+    mpc volume +5 && /home/jackson/.scripts/mpdvolumenotif.sh
+
+shift + XF86AudioPrev
+    mpc volume -5 && /home/jackson/.scripts/mpdvolumenotif.sh
+
+# mic mute
+super + ctrl + shift + alt + m
+    /home/jackson/.scripts/micmute.sh
+
+# random wallpapers
+super + F1
+    /home/jackson/.scripts/wallpapers.sh -r
 
 #
 # bspwm hotkeys
