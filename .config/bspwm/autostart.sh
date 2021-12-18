@@ -2,6 +2,7 @@
 picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf &
 nm-applet &
 /usr/bin/emacs --daemon &
+xrdb ~/.Xresources &
 dunst &
 
 # MPD Stuff
