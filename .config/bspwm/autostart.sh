@@ -18,6 +18,7 @@ pgrep -x mpd-mpris > /dev/null || /home/jackson/go/bin/mpd-mpris &
 pgrep -x xfce4-clipman > /dev/null || xfce4-clipman &
 pgrep -x mailspring > /dev/null || mailspring &
 pgrep -x discord-canary > /dev/null || discord-canary &
+pgrep -x streamdeck > /dev/null || /home/jackson/.local/bin/streamdeck &
 
 # Polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval "$(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)" &

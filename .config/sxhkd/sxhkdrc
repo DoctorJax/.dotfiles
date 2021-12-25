@@ -65,10 +65,10 @@ ctrl + XF86AudioPlay
     mpc toggle
 
 shift + XF86AudioNext
-    mpc volume +5 && /home/jackson/.scripts/mpdvolumenotif.sh
+    /home/jackson/.scripts/mpdvolumenotif.sh -u
 
 shift + XF86AudioPrev
-    mpc volume -5 && /home/jackson/.scripts/mpdvolumenotif.sh
+    /home/jackson/.scripts/mpdvolumenotif.sh -d
 
 # mic mute
 super + ctrl + shift + alt + m
