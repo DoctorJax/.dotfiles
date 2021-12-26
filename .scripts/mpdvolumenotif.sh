@@ -11,7 +11,7 @@ down() {
 }
 
 player() {
-    urxvt -title Music -g 130x34-320+16 -st -fn "xft:Meslo LG S Nerd Font:size=12" -e ncmpcpp & disown
+    alacritty -e ncmpcpp
 }
 
 case "$1" in
