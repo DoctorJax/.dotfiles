@@ -112,7 +112,7 @@ label-occupied-foreground = "#5e81ac"
 label-occupied-padding = 2
 
 label-urgent = %icon%
-label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 2
 
 label-empty = %icon%
