@@ -540,3 +540,6 @@
  tab-width 4
  tab-stop-list (quote (4 8))
  )
+
+;; Preventative measure
+(setq frame-resize-pixelwise t)
