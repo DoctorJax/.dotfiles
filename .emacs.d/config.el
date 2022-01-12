@@ -533,3 +533,10 @@
 ;; Packages not installed with DT's config
 (use-package pacmacs)
 (use-package yaml-mode)
+
+;; Settings tab to be 4 spaces
+(setq-default
+ indent-tabs-mode nil
+ tab-width 4
+ tab-stop-list (quote (4 8))
+ )
