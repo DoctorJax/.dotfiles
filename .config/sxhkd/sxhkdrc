@@ -114,6 +114,10 @@ super + {t,shift + t,c,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
+# minimize/maximize window
+super + {_,shift + }n
+    /home/jackson/.scripts/minimize.sh -{n,m}
+
 #
 # focus/swap
 #
