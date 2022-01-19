@@ -48,27 +48,12 @@ nnoremap <C-l> <C-w>l
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
-"" My Status Line
-"set statusline=
-"set statusline+=%#DraculaTodo#
-"set statusline+=\ %F\ 
-"set statusline+=%r
-"set statusline+=%m
-"set statusline+=%#DraculaCyan#
-"set statusline+=\ 
-"set statusline+=%#NonText#
-"set statusline+=%=
-"set statusline+=%#DraculaPurple#
-"set statusline+=\ 
-"set statusline+=%#WildMenu#
-"set statusline+=\ %y\ 
-"set statusline+=%#DraculaPurple#
-"set statusline+=
-"set statusline+=%#DraculaSubtle#
-"set statusline+=\ 
-"set statusline+=%##
-"set statusline+=\ %c:%l/%L 
-"set statusline+=\ {%2p%%}
+nnoremap <C-l>h :tabr<CR>
+nnoremap <C-l>l :tabl<CR>
+nnoremap <C-l>j :tabp<CR>
+nnoremap <C-l>k :tabn<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-x> :tabc<CR>
 
 "Theme Settings
 colorscheme dracula
