@@ -1,9 +1,12 @@
 # Fancy Stuff
 picom -b --experimental-backends --dbus --config /home/jackson/.config/picom/picom.conf &
-nm-applet &
-/usr/bin/emacs --daemon &
 xrdb ~/.Xresources &
 dunst &
+
+# Useful Stuff
+nm-applet &
+/usr/bin/emacs --daemon &
+numlockx on &
 
 # MPD Stuff
 pgrep -x mpd > /dev/null || mpd /home/jackson/.config/mpd/mpd.conf &
