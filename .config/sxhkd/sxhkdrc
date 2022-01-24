@@ -14,61 +14,31 @@ ctrl + grave
 super + e
 	rofi -show run
 
-# brave
-super + shift + b
-    brave
-
-# firefox
-super + shift + f
-    firefox
-
-# file browser
-super + shift + e
-    nemo
-
-# screenshots
-super + shift + s
-    /home/jackson/.scripts/screenshot.sh
+# Most used
+super + shift + {b,f,e,s}
+    {brave,firefox,nemo,/home/jackson/.scripts/screenshot.sh}
 
 # emacs
 super + alt + e
     emacsclient -a 'emacs' -c
 
 # audio controls
-XF86AudioRaiseVolume
-    amixer -q set Master 1%+
-
-XF86AudioLowerVolume
-    amixer -q set Master 1%-
+XF86Audio{Raise,Lower}Volume
+    amixer -q set Master 1%{+,-}
 
 XF86AudioMute
     amixer -q set Master toggle
 
 # music controls
-XF86AudioNext
-    playerctl next
-
-XF86AudioPrev
-    playerctl previous
-
-XF86AudioPlay
-    playerctl play-pause
+XF86Audio{Next,Prev,Play}
+    playerctl {next,previous,play-pause}
 
 # mpc controls
-ctrl + XF86AudioNext
-    mpc next
+ctrl + XF86Audio{Next,Prev,Play}
+    mpc {next,prev,toggle}
 
-ctrl + XF86AudioPrev
-    mpc prev
-
-ctrl + XF86AudioPlay
-    mpc toggle
-
-shift + XF86AudioNext
-    /home/jackson/.scripts/mpdvolumenotif.sh -u
-
-shift + XF86AudioPrev
-    /home/jackson/.scripts/mpdvolumenotif.sh -d
+shift + XF86Audio{Next,Prev}
+    /home/jackson/.scripts/mpdvolumenotif.sh -{u,d}
 
 # mic mute
 super + ctrl + shift + alt + m
