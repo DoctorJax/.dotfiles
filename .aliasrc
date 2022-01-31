@@ -47,6 +47,7 @@ alias em='emacsclient -c -a "emacs -nw" -nw'
 alias v='nvim'
 alias n='nnn'
 alias q='exit'
+alias d='devour'
 
 gitpush() {
     git add .
