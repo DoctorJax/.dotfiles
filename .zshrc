@@ -1,7 +1,3 @@
-# Enable colors and change prompt:
-autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-
 # Custom Variables
 EDITOR=vim
 
@@ -30,6 +26,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # For vim keybindings
 bindkey -v
+bindkey "^?" backward-delete-char
 
 # Bash Insulter
 if [ -f /etc/bash.command-not-found ]; then
