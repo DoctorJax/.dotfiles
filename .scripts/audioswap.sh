@@ -21,7 +21,7 @@ togglesink() {
 
 recordingsink() {
     pactl load-module module-null-sink sink_name=virtualsink
-    pactl load-module module-loopback source=virtualsink.monitor sink="$(pactl get-default-sink)"
+    pactl load-module module-loopback source=virtualsink.monitor sink="$(pactl get-default-sink)" latency_msec=1
     notify-send -t 2000 -a System "Audio Swap" "Virtual Sink: Enabled"
 }
 
