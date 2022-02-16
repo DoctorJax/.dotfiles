@@ -1,7 +1,4 @@
-(org-babel-load-file
- (expand-file-name
-  "config.org"
-  user-emacs-directory))
+(load "~/.emacs.d/config.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

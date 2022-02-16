@@ -199,15 +199,15 @@
 
 (set-face-attribute 'default nil
   :font "Source Code Pro"
-  :height 140
+  :height 120
   :weight 'medium)
 (set-face-attribute 'variable-pitch nil
   :font "Ubuntu Nerd Font"
-  :height 140
+  :height 120
   :weight 'medium)
 (set-face-attribute 'fixed-pitch nil
   :font "Source Code Pro"
-  :height 140
+  :height 120
   :weight 'medium)
 ;; Makes commented text and keywords italics.
 ;; This is working in emacsclient but not emacs.
@@ -221,7 +221,7 @@
 (setq-default line-spacing 0.12)
 
 ;; Needed if using emacsclient. Otherwise, your fonts will be smaller than expected.
-(add-to-list 'default-frame-alist '(font . "Source Code Pro-14"))
+(add-to-list 'default-frame-alist '(font . "Source Code Pro-12"))
 ;; changes certain keywords to symbols, such as lamda!
 (setq global-prettify-symbols-mode t)
 
@@ -481,7 +481,7 @@
       eshell-visual-commands'("bash" "fish" "htop" "ssh" "top" "zsh"))
 
 (use-package vterm)
-(setq shell-file-name "/bin/fish"
+(setq shell-file-name "/bin/zsh"
       vterm-max-scrollback 5000)
 
 (winner-mode 1)
@@ -543,3 +543,6 @@
 
 ;; Preventative measure
 (setq frame-resize-pixelwise t)
+
+;; Clipboard doesn't work right and makes it hang
+(setq x-select-enable-clipboard-manager nil)
