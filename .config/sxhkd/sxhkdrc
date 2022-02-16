@@ -48,6 +48,10 @@ super + ctrl + shift + alt + m
 super + F1
     /home/jackson/.scripts/wallpapers.sh -r
 
+# screen brightness controls
+XF86MonBrightness{Up,Down}
+    /home/jackson/.scripts/brightness.sh -{u,d}
+
 # switch keyboard layout
 Alt_R
     setxkbmap -print -verbose 10 | grep variant && setxkbmap -layout us || setxkbmap -variant colemak
