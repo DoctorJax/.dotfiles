@@ -533,6 +533,7 @@
 ;; Packages not installed with DT's config
 (use-package pacmacs)
 (use-package yaml-mode)
+;(use-package langtool)
 
 ;; Settings tab to be 4 spaces
 (setq-default
@@ -546,3 +547,17 @@
 
 ;; Clipboard doesn't work right and makes it hang
 (setq x-select-enable-clipboard-manager nil)
+
+;; I definitely know what I'm doing, shhh
+;(require 'langtool)
+;(setq langtool-language-tool-jar "/usr/share/java/languagetool/languagetool-commandline.jar")
+;(setq langtool-java-classpath "/usr/share/languagetool:/usr/share/java/languagetool/*")
+;(setq langtool-java-bin "/usr/bin/java")
+
+;; Setting up flyspell and langtool for spelling and grammar checking
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+
+;(add-hook 'markdown-mode-hook
+;          (lambda () 
+;            (add-hook 'after-save-hook 'langtool-check nil 'make-it-local)))
