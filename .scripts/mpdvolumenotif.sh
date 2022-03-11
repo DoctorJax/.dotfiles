@@ -14,8 +14,24 @@ player() {
     alacritty -e ncmpcpp
 }
 
+loadfavorites() {
+    mpc clear
+    mpc load favorites
+    mpc shuffle
+    notify-send -t 2000 -a System "MPD" "Playlist: Favorites"
+}
+
+loadstreambeats() {
+    mpc clear
+    mpc load streambeats
+    mpc shuffle
+    notify-send -t 2000 -a System "MPD" "Playlist: StreamBeats"
+}
+
 case "$1" in
     -u) up ;;
     -d) down ;;
     -p) player ;;
+    -f) loadfavorites ;;
+    -s) loadstreambeats ;;
 esac
