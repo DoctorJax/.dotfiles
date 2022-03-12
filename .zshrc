@@ -1,5 +1,5 @@
 # Custom Variables
-EDITOR=vim
+EDITOR=nvim
 
 # History in cache directory:
 HISTSIZE=10000
