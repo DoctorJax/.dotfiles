@@ -18,6 +18,7 @@ loadfavorites() {
     mpc clear
     mpc load favorites
     mpc shuffle
+    mpc play
     notify-send -t 2000 -a System "MPD" "Playlist: Favorites"
 }
 
@@ -25,6 +26,7 @@ loadstreambeats() {
     mpc clear
     mpc load streambeats
     mpc shuffle
+    mpc play
     notify-send -t 2000 -a System "MPD" "Playlist: StreamBeats"
 }
 
