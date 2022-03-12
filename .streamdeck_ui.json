@@ -1,0 +1,265 @@
+{
+    "streamdeck_ui_version": 1,
+    "state": {
+        "AL48K2C58613": {
+            "buttons": {
+                "0": {
+                    "0": {
+                        "write": "",
+                        "command": "",
+                        "icon": "/home/jackson/.config/streamdeck/icons/obs.png",
+                        "text": "Recording",
+                        "switch_page": 2
+                    },
+                    "1": {
+                        "write": "",
+                        "switch_page": 3,
+                        "text": "Music",
+                        "icon": "/home/jackson/.config/streamdeck/icons/note.png"
+                    },
+                    "2": {
+                        "write": "",
+                        "switch_page": 4,
+                        "text": "Macros",
+                        "icon": "/home/jackson/.config/streamdeck/icons/click.png"
+                    },
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "",
+                        "icon": "/home/jackson/.config/streamdeck/icons/volume-up.png",
+                        "command": "/home/jackson/.scripts/audioswap.sh -t"
+                    },
+                    "11": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "",
+                        "command": ""
+                    },
+                    "12": {},
+                    "13": {},
+                    "14": {
+                        "write": "",
+                        "icon": "/home/jackson/.config/streamdeck/icons/white-micicon-mute.png",
+                        "command": "/home/jackson/.scripts/micmute.sh",
+                        "switch_page": 0,
+                        "text": ""
+                    }
+                },
+                "1": {
+                    "0": {
+                        "write": "",
+                        "switch_page": 1,
+                        "text": "Go back",
+                        "icon": "/home/jackson/.config/streamdeck/icons/back.png",
+                        "command": ""
+                    },
+                    "1": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": ""
+                    },
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "",
+                        "icon": "/home/jackson/.config/streamdeck/icons/soundux.png",
+                        "command": "/usr/bin/soundux"
+                    },
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "",
+                        "command": "/usr/bin/obs",
+                        "icon": "/home/jackson/.config/streamdeck/icons/obs.png"
+                    },
+                    "11": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "Null Sink",
+                        "icon": "/home/jackson/.config/streamdeck/icons/volume-up.png",
+                        "command": "/home/jackson/.scripts/audioswap.sh -s"
+                    },
+                    "12": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "Left",
+                        "icon": "/home/jackson/.config/streamdeck/icons/polybar.png",
+                        "command": "/home/jackson/.scripts/movetray.sh"
+                    },
+                    "13": {},
+                    "14": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "",
+                        "icon": "/home/jackson/.config/streamdeck/icons/white-micicon-mute.png",
+                        "command": "/home/jackson/.scripts/micmute.sh"
+                    }
+                },
+                "2": {
+                    "0": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "",
+                        "command": ""
+                    },
+                    "1": {
+                        "write": "",
+                        "text": "Go back",
+                        "switch_page": 1,
+                        "icon": "/home/jackson/.config/streamdeck/icons/back.png"
+                    },
+                    "2": {
+                        "command": "mpc volume 50",
+                        "write": "",
+                        "text": "50%"
+                    },
+                    "3": {
+                        "command": "mpc volume 60",
+                        "write": "",
+                        "text": "60%"
+                    },
+                    "4": {
+                        "write": "",
+                        "text": "70%",
+                        "command": "mpc volume 70"
+                    },
+                    "5": {
+                        "write": "",
+                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -d",
+                        "icon": "/home/jackson/.config/streamdeck/icons/volume-down.png",
+                        "text": "MPC"
+                    },
+                    "6": {
+                        "command": "mpc prev",
+                        "write": "",
+                        "icon": "/home/jackson/.config/streamdeck/icons/left.png",
+                        "text": "MPC"
+                    },
+                    "7": {
+                        "write": "",
+                        "switch_page": 0,
+                        "text": "MPC",
+                        "command": "mpc toggle",
+                        "icon": "/home/jackson/.config/streamdeck/icons/play.png"
+                    },
+                    "8": {
+                        "command": "mpc next",
+                        "write": "",
+                        "icon": "/home/jackson/.config/streamdeck/icons/right.png",
+                        "text": "MPC"
+                    },
+                    "9": {
+                        "write": "",
+                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -u",
+                        "icon": "/home/jackson/.config/streamdeck/icons/volume-up.png",
+                        "text": "MPC"
+                    },
+                    "10": {
+                        "write": "",
+                        "text": "Favorites",
+                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -f"
+                    },
+                    "11": {
+                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -s",
+                        "write": "",
+                        "text": "StreamBeats",
+                        "icon": "/home/jackson/.config/streamdeck/icons/streambeats.png"
+                    },
+                    "12": {
+                        "write": "",
+                        "command": "playerctl play-pause",
+                        "icon": "/home/jackson/.config/streamdeck/icons/play.png",
+                        "text": "Playerctl"
+                    },
+                    "13": {
+                        "write": ""
+                    },
+                    "14": {
+                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -p",
+                        "write": "",
+                        "text": "ncmpcpp",
+                        "icon": ""
+                    }
+                },
+                "3": {
+                    "0": {
+                        "write": "",
+                        "text": "Kill Xdotool",
+                        "switch_page": 0,
+                        "command": "/home/jackson/.scripts/veryclicky.sh -k"
+                    },
+                    "1": {
+                        "write": "",
+                        "command": "/home/jackson/.scripts/veryclicky.sh -m",
+                        "text": "Grinder",
+                        "switch_page": 0
+                    },
+                    "2": {
+                        "write": "",
+                        "switch_page": 1,
+                        "icon": "/home/jackson/.config/streamdeck/icons/back.png",
+                        "text": "Go back",
+                        "command": ""
+                    },
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {
+                        "write": ""
+                    },
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {
+                        "write": ""
+                    }
+                }
+            },
+            "brightness": 50,
+            "page": 0
+        },
+        "": {
+            "buttons": {
+                "0": {
+                    "0": {
+                        "write": ""
+                    },
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                }
+            },
+            "brightness": 99
+        }
+    }
+}
