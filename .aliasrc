@@ -1,6 +1,5 @@
-# Setting the path and other things
+# Setting the editor and path
 export EDITOR=nvim
-
 export PATH="$PATH:$HOME/.scripts:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin"
 
 # # ex - archive extractor
