@@ -5,11 +5,15 @@ earbuds_sink="alsa_output.pci-0000_1f_00.3.analog-stereo"
 
 headphones() {
     pactl set-default-sink $headphones_sink
+    sed -i "s/earbuds.png/headphones.png/g" ~/.streamdeck_ui.json
+    kill -USR1 `pgrep streamdeck`
     notify-send -t 2000 -a System "Audio Swap" "Default Sink: Headphones"
 }
 
 earbuds() {
     pactl set-default-sink $earbuds_sink
+    sed -i "s/headphones.png/earbuds.png/g" ~/.streamdeck_ui.json
+    kill -USR1 `pgrep streamdeck`
     notify-send -t 2000 -a System "Audio Swap" "Default Sink: Earbuds"
 }
 
