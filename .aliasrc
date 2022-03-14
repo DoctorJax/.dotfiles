@@ -48,6 +48,7 @@ alias v='nvim'
 alias n='nnn'
 alias q='exit'
 alias d='devour'
+alias m='maim -u -s $(date +%m-%d-%Y_%T).png'
 
 gitpush() {
     git add .
