@@ -1,1 +1,6 @@
+configuration {
+ modi: "window,run,drun";
+ show-icons: true;
+ terminal: "alacritty";
+}
 @theme "dt-center.rasi"

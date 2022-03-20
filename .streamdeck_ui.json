@@ -34,7 +34,7 @@
                         "write": "",
                         "switch_page": 0,
                         "text": "",
-                        "icon": "/home/jackson/.config/streamdeck/icons/headphones.png",
+                        "icon": "/home/jackson/.config/streamdeck/icons/earbuds.png",
                         "command": "/home/jackson/.scripts/audioswap.sh -t"
                     },
                     "11": {
