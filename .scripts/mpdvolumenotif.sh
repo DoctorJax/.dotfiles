@@ -30,10 +30,22 @@ loadstreambeats() {
     notify-send -t 2000 -a System "MPD" "Playlist: StreamBeats"
 }
 
+reloadfavorites() {
+    cd ~/Music
+    mpc clear
+    mpc rm favorites
+    mpc add $(ls | grep -wv StreamBeats | tr '\n' ' ')
+    mpc save favorites
+    mpc shuffle
+    mpc play
+    cd ~
+}
+
 case "$1" in
     -u) up ;;
     -d) down ;;
     -p) player ;;
     -f) loadfavorites ;;
     -s) loadstreambeats ;;
+    -r) reloadfavorites ;;
 esac
