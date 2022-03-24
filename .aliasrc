@@ -50,11 +50,6 @@ alias q='exit'
 alias d='devour'
 alias m='maim -u -s $(date +%m-%d-%Y_%T).png'
 
-gitpush() {
-    git add .
-    git commit -m "$*"
-    git push
-}
-alias gp=gitpush
+alias ytogg='yt-dlp -x --audio-format vorbis'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
