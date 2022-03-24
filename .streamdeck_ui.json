@@ -114,8 +114,8 @@
                     "0": {
                         "write": "",
                         "switch_page": 0,
-                        "text": "",
-                        "command": ""
+                        "text": "Reload Fav",
+                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -r"
                     },
                     "1": {
                         "write": "",
@@ -142,18 +142,18 @@
                         "write": "",
                         "command": "/home/jackson/.scripts/mpdvolumenotif.sh -d",
                         "icon": "/home/jackson/.config/streamdeck/icons/volume-down.png",
-                        "text": "MPC"
+                        "text": ""
                     },
                     "6": {
                         "command": "mpc prev",
                         "write": "",
                         "icon": "/home/jackson/.config/streamdeck/icons/left.png",
-                        "text": "MPC"
+                        "text": ""
                     },
                     "7": {
                         "write": "",
                         "switch_page": 0,
-                        "text": "MPC",
+                        "text": "",
                         "command": "mpc toggle",
                         "icon": "/home/jackson/.config/streamdeck/icons/play.png"
                     },
@@ -161,13 +161,13 @@
                         "command": "mpc next",
                         "write": "",
                         "icon": "/home/jackson/.config/streamdeck/icons/right.png",
-                        "text": "MPC"
+                        "text": ""
                     },
                     "9": {
                         "write": "",
                         "command": "/home/jackson/.scripts/mpdvolumenotif.sh -u",
                         "icon": "/home/jackson/.config/streamdeck/icons/volume-up.png",
-                        "text": "MPC"
+                        "text": ""
                     },
                     "10": {
                         "write": "",
@@ -177,14 +177,14 @@
                     "11": {
                         "command": "/home/jackson/.scripts/mpdvolumenotif.sh -s",
                         "write": "",
-                        "text": "StreamBeats",
+                        "text": "",
                         "icon": "/home/jackson/.config/streamdeck/icons/streambeats.png"
                     },
                     "12": {
                         "write": "",
                         "command": "playerctl play-pause",
                         "icon": "/home/jackson/.config/streamdeck/icons/play.png",
-                        "text": "Playerctl"
+                        "text": ""
                     },
                     "13": {
                         "write": ""
