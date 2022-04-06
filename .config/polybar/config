@@ -55,7 +55,7 @@ font-2 = Material Icons:pixelsize=10;2
 
 modules-right = pulseaudio memory cpu date
 modules-center = bspwm
-modules-left = xwindow
+modules-left = mpd xwindow
 
 tray-position = right
 tray-padding = 2
@@ -72,7 +72,8 @@ scroll-down = bspwm-desknext
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = "%title%"
+label-maxlen = 30
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -184,15 +185,12 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <toggle> <label-song>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-play = "ﱙ " 
+icon-pause = "ﱘ "
 
-label-song-maxlen = 25
+label-song-maxlen = 30
 label-song-ellipsis = true
 
 [module/xbacklight]
