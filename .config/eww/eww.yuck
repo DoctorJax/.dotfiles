@@ -1,0 +1,91 @@
+(defwidget mainbar []
+  (centerbox :orientation "h"
+    (music)
+    (workspaces0)
+    (sidestuff)))
+
+(defwidget altbar []
+  (centerbox :orientation "h"
+    (music)
+    (workspaces1)
+    (sidestuff)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    (metric :label "墳"
+            :value volume
+            :onchange "amixer -D pulse sset Master {}%")
+    (metric :label ""
+            :value {EWW_RAM.used_mem_perc}
+            :onchange "")
+    (metric :label ""
+            :value {EWW_CPU.avg}
+            :onchange "")
+    time))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwidget workspaces0 []
+	(literal :content workspace0))
+(deflisten workspace0 "scripts/workspace0")
+
+(defwidget workspaces1 []
+	(literal :content workspace1))
+(deflisten workspace1 "scripts/workspace1")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwidget music []
+  (box :class "music"
+       :orientation "h"
+       :space-evenly false
+    {music != "" ? "🎵${music}" : ""}))
+
+
+(defwidget metric [label value onchange]
+  (box :orientation "h"
+       :class "metric"
+       :space-evenly false
+    (box :class "label" label)
+    (scale :min 0
+           :max 101
+           :active {onchange != ""}
+           :value value
+           :onchange onchange)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+(defpoll volume :interval "1s"
+  "scripts/getvol")
+
+(defpoll time :interval "1s"
+  "date '+%a %d %b %r'")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwindow mainbar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "22px")
+  (mainbar))
+
+(defwindow altbar
+  :monitor 1
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "22px")
+  (altbar))

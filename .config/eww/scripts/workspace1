@@ -1,0 +1,45 @@
+#!/bin/bash
+
+workspaces() {
+ws1=11
+ws2=12
+ws3=13
+ws4=14
+ws5=15
+ws6=16
+ws7=17
+ws8=18
+ws9=19
+
+# unoccupied
+un="0"
+
+# occupied
+o1=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws1" || echo "00")
+o2=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws2" || echo "00")
+o3=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws3" || echo "00")
+o4=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws4" || echo "00")
+o5=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws5" || echo "00")
+o6=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws6" || echo "00")
+o7=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws7" || echo "00")
+o8=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws8" || echo "00")
+o9=$(bspc query -D -d .occupied --names | grep -E "[0-9]{2}" | grep "$ws9" || echo "00")
+
+# focused
+f1=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws1" || echo "00")
+f2=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws2" || echo "00")
+f3=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws3" || echo "00")
+f4=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws4" || echo "00")
+f5=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws5" || echo "00")
+f6=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws6" || echo "00")
+f7=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws7" || echo "00")
+f8=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws8" || echo "00")
+f9=$(bspc query -D -d focused --names | grep -E "[0-9]{2}" | grep "$ws9" || echo "00")
+
+echo "(eventbox :onscroll \"${HOME}/.config/eww/scripts/scrollworkspace1 {}\" (box :class \"workspaces\" :orientation \"h\" :space-evenly true :halign \"start\" :spacing 10 (button :onclick \"wmctrl -s 0\" :class \"$un$o1$f1\" \"ﭮ \") (button :onclick \"wmctrl -s 1\" :class \"$un$o2$f2\" \"\") (button :onclick \"wmctrl -s 2\" :class \"$un$o3$f3\" \"\") (button :onclick \"wmctrl -s 3\" :class \"$un$o4$f4\" \"\") (button :onclick \"wmctrl -s 4\" :class \"$un$o5$f5\" \"\") (button :onclick \"wmctrl -s 5\" :class \"$un$o6$f6\" \"\") (button :onclick \"wmctrl -s 6\" :class \"$un$o7$f7\" \"\") (button :onclick \"wmctrl -s 7\" :class \"$un$o8$f8\" \"\") (button :onclick \"wmctrl -s 8\" :class \"$un$o9$f9\" \"\")))"
+}
+
+workspaces
+bspc subscribe desktop node_transfer | while read -r _ ; do
+workspaces
+done

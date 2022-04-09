@@ -1,0 +1,20 @@
+#!/bin/bash
+
+up() {
+    case $(xdotool get_desktop) in
+        10) wmctrl -s 19 ;;
+        *) wmctrl -s $(expr `xdotool get_desktop` - 1) ;;
+    esac
+}
+
+down() {
+    case $(xdotool get_desktop) in
+        19) wmctrl -s 10 ;;
+        *) wmctrl -s $(expr `xdotool get_desktop` + 1) ;;
+    esac
+}
+
+case $1 in
+    up) up ;;
+    down) down ;;
+esac
