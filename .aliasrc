@@ -29,7 +29,7 @@ ex ()
 }
 
 # cd and ls combined for easy of use
-cl() { builtin cd "$@" && exa --icons --group-directories-first -alh; }
+cd() { builtin cd "$@" && exa --icons --group-directories-first -alh; }
 
 # Aliases
 alias ls='exa --icons --group-directories-first'
