@@ -12,7 +12,7 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)               # Include hidden files.
+_comp_options+=(globdots)
 
 # Custom ZSH Binds
 bindkey '^ ' autosuggest-accept
