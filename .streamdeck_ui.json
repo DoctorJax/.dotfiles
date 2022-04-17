@@ -38,7 +38,7 @@
                         "write": "",
                         "switch_page": 0,
                         "text": "",
-                        "icon": "/home/jackson/.config/streamdeck/icons/headphones.png",
+                        "icon": "/home/jackson/.config/streamdeck/icons/earbuds.png",
                         "command": "/home/jackson/.scripts/audioswap.sh -t"
                     },
                     "11": {
@@ -119,7 +119,8 @@
                         "write": "",
                         "switch_page": 0,
                         "text": "Reload Fav",
-                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -r"
+                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -r",
+                        "text_vertical_align": "middle"
                     },
                     "1": {
                         "write": "",
@@ -130,17 +131,20 @@
                     "2": {
                         "command": "mpc volume 50",
                         "write": "",
-                        "text": "50%"
+                        "text": "50%",
+                        "text_vertical_align": "middle"
                     },
                     "3": {
                         "command": "mpc volume 60",
                         "write": "",
-                        "text": "60%"
+                        "text": "60%",
+                        "text_vertical_align": "middle"
                     },
                     "4": {
                         "write": "",
                         "text": "70%",
-                        "command": "mpc volume 70"
+                        "command": "mpc volume 70",
+                        "text_vertical_align": "middle"
                     },
                     "5": {
                         "write": "",
@@ -176,7 +180,8 @@
                     "10": {
                         "write": "",
                         "text": "Favorites",
-                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -f"
+                        "command": "/home/jackson/.scripts/mpdvolumenotif.sh -f",
+                        "text_vertical_align": "middle"
                     },
                     "11": {
                         "command": "/home/jackson/.scripts/mpdvolumenotif.sh -s",
@@ -197,7 +202,8 @@
                         "command": "/home/jackson/.scripts/mpdvolumenotif.sh -p",
                         "write": "",
                         "text": "ncmpcpp",
-                        "icon": ""
+                        "icon": "",
+                        "text_vertical_align": "middle"
                     }
                 },
                 "3": {
@@ -205,13 +211,15 @@
                         "write": "",
                         "text": "Kill Xdotool",
                         "switch_page": 0,
-                        "command": "/home/jackson/.scripts/veryclicky.sh -k"
+                        "command": "/home/jackson/.scripts/veryclicky.sh -k",
+                        "text_vertical_align": "middle"
                     },
                     "1": {
                         "write": "",
                         "command": "/home/jackson/.scripts/veryclicky.sh -m",
                         "text": "Grinder",
-                        "switch_page": 0
+                        "switch_page": 0,
+                        "text_vertical_align": "middle"
                     },
                     "2": {
                         "write": "",
@@ -236,10 +244,112 @@
                     "14": {
                         "write": ""
                     }
+                },
+                "4": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "5": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "6": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "7": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "8": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "9": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
                 }
             },
             "brightness": 50,
-            "page": 2
+            "page": 0
         },
         "": {
             "buttons": {

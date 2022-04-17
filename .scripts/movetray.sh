@@ -8,11 +8,11 @@ left() {
         for m in $(xrandr --query | grep " connected" | cut -d" " -f1 | tac); do
             if [ $m == 'DP-1' ]
             then
-                MONITOR=$m polybar --reload jackson & 
+                MONITOR=$m polybar --reload jackson & disown
                 sleep 0.1
             elif [ $m == 'HDMI-0' ]
             then
-                MONITOR=$m polybar --reload jackson &
+                MONITOR=$m polybar --reload jackson & disown
             fi
         done
     fi
