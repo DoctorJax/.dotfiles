@@ -19,7 +19,7 @@ pgrep -x mpd-mpris > /dev/null || /home/jackson/go/bin/mpd-mpris &
 
 # Run Once
 pgrep -x xfce4-clipman > /dev/null || xfce4-clipman &
-pgrep -x streamdeck > /dev/null || /home/jackson/.local/bin/streamdeck &
+pgrep -x streamdeck.sh > /dev/null || /home/jackson/.local/bin/streamdeck.sh &
 
 pgrep -x mailspring > /dev/null || mailspring &
 pgrep -x discord-canary > /dev/null || discord-canary &
