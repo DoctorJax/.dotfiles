@@ -18,6 +18,10 @@ super + e
 super + shift + {b,f,e,s}
     {brave,firefox,nemo,/home/jackson/.scripts/screenshot.sh}
 
+# separate brave profiles
+super + ctrl + {b,s}
+    {brave --profile-directory=Default, brave --profile-directory="Profile 1"}
+
 # emacs
 super + alt + e
     emacsclient -a 'emacs' -c
