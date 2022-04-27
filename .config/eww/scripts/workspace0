@@ -36,7 +36,7 @@ f7=$(bspc query -D -d focused --names | grep -Ev "[0-9]{2}" | grep "$ws7")
 f8=$(bspc query -D -d focused --names | grep -Ev "[0-9]{2}" | grep "$ws8")
 f9=$(bspc query -D -d focused --names | grep -Ev "[0-9]{2}" | grep "$ws9")
 
-echo "(eventbox :onscroll \"${HOME}/.config/eww/scripts/scrollworkspace0 {}\" (box :class \"workspaces\" :orientation \"h\" :space-evenly true :halign \"start\" :spacing 10 (button :onclick \"wmctrl -s 10\" :class \"$un$o1$f1\" \"\") (button :onclick \"wmctrl -s 11\" :class \"$un$o2$f2\" \"\") (button :onclick \"wmctrl -s 12\" :class \"$un$o3$f3\" \"\") (button :onclick \"wmctrl -s 13\" :class \"$un$o4$f4\" \"\") (button :onclick \"wmctrl -s 14\" :class \"$un$o5$f5\" \"\") (button :onclick \"wmctrl -s 15\" :class \"$un$o6$f6\" \"\") (button :onclick \"wmctrl -s 16\" :class \"$un$o7$f7\" \"\") (button :onclick \"wmctrl -s 17\" :class \"$un$o8$f8\" \"\") (button :onclick \"wmctrl -s 18\" :class \"$un$o9$f9\" \" \")))"
+echo "(eventbox :onscroll \"${HOME}/.config/eww/scripts/scrollworkspace0 {}\" (box :class \"workspaces\" :orientation \"h\" :space-evenly true :halign \"start\" :spacing 10 (button :onclick \"wmctrl -s 10\" :class \"$un$o1$f1\" \"\") (button :onclick \"wmctrl -s 11\" :class \"$un$o2$f2\" \"\") (button :onclick \"wmctrl -s 12\" :class \"$un$o3$f3\" \"\") (button :onclick \"wmctrl -s 13\" :class \"$un$o4$f4\" \"\") (button :onclick \"wmctrl -s 14\" :class \"$un$o5$f5\" \"\") (button :onclick \"wmctrl -s 15\" :class \"$un$o6$f6\" \"\") (button :onclick \"wmctrl -s 16\" :class \"$un$o7$f7\" \"\") (button :onclick \"wmctrl -s 17\" :class \"$un$o8$f8\" \"\") (button :onclick \"wmctrl -s 18\" :class \"$un$o9$f9\" \" \")))"
 }
 
 workspaces

@@ -71,6 +71,7 @@
 (defwindow mainbar
   :monitor 0
   :windowtype "dock"
+  :stacking "bg"
   :geometry (geometry :x "0%"
                       :y "0%"
                       :width "100%"
@@ -82,6 +83,7 @@
 (defwindow altbar
   :monitor 1
   :windowtype "dock"
+  :stacking "bg"
   :geometry (geometry :x "0%"
                       :y "0%"
                       :width "100%"
