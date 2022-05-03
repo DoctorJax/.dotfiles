@@ -32,6 +32,10 @@ ex ()
 cd() { builtin cd "$@" && exa --icons --group-directories-first -alh; }
 
 # Aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 alias ls='exa --icons --group-directories-first'
 alias ll='ls -alh'
 alias l='ls -lFh'
