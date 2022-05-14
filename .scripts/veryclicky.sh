@@ -7,7 +7,7 @@ killxdotool() {
 
 mobgrinder() {
     notify-send -t 2000 -a System "Macro" "Mob Grinder: Activated"
-    xdotool click --repeat 1000000 --delay 750 1
+    xdotool click --repeat 1000000 --delay 750 --window $(xdotool getactivewindow) 1
     notify-send -t 2000 -a System "Macro" "Mob Grinder: Deactivated"
 }
 
