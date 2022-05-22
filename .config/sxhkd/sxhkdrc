@@ -12,7 +12,7 @@ ctrl + grave
 
 # program launcher
 super + e
-	exec zsh -c "rofi -show run"
+	exec zsh -c "rofi -show drun"
 
 # most used
 super + shift + {b,f,e,s}
