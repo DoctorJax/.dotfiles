@@ -13,10 +13,12 @@ fi
 PS1='[\u@\h \W]\$ '
 
 # Bash insulter
-
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 eval "$(starship init bash)"
 

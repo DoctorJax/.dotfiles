@@ -24,6 +24,9 @@ bindkey '^ ' autosuggest-accept
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
+# For fzf keybindings and completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # For vim keybindings
 bindkey -v
 bindkey "^?" backward-delete-char
@@ -38,3 +41,4 @@ pfetch | lolcat
 
 # For Starship prompt instead
 eval "$(starship init zsh)"
+
