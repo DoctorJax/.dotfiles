@@ -17,9 +17,9 @@ if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
 
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 eval "$(starship init bash)"
 
 pfetch | lolcat
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
