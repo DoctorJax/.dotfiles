@@ -26,6 +26,12 @@ window#waybar.hidden {
 
 #workspaces button.active {
 	color: #B5E8E0;
+    background-color: #282a36;
+}
+
+#workspaces button {
+	color: #282a36;
+    margin-top: 2px;
 }
 
 #tags {
