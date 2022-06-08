@@ -6,4 +6,4 @@ xrandr --output HDMI-0 --primary
 
 xsetwacom set "Wacom Bamboo Pen Pen stylus" MapToOutput HEAD-0
 
-xset r rate 660 75
+xset r rate 600 75
