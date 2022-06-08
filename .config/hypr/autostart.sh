@@ -1,6 +1,6 @@
 # Fancy Stuff
 pgrep -x waybar > /dev/null || waybar &
-pgrep -x swaybg > /dev/null || swaybg --image "$(find ~/wallpapers -name '*.jpg' -type f | shuf -n 1)" -m fill &
+/home/jackson/.scripts/wallpapers.sh -i &
 dunst &
 
 # Useful Stuff
