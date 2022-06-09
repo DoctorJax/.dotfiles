@@ -3,13 +3,11 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["mpd"],
-    "modules-center": ["wlr/workspaces"],
+    "modules-center": ["wlr/workspaces","custom/workscroll"],
     "modules-right": ["pulseaudio", "cpu", "memory", "clock", "tray"],
     // Modules configuration
     "wlr/workspaces": {
-        "all-outputs": true,
         "format": "{name}",
-        "on-click": "activate",
         "sort-by-name": true,
         "format-icons": {
             "urgent": "",
@@ -17,8 +15,14 @@
             "default": ""
         }
     },
+    "custom/workscroll": {
+        "format": " ",
+        "tooltip": false,
+        "on-scroll-down": "/usr/local/bin/hyprctl dispatch workspace +1",
+        "on-scroll-up": "/usr/local/bin/hyprctl dispatch workspace -1"
+    },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title}",
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title:.40}",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
