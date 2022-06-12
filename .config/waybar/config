@@ -1,6 +1,7 @@
 {
+    "gtk-layer-shell": false,
     "height": 20, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["mpd"],
     "modules-center": ["wlr/workspaces","custom/workscroll"],
@@ -47,7 +48,6 @@
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 5
     },
     "clock": {
