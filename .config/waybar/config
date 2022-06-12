@@ -1,6 +1,6 @@
 {
     "gtk-layer-shell": false,
-    "spacing": 2, // Gaps between modules (4px)
+    "spacing": 2, // Gaps between modules
     // Choose the order of the modules
     "modules-left": ["mpd"],
     "modules-center": ["wlr/workspaces","custom/workscroll"],
