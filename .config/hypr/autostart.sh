@@ -6,6 +6,9 @@ dunst &
 # Useful Stuff
 /usr/bin/emacs --daemon &
 
+# Steam was being a pain
+xrandr --output XWAYLAND0 --primary &
+
 # MPD Stuff
 pgrep -x mpd > /dev/null || mpd /home/jackson/.config/mpd/mpd.conf &
 pgrep -x mpd-mpris > /dev/null || /home/jackson/go/bin/mpd-mpris &
