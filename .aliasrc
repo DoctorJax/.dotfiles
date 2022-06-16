@@ -1,5 +1,5 @@
 # Setting the editor, pfetch source, and path
-export EDITOR=nvim
+export EDITOR=helix
 export PF_SOURCE="$HOME/.config/pfetch/pfetchrc"
 export PATH="$PATH:$HOME/.scripts:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin"
 
@@ -51,6 +51,7 @@ alias vi='vim'
 alias emacs='emacsclient -c -a emacs'
 alias em='emacsclient -c -a "emacs -nw" -nw'
 
+alias h='helix'
 alias v='nvim'
 alias n='nnn'
 alias q='exit'

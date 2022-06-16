@@ -1,6 +1,6 @@
 "Plugins
 call plug#begin('~/.config/nvim/plugged')
-Plug 'dracula/vim',{'as':'dracula'}
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
 Plug 'itchyny/lightline.vim' | Plug 'vifm/vifm.vim' | Plug 'vimwiki/vimwiki'
@@ -56,7 +56,7 @@ nnoremap <C-t> :tabnew<CR>
 nnoremap <C-x> :tabc<CR>
 
 "Theme Settings
-colorscheme dracula
+colorscheme tokyonight
 set background=dark
 set termguicolors
 
