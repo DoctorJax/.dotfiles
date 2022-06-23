@@ -11,7 +11,7 @@ xrandr --output XWAYLAND0 --primary &
 
 # MPD Stuff
 pgrep -x mpd > /dev/null || mpd /home/jackson/.config/mpd/mpd.conf &
-pgrep -x mpd-mpris > /dev/null || /home/jackson/go/bin/mpd-mpris &
+pgrep -x mpd-mpris > /dev/null || mpd-mpris &
 
 # Run Once
 pgrep -x streamdeck.sh > /dev/null || /home/jackson/.local/bin/streamdeck.sh &

@@ -10,7 +10,7 @@ numlockx on &
 
 # MPD Stuff
 pgrep -x mpd > /dev/null || mpd /home/jackson/.config/mpd/mpd.conf &
-pgrep -x mpd-mpris > /dev/null || /home/jackson/go/bin/mpd-mpris &
+pgrep -x mpd-mpris > /dev/null || mpd-mpris &
 
 # My Scripts
 /home/jackson/.scripts/wallpapers.sh -i &

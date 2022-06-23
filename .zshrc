@@ -5,10 +5,10 @@ HISTFILE=~/.cache/zshhistory
 setopt appendhistory
 
 # Basic auto/tab complete:
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME"/zcompdump-"$ZSH_VERSION"
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 zmodload zsh/complist
-compinit
+compinit -d "$XDG_CACHE_HOME"/zcompdump-"$ZSH_VERSION"
 _comp_options+=(globdots)
 
 # Custom ZSH Binds

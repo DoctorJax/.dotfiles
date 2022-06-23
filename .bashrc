@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Moving bash_history
+export HISTFILE="${XDG_CACHE_HOME}"/bashhistory
+
 # Just gonna steal the same aliases as zshrc
 if [ -f ~/.aliasrc ]; then 
 	. ~/.aliasrc 

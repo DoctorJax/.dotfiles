@@ -1,7 +1,7 @@
 # Setting the editor, pfetch source, and path
 export EDITOR="emacsclient -t -a=\"\""
 export PF_SOURCE="$HOME/.config/pfetch/pfetchrc"
-export PATH="$PATH:$HOME/.scripts:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin"
+export PATH="$PATH:$HOME/.scripts:$HOME/.local/bin"
 
 # # ex - archive extractor
 # # usage: ex <file>
@@ -41,6 +41,7 @@ alias ll='ls -alh'
 alias l='ls -lFh'
 
 alias grep='grep --color'
+alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget_history"
 
 alias rm='rm -i'
 alias cp='cp -i'
