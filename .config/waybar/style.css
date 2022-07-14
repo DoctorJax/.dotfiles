@@ -23,12 +23,11 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-	color: #B5E8E0;
     background-color: #161320;
 }
 
 #workspaces button {
-	color: #050407;
+	color: #b5e8e0;
 	margin: 0px;
 	padding: 0px;
 }
