@@ -4,7 +4,6 @@ xrdb ~/.Xresources &
 dunst &
 
 # Useful Stuff
-nm-applet &
 /usr/bin/emacs --daemon &
 numlockx on &
 
@@ -18,7 +17,6 @@ pgrep -x mpd-mpris > /dev/null || mpd-mpris &
 /home/jackson/.scripts/keepscreenon.sh &
 
 # Run Once
-pgrep -x xfce4-clipman > /dev/null || xfce4-clipman &
 pgrep -x streamdeck.sh > /dev/null || /home/jackson/.local/bin/streamdeck.sh &
 
 pgrep -x mailspring > /dev/null || mailspring &
