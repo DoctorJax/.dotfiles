@@ -32,8 +32,14 @@ rightclick() {
     esac
 }
 
+leftclick() {
+    notify-send -t 2000 -a System "Macro" "Leftclick: Hold"
+    xdotool mousedown --window $(xdotool getactivewindow) 1
+}
+
 case "$1" in
     -k) killxdotool ;;
     -m) mobgrinder ;;
+    -l) leftclick ;;
     -r) rightclick "$@" ;;
 esac
