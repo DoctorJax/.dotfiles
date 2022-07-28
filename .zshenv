@@ -17,6 +17,7 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
 export GOPATH="$XDG_DATA_HOME"/go
+export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
 
 # QT theming
 export QT_QPA_PLATFORMTHEME="qt5ct"
