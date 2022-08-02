@@ -56,8 +56,8 @@ alias h='helix'
 alias v='nvim'
 alias n='nnn'
 alias q='exit'
-alias d='devour'
 alias m='maim -u -s $(date +%m-%d-%Y_%T).png'
+alias c='clifm'
 
 alias ytogg='yt-dlp -x --audio-format vorbis'
 
