@@ -11,7 +11,7 @@ down() {
 }
 
 player() {
-    alacritty -e ncmpcpp
+    kitty -e ncmpcpp
 }
 
 loadstreambeats() {

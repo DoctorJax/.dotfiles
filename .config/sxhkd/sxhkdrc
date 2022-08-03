@@ -8,7 +8,7 @@ super + Escape
 
 # terminal emulator
 ctrl + grave
-	alacritty
+	kitty
 
 # program launcher
 super + e
