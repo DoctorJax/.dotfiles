@@ -4,6 +4,7 @@
     "modules-left": ["mpd"],
     "modules-center": ["wlr/workspaces","custom/workscroll"],
     "modules-right": ["pulseaudio", "cpu", "memory", "clock", "tray"],
+    "layer": "top",
     // Modules configuration
     "wlr/workspaces": {
         "format": "{name}",
