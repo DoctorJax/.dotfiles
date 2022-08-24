@@ -26,7 +26,8 @@ reloadfavorites() {
     cd ~/Music
     mpc clear
     mpc rm favorites
-    mpc add $(ls)
+    mpc update
+    mpc add $(\ls)
     mpc save favorites
     mpc shuffle
     mpc play
