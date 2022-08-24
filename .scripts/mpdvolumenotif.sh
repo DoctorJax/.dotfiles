@@ -26,11 +26,12 @@ reloadfavorites() {
     cd ~/Music
     mpc clear
     mpc rm favorites
-    mpc add $(ls | grep -wv StreamBeats | tr '\n' ' ')
+    mpc add $(ls)
     mpc save favorites
     mpc shuffle
     mpc play
     cd ~
+    notify-send -t 2000 -a System "MPD" "Playlist: Favorites"
 }
 
 case "$1" in
