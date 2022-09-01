@@ -25,6 +25,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 bindkey -v
 bindkey "^?" backward-delete-char
 
+# Fix ctrl+left/right deleting characters
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
 # Bash Insulter
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
