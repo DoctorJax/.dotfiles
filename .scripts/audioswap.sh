@@ -17,29 +17,8 @@ togglesink() {
     pactl get-default-sink | grep $headphones_sink && earbuds || headphones
 }
 
-
-
-recordingsink() {
-    pactl load-module module-null-sink sink_name=virtualsink
-    pactl load-module module-loopback source=virtualsink.monitor sink="$(pactl get-default-sink)" latency_msec=1
-    notify-send -t 2000 -a System "Audio Swap" "Virtual Sink: Enabled"
-}
-
-norecordingsink() {
-    pactl unload-module module-null-sink
-    pactl unload-module module-loopback
-    notify-send -t 2000 -a System "Audio Swap" "Virtual Sink: Disabled"
-}
-
-togglerecordingsink() {
-    pactl list sinks short | grep virtualsink && norecordingsink || recordingsink
-}
-
 case "$1" in
     -h) headphones;;
     -e) earbuds;;
     -t) togglesink;;
-    -r) recordingsink;;
-    -n) norecordingsink;;
-    -s) togglerecordingsink;;
 esac
