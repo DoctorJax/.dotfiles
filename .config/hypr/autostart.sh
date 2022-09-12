@@ -18,7 +18,6 @@ pgrep -x streamdeck.sh > /dev/null || /home/jackson/.local/bin/streamdeck.sh &
 
 pgrep -x mailspring > /dev/null || mailspring &
 pgrep -x signal-desktop > /dev/null || signal-desktop --use-tray-icon &
-replugged --enable-features=UseOzonePlatform --ozone-platform=wayland &
-
+discord-canary --disable-gpu &
 # Polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval "$(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)" &
