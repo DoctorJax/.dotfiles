@@ -19,6 +19,12 @@ timestamp(){
         echo "$pickLocation" > /tmp/.screenshot.sh.tmp
     fi
 
+    if [[ -n "$2" ]]
+    then
+        pickLocation="$2"
+        echo "$pickLocation" > /tmp/.screenshot.sh.tmp
+    fi
+
     case "$XDG_SESSION_TYPE" in
         x11) maim -u -s "$pickLocation"/"$(date +%m-%d-%Y_%T).png" ;;
         wayland) grim -g "$(slurp)" "$pickLocation"/"$(date +%m-%d-%Y_%T).png" ;;
@@ -29,6 +35,6 @@ timestamp(){
 }
 
 case "$1" in
-    -t) timestamp ;;
+    -t) timestamp "$@";;
     *) copyscreenshot ;;
 esac
