@@ -13,15 +13,15 @@ copyscreenshot(){
 timestamp(){
     pickLocation=$(cat /tmp/.screenshot.sh.tmp)
 
-    if [[ -z "$pickLocation" ]]
-    then
-        pickLocation=$(zenity --file-selection --directory)
-        echo "$pickLocation" > /tmp/.screenshot.sh.tmp
-    fi
-
     if [[ -n "$2" ]]
     then
         pickLocation="$2"
+        echo "$pickLocation" > /tmp/.screenshot.sh.tmp
+    fi
+
+    if [[ -z "$pickLocation" ]]
+    then
+        pickLocation=$(zenity --file-selection --directory)
         echo "$pickLocation" > /tmp/.screenshot.sh.tmp
     fi
 
