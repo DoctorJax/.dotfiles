@@ -3,6 +3,7 @@
 	border-radius: 10px;
     font-family: "JetbrainsMono Nerd Font";
 	font-size: 14px;
+	font-weight: bold;
 	min-height: 10px;
 }
 
@@ -23,22 +24,22 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-    background-color: #161320;
+    color: #1a1b26;
+	background-color: #7aa2f7;
 }
 
 #workspaces button {
-	color: #b5e8e0;
+	color: #7aa2f7;
 	margin: 0px;
-	padding: 0px;
+	padding: 0px 2px;
 }
 
 #workspaces {
-	background: #282a36;
 	margin: 2px;
 }
 
 #custom-workscroll {
-	color: #b5e8e0;
+	color: #7dcfff;
 	padding-left: 4px;
 	padding-right: 8px;
 }
@@ -47,7 +48,7 @@ window#waybar.hidden {
 	margin-top: 2px;
 	margin-bottom: 0px;
 	border-radius: 10px;
-	background-color: #1e1a2c;
+	background-color: #1a1b26;
 }
 
 .modules-right {
@@ -58,7 +59,23 @@ window#waybar.hidden {
     margin-right: 2px;
 	transition: none;
 	color: #b5e8e0;
-	background-color: #161320;
+	background-color: #1a1b26;
+}
+
+#pulseaudio {
+	color: #2ac3de;
+}
+
+#cpu {
+	color: #7dcfff;
+}
+
+#memory {
+	color: #7aa2f7;
+}
+
+#clock {
+	color: #bb9af7;
 }
 
 #pulseaudio,
@@ -76,13 +93,6 @@ window#waybar.hidden {
 	margin: 2px;
 }
 
-#pulseaudio,
-#clock,
-#memory,
-#cpu {
-	background-color: #282a36;
-}
-
 #mpd {
 	margin-top: 2px;
 	margin-left: 2px;
@@ -91,8 +101,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #B5E8E0;
-	background: #161320;
+	color: #b4f9f8;
+	background: #1a1b26;
 }
 
 /* Laptop only */
@@ -104,18 +114,18 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
+	color: #1a1b26;
 	background: #B5E8E0;
 }
 
 #battery.charging, #battery.plugged {
-	color: #161320;
+	color: #1a1b26;
     background-color: #B5E8E0;
 }
 
 #battery.critical:not(.charging) {
     background-color: #B5E8E0;
-    color: #161320;
+    color: #1a1b26;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -138,6 +148,6 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
+	color: #1a1b26;
 	background: #F8BD96;
 }
