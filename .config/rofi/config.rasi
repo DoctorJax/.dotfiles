@@ -1,6 +1,6 @@
 configuration {
  modi: "drun,run";
  show-icons: true;
- terminal: "alacritty";
+ terminal: "kitty";
 }
 @theme "dt-center.rasi"
