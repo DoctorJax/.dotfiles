@@ -3,4 +3,4 @@ configuration {
  show-icons: true;
  terminal: "kitty";
 }
-@theme "dt-center.rasi"
+@theme "tokyonight.rasi"
