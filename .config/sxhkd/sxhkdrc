@@ -20,7 +20,7 @@ super + shift + {b,f,e,s}
 
 # separate brave profiles
 super + ctrl + {b,s}
-    {brave --profile-directory=Default, brave --profile-directory="Profile 1"}
+    {firefox, brave --profile-directory="Profile 1"}
 
 # emacs
 super + alt + e
