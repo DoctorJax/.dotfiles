@@ -15,7 +15,6 @@ pgrep -x mpd-mpris > /dev/null || mpd-mpris &
 
 # Run Once
 pgrep -x streamdeck.sh > /dev/null || /home/jackson/.local/bin/streamdeck.sh &
-pgrep -f "python3 /usr/bin/headset-charge-indicator" > /dev/null || headset-charge-indicator &
 
 pgrep -x mailspring > /dev/null || mailspring &
 pgrep -x signal-desktop > /dev/null || signal-desktop --use-tray-icon &
