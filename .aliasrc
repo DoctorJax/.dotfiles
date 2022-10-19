@@ -30,6 +30,7 @@ ex ()
 
 # cd and ls combined for easy of use
 cd() { builtin cd "$@" && exa --icons --group-directories-first -alh; }
+mock() { builtin echo "$@" | sed 's/\(.\)\(.\)\?/\u\1\2/g'; }
 
 # Aliases
 alias ..='cd ..'
