@@ -44,6 +44,8 @@ alias l='ls -lFh'
 alias grep='grep --color'
 alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget_history"
 
+alias ssh='kitty +kitten ssh'
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
