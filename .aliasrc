@@ -28,11 +28,15 @@ ex ()
   fi
 }
 
-# cd and ls combined for easy of use
+# functions
 cd() { builtin cd "$@" && exa --icons --group-directories-first -alh; }
 mock() { builtin echo "$@" | sed 's/\(.\)\(.\)\?/\u\1\2/g'; }
 
-# Aliases
+# kitty specific
+alias ssh='kitty +kitten ssh'
+alias icat='kitty +kitten icat'
+
+# aliases
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -43,8 +47,6 @@ alias l='ls -lFh'
 
 alias grep='grep --color'
 alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget_history"
-
-alias ssh='kitty +kitten ssh'
 
 alias rm='rm -i'
 alias cp='cp -i'
