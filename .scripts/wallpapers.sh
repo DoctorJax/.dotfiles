@@ -1,7 +1,7 @@
 #!/bin/bash
 
 random() {
-    randomwall="$(find ~/wallpapers -name '*.[jp][pn]g' -type f | shuf -n 1)"
+    randomwall="$(find ~/Wallpapers -name '*.[jp][pn]g' -type f | shuf -n 1)"
     feh --bg-fill -z "$randomwall"
     pkill swaybg
     swaybg --image "$randomwall" -m fill &
