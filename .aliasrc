@@ -1,7 +1,7 @@
 # Setting the editor, pfetch source, and path
 export EDITOR="emacsclient -t -a=\"\""
 export PF_SOURCE="$HOME/.config/pfetch/pfetchrc"
-export PATH="$PATH:$HOME/.scripts:$HOME/.local/bin:$HOME/.local/share/cargo/bin"
+export PATH="$PATH:$HOME/.scripts:$HOME/.local/bin:$HOME/.local/share/cargo/bin:$HOME/.local/share/go/bin"
 
 # # ex - archive extractor
 # # usage: ex <file>
