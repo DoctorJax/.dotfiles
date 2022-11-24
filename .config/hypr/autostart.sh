@@ -1,5 +1,5 @@
 # Fancy Stuff
-pgrep -x waybar > /dev/null || waybar &
+/home/jackson/.config/eww/launch_bar &
 /home/jackson/.scripts/wallpapers.sh -i &
 dunst &
 
