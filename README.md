@@ -8,3 +8,4 @@ DistroTube | awesome, picom, alacritty, fish, xmonad | https://gitlab.com/dwt1/d
 DistroTube | I'm using his wallpapers too, but don't feel like dealing with copyright so you just get a link | https://gitlab.com/dwt1/wallpapers
 TheTrashPenguin | where my qtile configs came from | https://github.com/TheTrashPenguin/Dotfiles
 manilarome | when I originally started with awesomeWM this is where I got a lot of stuff | https://github.com/manilarome/the-glorious-dotfiles
+taylor85345 (BeardedWarrior) | stole his eww config and configured it to my liking | https://github.com/taylor85345/hyprland-dotfiles
