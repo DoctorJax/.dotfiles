@@ -1,4 +1,4 @@
-;; Variables
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Variables
 
 (include "sidebar.yuck")
 (include "notifications.yuck")
@@ -24,8 +24,7 @@
 (defvar wifi_rev false)
 (defvar time_rev false)
 
-
-;; widgets
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; widgets
 
 (defwidget launcher []
   (box 
@@ -243,8 +242,8 @@
     :visible "true"
     :width "150"))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define bar config
 
-;;define widget groups
 (defwidget left []
 	(box 
 	  :orientation "h" 
@@ -254,6 +253,7 @@
     (launcher)
     (sep)
     (music)))
+
 (defwidget center []
 	(box 
      :orientation "h" 
@@ -261,6 +261,7 @@
      :halign "center"
 		 :class "center_modules"
     (workspaces)))
+
 (defwidget right []
 	(box
 	  :orientation "h" 
@@ -284,6 +285,7 @@
     (center)
     (right)
     ))
+
 (defwindow bar0
     :monitor 0
     :exclusive false
@@ -297,6 +299,7 @@
     :windowtype "dock"
     :exclusive true
     (bar_layout))
+
 (defwindow bar1
     :monitor 1
     :exclusive false
@@ -310,20 +313,8 @@
     :windowtype "dock"
     :exclusive true
     (bar_layout))
-(defwindow bar2
-    :monitor 2
-    :exclusive false
-    :geometry (geometry 
-        :x "15px"
-        :y "0px"
-        :width "100%"
-        :height "20px"
-        :anchor "top center")
-    :stacking "fg"
-    :windowtype "dock"
-    (bar_layout))
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define widget groups
 
 (defwidget audio []
 	(box 
@@ -409,8 +400,8 @@
 		:height "60px")
     (audio))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define System widget
 
-;;Define System widget  
 (defwidget system []
   (box 
     :class "sys_win"
@@ -497,6 +488,7 @@
                 :limit-width 22
                 :wrap false)
             ))))
+
 (defwindow system
     :stacking "fg"
     :focusable "false"
@@ -511,9 +503,8 @@
 			:height "120px")
     (system))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Calendar Widget
 
-
-;;Calendar Widget
 (defwidget cal []
 	(box 
 	    :class "cal"
@@ -523,6 +514,7 @@
 	        (calendar
 			      :day calendar_day 
 			      :year calendar_year))))
+
 (defwindow calendar
     :stacking "fg"
     :focusable "false"
