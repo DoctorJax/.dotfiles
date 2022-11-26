@@ -1,6 +1,5 @@
 # Fancy Stuff
 /home/jackson/.config/eww/launch_bar &
-sleep 1 && /home/jackson/.scripts/systray.sh -s &
 /home/jackson/.scripts/wallpapers.sh -i &
 dunst &
 
