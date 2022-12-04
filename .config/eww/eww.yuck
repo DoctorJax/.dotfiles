@@ -13,7 +13,8 @@
 (defpoll COL_WLAN :interval "1m" "scripts/wifi --COL")
 (defpoll ESSID_WLAN :interval "1m" "scripts/wifi --ESSID")
 (defpoll WLAN_ICON :interval "1m" "scripts/wifi --ICON")
-(deflisten workspace "scripts/workspace")
+(deflisten workspace0 "scripts/workspace0")
+(deflisten workspace1 "scripts/workspace1")
 (deflisten appname "scripts/appname")
 (defpoll music :interval "2s" "mpc -f '%artist% - %title%' | head -n1 | grep '-'")
 
@@ -38,9 +39,13 @@
           :image-width 16))
    ))
 
-(defwidget workspaces []
+(defwidget workspaces0 []
   (literal 
-    :content workspace))
+    :content workspace0))
+
+(defwidget workspaces1 []
+  (literal
+    :content workspace1))
 
 (defwidget appnames []
   (eventbox
@@ -277,12 +282,21 @@
     (notif_button)
 ))
 
-(defwidget bar_layout []
+(defwidget bar_layout0 []
   (centerbox 
     :class "bar_class"
     :orientation "h"
     (left)
-    (center)
+    (workspaces0)
+    (right)
+    ))
+
+(defwidget bar_layout1 []
+  (centerbox
+    :class "bar_class"
+    :orientation "h"
+    (left)
+    (workspaces1)
     (right)
     ))
 
@@ -298,7 +312,7 @@
     :stacking "fg"
     :windowtype "dock"
     :exclusive true
-    (bar_layout))
+    (bar_layout0))
 
 (defwindow bar1
     :monitor 1
@@ -312,7 +326,7 @@
     :stacking "fg"
     :windowtype "dock"
     :exclusive true
-    (bar_layout))
+    (bar_layout1))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define widget groups
 
