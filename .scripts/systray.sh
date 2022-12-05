@@ -1,18 +1,16 @@
 #!/bin/bash
 
-gtktraybin="$HOME/GitRepos/stray/target/debug/gtk-tray"
-
 starttray() {
     killtray
-    ${gtktraybin}
+    waybar
 }
 
 killtray() {
-    killall gtk-tray
+    killall waybar
 }
 
 toggle() {
-    if [[ ! $(pidof gtk-tray) ]]; then
+    if [[ ! $(pidof waybar) ]]; then
         starttray
     else
         killtray

@@ -1,10 +1,11 @@
 {
     "spacing": 2, // Gaps between modules
     // Choose the order of the modules
-    "modules-left": ["mpd"],
-    "modules-center": ["wlr/workspaces","custom/workscroll"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "clock", "tray"],
+    "modules-left": ["tray"],
     "layer": "top",
+    "position": "left",
+    "exclusive": "false",
+    "width": 2,
     // Modules configuration
     "wlr/workspaces": {
         "format": "{name}",
