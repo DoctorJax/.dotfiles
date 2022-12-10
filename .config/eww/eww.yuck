@@ -122,7 +122,7 @@
 			        :tooltip "${volume_percent}%"
 			        :max 100
 			        :min 0
-			        :onchange "amixer -D pulse sset Master {}%" ))
+			        :onchange "amixer -D pulse sset Master {}% && notify-send -t 1000 {}%"))
 	        (button
 	            :onclick "scripts/pop audio_ctl"
 	            :class "volume_icon"
