@@ -4,6 +4,9 @@
 EWW="eww"
 focusmon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')
 
+# Kill eww so that it reloads certain things
+killall eww
+
 ## Run eww daemon if not running already
 if [[ ! $(pidof eww) ]]; then
 	${EWW} daemon
