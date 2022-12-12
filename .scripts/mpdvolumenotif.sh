@@ -55,7 +55,7 @@ selectplaylist() {
     mpc add $selectedartists
     mpc play
     cd ~
-    notify-send -t 2000 -a System "MPD" "Playlist: Specifically Selected"
+    notify-send -t 2000 -a System "MPD" "Specifically Selected: $selectedartists"
 }
 
 case "$1" in
