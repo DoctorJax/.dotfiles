@@ -37,7 +37,7 @@ reloadfavorites() {
 
 selectplaylist() {
     musicdir="$HOME/Music"
-    fzfmenu=($(ls $musicdir | fzf --prompt="Which Artists Would You Like : " --border=rounded --margin=5% --color=dark --height 100% --reverse --header="                    MUSIC " --info=hidden --header-first))
+    fzfmenu=($(\ls -a $musicdir | fzf --prompt="Which Artists Would You Like : " --border=rounded --margin=5% --color=dark --height 100% --reverse --header="                    MUSIC " --info=hidden --header-first))
     if [ -z "$fzfmenu" ]; then
         exit 1
     fi
@@ -48,7 +48,7 @@ selectplaylist() {
             x=$(( $x + 1 ))
         fi
         selectedartists="$selectedartists $fzfmenu"
-        fzfmenu=($(ls $musicdir | fzf --prompt="Which Artists Would You Like : " --border=rounded --margin=5% --color=dark --height 100% --reverse --header="                    MUSIC " --info=hidden --header-first))
+        fzfmenu=($(\ls -a $musicdir | fzf --prompt="Which Artists Would You Like : " --border=rounded --margin=5% --color=dark --height 100% --reverse --header="                    MUSIC " --info=hidden --header-first))
     done
     mpc clear
     mpc update
