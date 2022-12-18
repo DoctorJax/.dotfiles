@@ -102,9 +102,9 @@
 			    :class "iconweather" 
 			    :halign "center" 
 			    :valign "center" 
-			    :style "color: ${HEX};" :text ICON)
+			    :text ICON)
 			(button 
-			    :onclick "scripts/weather --getdata && eww reload &" 
+			    :onclick "eww reload &"
 			    :class "label_temp" 
 			    :valign "center" 
 			    :halign "center" 
@@ -127,7 +127,6 @@
 ;; Weather vars
 (defpoll ICON :interval "15m" `scripts/weather --icon`)
 (defpoll TEMP :interval "15m" `scripts/weather --temp`)
-(defpoll HEX :interval "15m" `scripts/weather --hex`)
 
 ;; <-- System -->
 (defwidget system-side [] 

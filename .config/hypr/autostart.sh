@@ -5,6 +5,7 @@ dunst &
 
 # Useful Stuff
 /usr/bin/emacs --daemon &
+headsetcontrol -l 0 &
 
 # Steam was being a pain
 xrandr --output XWAYLAND0 --primary &

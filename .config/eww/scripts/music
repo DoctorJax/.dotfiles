@@ -27,9 +27,9 @@ Control="MPD"
 # saves covers here
 Cover=/tmp/cover.png
 # if cover not found in metadata use this instead
-bkpCover=~/.config/eww/music.png
+bkpCover=~/.config/eww/images/music.png
 # mpd music directory
-mpddir="$HOME/Music/iTunes Media"
+mpddir="$HOME/Music"
 
 # ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐┌─┐┌┬┐┬    ┌─┐┌─┐┬─┐┬┌─┐┌┬┐┌─┐
 # ├─┘│  ├─┤└┬┘├┤ ├┬┘│   │ │    └─┐│  ├┬┘│├─┘ │ └─┐
