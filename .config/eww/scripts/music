@@ -163,6 +163,14 @@ icon=""
 echo "$icon"
 }
 
+mpciconbar() {
+status=$(mpc status | head -2 | tail -1 | cut -c2-7 )
+icon=""
+[ "$status" = "playin" ] && icon="ﱘ "
+[ "$status" = "paused" ] && icon="ﱙ "
+echo "$icon"
+}
+
 ########################## Status ##########################
 mpcstatus() {
 stat=$(mpc status | head -2 | tail -1 | cut -c2-7 )
@@ -239,6 +247,7 @@ case $Control in
 		album)		mpcalbum		;;
 		status)		mpcstatus		;;
 		statusicon)	mpcicon			;;
+		baricon)	mpciconbar		;;
 		player)		echo "$Control"		;;
 		coverloc)	mpccover		;;
 		showcover)	mpccover | xargs feh	;;
@@ -260,6 +269,7 @@ case $Control in
 		album)		album					;;
 		status)		status					;;
 		statusicon)	statusicon				;;
+		baricon)	baricon					;;
 		player)		echo "$Control"				;;
 		coverloc)	cover					;;
 		showcover)	cover | xargs feh 			;;

@@ -133,16 +133,13 @@
        :orientation "h"
        :space-evenly false
        :tooltip "${music}"
-       (button
-       :onclick "mpc toggle"
-           (image
-           :class "musicicon"
-           :path "images/music.png"
-           :image-width 16))
+       (button :class "musicicon" :onclick "mpc toggle" barplaypause)
            (label
            :limit-width 50
            :show_truncated true
            :text music)))
+
+(defpoll barplaypause :interval "1s" "scripts/music baricon")
 
 (defwidget wifi [] 
   (eventbox 
