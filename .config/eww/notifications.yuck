@@ -10,7 +10,8 @@
 
 (defwidget notif-panel [] 
 	(eventbox 
-	    :halign "start" 
+	    :halign "start"
+        :onhover "${EWW_CMD} update rightside=true"
 	    :onhoverlost "${EWW_CMD} update rightside=false"
 		(revealer 
 		    :transition "slideleft"
