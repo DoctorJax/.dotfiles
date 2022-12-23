@@ -28,7 +28,6 @@
             :space-evenly "false" 
             :spacing "30"
             :halign "start"
-            (fetch)
             (top)
             (music-side)
             (system-side)
@@ -36,8 +35,8 @@
 )
 
 (defwidget top [] 
-    (box 
-        :orientation "h" 
+    (box
+        :orientation "h"
         :space-evenly "false" 
         :spacing "30" 
         :halign "center"
@@ -49,7 +48,7 @@
 (defwidget music-side [] 
 	 (box 	
 	    :class "music-player"
-		:orientation "h" 
+		:orientation "v"
 		:space-evenly "false"
 		:spacing 15   
 		:halign "center"
@@ -60,18 +59,18 @@
 	        :class "album_art" 
 		 	:style "background-image: url('${art}');")
 	    (box 	
-	        :orientation "v" 
+	        :orientation "v"
 		 	:space-evenly "false"
 		 	:valign "center"
 			:halign "center"
 		 	:spacing 10 
  	        (label  
  	            :class "song"
-		 	    :limit-width 15
+		 	    :limit-width 25
 		 	    :text title)
 	        (label  
 	            :class "artist"
-		 	    :limit-width 15
+		 	    :limit-width 25
 		 	    :text artist) 
 	        (box
 	            :orientation "h"  

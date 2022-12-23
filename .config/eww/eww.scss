@@ -416,7 +416,7 @@ color: $black;
 .music-player {
 	all: unset;
     background-color: $widget-background;
-	padding: 0px 25px 0px 17px;
+	padding: 0px 6px 0px 6px;
 	border-radius: 12px;
     box-shadow: 0px 0px 6px 6px $shadow;}
 
@@ -424,29 +424,31 @@ color: $black;
 	background-size: cover;
 	background-position: center;
 	border-radius: 12px;
-	margin: 2rem 1rem 1.5rem 1rem;
-	padding: 4rem;}
+	margin: 2rem 2rem 2rem 2rem;
+	padding: 9rem;
+}
 
 .song {
-font-family: JetBrainsMono Nerd Font Mono;
+    font-family: JetBrainsMono Nerd Font Mono;
 	font-weight: bold;
 	color: $white;
-	font-size : 1.2em;
+	font-size: 1.2em;
+    margin-top: -20px;
 }
 .artist {
 	font-family: JetBrainsMono Nerd Font;
 	font-style: italic;
 	font-size: 1.1em;
 	color: $blue;
-	margin-top: -5px;
 }
 .btn_prev, .btn_play, .btn_next {
   font-family: JetBrainsMono Nerd Font Mono;
   color: $purple;
   font-size: 25px;
+  margin-bottom: 20px;
 }
 
-.metric-player  scale trough highlight {
+.music-player  scale trough highlight {
 	all: unset;
 	border-radius: 10px;
 	background-color: $blue;
@@ -455,9 +457,10 @@ font-family: JetBrainsMono Nerd Font Mono;
 // weather
 .weather {
     all: unset;
+    margin-top: 35px;
     background-color: $widget-background;
     border-radius: 12px;
-    padding: 23px 37px 20px 37px;
+    padding: 23px 37px 27px 37px;
     box-shadow: 0px 0px 6px 6px rgb(0, 0, 0, .4);}
 
 .iconweather {
@@ -490,6 +493,7 @@ font-family: JetBrainsMono Nerd Font Mono;
 
 .date {
     all: unset;
+    margin-top: 35px;
     background-color: $widget-background;
     padding: 33px 27px 27px 27px;
     border-radius: 12px;
