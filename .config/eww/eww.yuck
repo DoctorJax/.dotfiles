@@ -283,6 +283,7 @@
   (centerbox 
     :class "bar_class"
     :orientation "h"
+    :spacing "30"
     (left)
     (workspaces0)
     (right)
@@ -299,31 +300,46 @@
 
 (defwindow bar0
     :monitor 0
-    :exclusive false
-    :geometry (geometry 
-        :x "15px"
+    :geometry (geometry
+        :x "0px"
         :y "0px"
         :width "90%"
-        :height "20px"
+        :height "0px"
         :anchor "top center")
     :stacking "fg"
-    :windowtype "dock"
-    :exclusive true
-    (bar_layout0))
+    (bar0))
 
 (defwindow bar1
     :monitor 1
-    :exclusive false
-    :geometry (geometry 
-        :x "15px"
+    :geometry (geometry
+        :x "0px"
         :y "0px"
         :width "90%"
-        :height "20px"
+        :height "0px"
         :anchor "top center")
     :stacking "fg"
-    :windowtype "dock"
-    :exclusive true
-    (bar_layout1))
+    (bar1))
+
+(defwidget bar0 []
+    (eventbox
+        :onhover "${EWW_CMD} update bar=true"
+        :onhoverlost "${EWW_CMD} update bar=false"
+        (revealer
+            :transition "slidedown"
+            :reveal bar
+            :duration "150ms"
+        (bar_layout0))))
+(defvar bar false)
+
+(defwidget bar1 []
+    (eventbox
+        :onhover "${EWW_CMD} update bar=true"
+        :onhoverlost "${EWW_CMD} update bar=false"
+        (revealer
+            :transition "slidedown"
+            :reveal bar
+            :duration "150ms"
+        (bar_layout1))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define widget groups
 

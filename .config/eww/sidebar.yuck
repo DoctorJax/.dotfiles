@@ -16,7 +16,7 @@
 		(revealer 
 		    :transition "slideright"
 		    :reveal side 
-		    :duration "550ms"
+		    :duration "150ms"
 		(side))))
 (defvar side false)
 
