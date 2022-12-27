@@ -276,7 +276,6 @@
     (mem)
     (sep)
     (clock_module)
-    (notif_button)
 ))
 
 (defwidget bar_layout0 []
