@@ -32,7 +32,7 @@
     :class "launcher_module"
     :orientation "h"
     (button
-	    :onclick "${EWW_CMD} update side=true"
+	    :onclick "if ${EWW_CMD} state | grep '^side: false' ; then ${EWW_CMD} update side=true ; else ${EWW_CMD} update side=false ; fi"
         (image 
           :class "launcher-icon"
           :path "favicon.ico"
@@ -49,7 +49,7 @@
 
 (defwidget appnames []
   (eventbox
-    :onhover "${EWW_CMD} update control_reveal=true"
+      :onhover "${EWW_CMD} update control_reveal=true"
 	  :onhoverlost "${EWW_CMD} update control_reveal=false"
     (box
 	    :orientation "h"
@@ -276,6 +276,7 @@
     (mem)
     (sep)
     (clock_module)
+    (notif_button)
 ))
 
 (defwidget bar_layout0 []
