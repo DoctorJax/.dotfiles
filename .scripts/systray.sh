@@ -3,10 +3,14 @@
 starttray() {
     killtray
     waybar
+    eww update bar0=false
+    eww update bar1=false
 }
 
 killtray() {
     killall waybar
+    eww update bar0=true
+    eww update bar1=true
 }
 
 toggle() {
