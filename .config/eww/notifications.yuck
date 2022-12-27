@@ -1,8 +1,8 @@
 (defwindow notifications
     :geometry (geometry :x "0px"
                         :y "0px"
-                        :width "1px"
-                        :height "93%"
+                        :width "0px"
+                        :height "100%"
                         :anchor "bottom right")
     :stacking "fg"
     :monitor "0"
@@ -54,7 +54,7 @@
         (scroll
             :vscroll "true"
             :hscroll "false"
-            :height 840
+            :height 940
             :width 200
             (literal
                 :content notifications)

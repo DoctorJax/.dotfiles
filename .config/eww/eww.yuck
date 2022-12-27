@@ -322,24 +322,25 @@
 
 (defwidget bar0 []
     (eventbox
-        :onhover "${EWW_CMD} update bar=true"
-        :onhoverlost "${EWW_CMD} update bar=false"
+        :onhover "${EWW_CMD} update bar0=true"
+        :onhoverlost "${EWW_CMD} update bar0=false"
         (revealer
             :transition "slidedown"
-            :reveal bar
+            :reveal bar0
             :duration "150ms"
         (bar_layout0))))
-(defvar bar false)
+(defvar bar0 false)
 
 (defwidget bar1 []
     (eventbox
-        :onhover "${EWW_CMD} update bar=true"
-        :onhoverlost "${EWW_CMD} update bar=false"
+        :onhover "${EWW_CMD} update bar1=true"
+        :onhoverlost "${EWW_CMD} update bar1=false"
         (revealer
             :transition "slidedown"
-            :reveal bar
+            :reveal bar1
             :duration "150ms"
         (bar_layout1))))
+(defvar bar1 false)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define widget groups
 
