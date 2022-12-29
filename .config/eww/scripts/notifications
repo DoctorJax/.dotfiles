@@ -12,18 +12,13 @@ printf "\n (box \
     :halign \"start\" "
 
 for id in "${ids[@]}"; do
-    mapfile -t notif < <(jq -r ".data[] | .[] | select(.id.data == $id) | .appname.data, .icon_path.data, .summary.data, .body.data" "$tmp" | sed -r '/^\s*$/d' | sed -e 's/\%/ percent/g')
+    mapfile -t notif < <(jq -r ".data[] | .[] | select(.id.data == $id) | .appname.data, .summary.data, .body.data" "$tmp" | sed -r '/^\s*$/d' | sed -e 's/\%/ percent/g')
     printf "(eventbox :onclick \"dunstctl history-pop $id && dunstctl action 0 && dunstctl close\" \
     (box	\
     :class \"notification\"	\
     :orientation \"h\" \
     :width 300 \
     :space-evenly \"false\" \
-    (image \
-        :class \"notification-icon\" \
-        :path \"${notif[1]}\" \
-        :image-height 50 \
-        :image-width 100) \
     (box \
         :orientation \"v\" \
         :space-evenly \"false\" \
@@ -39,12 +34,12 @@ for id in "${ids[@]}"; do
             :xalign 0 \
             :wrap "true" \
             :class \"notification-summary\" \
-            :text \"${notif[2]}\") \
+            :text \"${notif[1]}\") \
         (label \
             :xalign 0 \
             :wrap "true" \
             :class \"notification-body\" \
-            :text \"${notif[3]}\"))))"
+            :text \"${notif[2]}\"))))"
 done
 printf ") \n"
 }
