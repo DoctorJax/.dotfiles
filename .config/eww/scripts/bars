@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+nowindow=($(hyprctl workspaces -j | jq -r '.[] | select(.windows == 0) | .id'))
+yeswindow=($(hyprctl workspaces -j | jq -r '.[] | select(.windows != 0) | .id'))
+
+for ids in "${nowindow[@]}"; do
+    monitornowin=($(hyprctl monitors -j | jq -r ".[] | select(.activeWorkspace.id == $ids) | .id"))
+    bar="bar${monitornowin[*]}"
+    eww update "$bar"=true
+done
+
+for ids in "${yeswindow[@]}"; do
+    monitornowin=($(hyprctl monitors -j | jq -r ".[] | select(.activeWorkspace.id == $ids) | .id"))
+    bar="bar${monitornowin[*]}"
+    notopen=$(eww state | grep 'baropen: false')
+    if [ "$notopen" ]; then
+        eww update "$bar"=false
+    fi
+done
