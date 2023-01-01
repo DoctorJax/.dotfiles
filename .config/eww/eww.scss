@@ -180,6 +180,7 @@ tooltip label {
   margin: 0px 10px 0px 10px;
   }
 
+/* Workspaces */
 .works {
     font-size: 15px;
     font-weight: normal;
@@ -189,24 +190,19 @@ tooltip label {
 
 .workspacebuttons {
     margin: 0px 7px 0px 0px;
-}
-
-/* Unoccupied */
-.0, .1 {
     color: $grey;
 }
 
 /* Occupied */
-.01, .02, .03, .04, .05, .06, .07, .08, .09,
-.111, .112, .113, .114, .115, .116, .117, .118, .119 {
+.occupied {
     color: $white;
 }
 
 /* Focused */
-.011, .022, .033, .044, .055, .066, .077, .088, .099,
-.11111, .11212, .11313, .11414, .11515, .11616, .11717, .11818, .11919 {
+.focused {
     color: $purple;
 }
+
 
 
 // Calendar
