@@ -20,7 +20,7 @@ $purple:    #C574DD;
 $teal:      #79E6F3;
 $white:     #FDFDFD;
 
-/** General **/
+///////////////////////////////////////////////////////////// General
 .bar_class {
     background-color: $background;
     border-bottom-left-radius: 10px;
@@ -57,7 +57,7 @@ tooltip label {
 }
 
 
-/** Widgets **/
+///////////////////////////////////////////////////////////// Widgets
 
 .clock_time_class, .clock_minute_class {
     font-size: 14;
@@ -180,17 +180,19 @@ tooltip label {
   margin: 0px 10px 0px 10px;
   }
 
-/* Workspaces */
+///////////////////////////////////////////////////////////// Workspaces
 .works {
     font-size: 15px;
     font-weight: normal;
     margin: 2px 0px 2px 0px;
     background-color: rgba(00, 00, 00, 0.0);
+    min-height: 32px;
 }
 
 .workspacebuttons {
-    margin: 0px 7px 0px 0px;
+    margin: 0px 0px 0px 0px;
     color: $grey;
+    background-size: 70%;
 }
 
 /* Occupied */
@@ -201,11 +203,192 @@ tooltip label {
 /* Focused */
 .focused {
     color: $purple;
+    background-size: 100%;
+}
+
+.ws-1 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/terminal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-2 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/firefox.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-3 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/document.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-4 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/files.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-5 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/youtube.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-6 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/steam.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-7 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/random.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-8 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/stats.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-9 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/circles.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-10 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/3bars.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-11 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/discord.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-12 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/calendar.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-13 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/document.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-14 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/files.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-15 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/youtube.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-16 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/terminal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-17 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/stats.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-18 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/circles.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-19 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/random.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ws-20 {
+  padding-left: 13px;
+  padding-right: 13px;
+  border-top: 2px solid;
+  background-image: url("images/workspaces/3bars.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
 
-// Calendar
+///////////////////////////////////////////////////////////// Calendar
 .cal {
     background-color: $background;
     font-family: mononoki Nerd Font;
@@ -450,14 +633,15 @@ color: $black;
 	background-color: $blue;
 }
 
-// weather
+///////////////////////////////////////////////////////////// weather
 .weather {
     all: unset;
     margin-top: 35px;
     background-color: $widget-background;
     border-radius: 12px;
     padding: 23px 37px 27px 37px;
-    box-shadow: 0px 0px 6px 6px rgb(0, 0, 0, .4);}
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, .4);
+}
 
 .iconweather {
     font-family: JetBrainsMono Nerd Font;
@@ -497,14 +681,16 @@ color: $black;
 	font-size : 18px;
 	font-style : italic;
 	font-family: Cartograph CF;
-    box-shadow: 0px 0px 6px 6px rgb(0, 0, 0, .4);}
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, .4);
+}
 
 .stats-box {
     all: unset;
     background-color: $widget-background;
     padding: 20px 25px 20px 25px;
     border-radius: 12px;
-    box-shadow: 0px 0px 6px 6px rgb(0, 0, 0, .4);}
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, .4);
+}
 
 .stats-icon {
     font-size: 23px;
@@ -540,7 +726,8 @@ scale trough {
     padding: 15px 0px 15px 0px;
     font-family: JetBrainsMono Nerd Font Mono;
     margin-bottom: 30px;
-    box-shadow: 0px 0px 6px 6px rgb(0, 0, 0, .4);}
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, .4);
+}
 
 .poweroff, .reboot, .firmware, .exit, .restart {
   margin: 0px 16px 0px 16px;
@@ -573,7 +760,8 @@ scale trough {
     border-radius: 12px;
     background-color: $widget-background;
     padding: 30px 55px 30px 55px;
-    box-shadow: 0px 0px 6px 6px rgb(0, 0, 0, .4);}
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, .4);
+}
 
 .wm {
   font-family: "JetBrainsMono Nerd Font";

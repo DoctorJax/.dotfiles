@@ -53,15 +53,15 @@ module() {
 #output eww widget
 echo 	"(eventbox :onscroll \"echo {} | sed -e 's/up/-1/g' -e 's/down/+1/g' | xargs hyprctl dispatch workspace\" \
           (box	:class \"works\"	:orientation \"h\" :spacing 5 :space-evenly \"false\" :valign \"center\"	\
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 1\'\" :onrightclick \"hyprctl dispatch workspace 1\" :class \"ws-1 $o1 $f1 workspacebuttons\" \"${ic[1]}\") \
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 2\'\" :onrightclick \"hyprctl dispatch workspace 2\" :class \"ws-2 $o2 $f2 workspacebuttons\" \"${ic[2]}\") \
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 3\'\" :onrightclick \"hyprctl dispatch workspace 3\" :class \"ws-3 $o3 $f3 workspacebuttons\" \"${ic[3]}\") \
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 4\'\" :onrightclick \"hyprctl dispatch workspace 4\" :class \"ws-4 $o4 $f4 workspacebuttons\" \"${ic[4]}\") \
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 5\'\" :onrightclick \"hyprctl dispatch workspace 5\" :class \"ws-5 $o5 $f5 workspacebuttons\" \"${ic[5]}\") \
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 6\'\" :onrightclick \"hyprctl dispatch workspace 6\" :class \"ws-6 $o6 $f6 workspacebuttons\" \"${ic[6]}\") \
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 7\'\" :onrightclick \"hyprctl dispatch workspace 7\" :class \"ws-7 $o7 $f7 workspacebuttons\" \"${ic[7]}\") \
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 8\'\" :onrightclick \"hyprctl dispatch workspace 8\" :class \"ws-8 $o8 $f8 workspacebuttons\" \"${ic[8]}\") \
-              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 9\'\" :onrightclick \"hyprctl dispatch workspace 9\" :class \"ws-9 $o9 $f9 workspacebuttons\" \"${ic[9]}\") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 1\'\" :onrightclick \"hyprctl dispatch workspace 1\" :class \"ws-1 $o1 $f1 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 2\'\" :onrightclick \"hyprctl dispatch workspace 2\" :class \"ws-2 $o2 $f2 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 3\'\" :onrightclick \"hyprctl dispatch workspace 3\" :class \"ws-3 $o3 $f3 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 4\'\" :onrightclick \"hyprctl dispatch workspace 4\" :class \"ws-4 $o4 $f4 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 5\'\" :onrightclick \"hyprctl dispatch workspace 5\" :class \"ws-5 $o5 $f5 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 6\'\" :onrightclick \"hyprctl dispatch workspace 6\" :class \"ws-6 $o6 $f6 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 7\'\" :onrightclick \"hyprctl dispatch workspace 7\" :class \"ws-7 $o7 $f7 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 8\'\" :onrightclick \"hyprctl dispatch workspace 8\" :class \"ws-8 $o8 $f8 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 9\'\" :onrightclick \"hyprctl dispatch workspace 9\" :class \"ws-9 $o9 $f9 workspacebuttons\" \" \") \
           )\
         )"
 }
