@@ -184,13 +184,13 @@ tooltip label {
 .works {
     font-size: 15px;
     font-weight: normal;
-    margin: 2px 0px 2px 0px;
+    margin: 0px 0px 0px 0px;
     background-color: rgba(00, 00, 00, 0.0);
     min-height: 32px;
 }
 
 .workspacebuttons {
-    margin: 0px 0px 0px 0px;
+    margin: 0px -4px 0px 0px;
     color: $grey;
     background-size: 70%;
 }
@@ -206,6 +206,7 @@ tooltip label {
     background-size: 100%;
 }
 
+/* Bar0 */
 .ws-1 {
   padding-left: 13px;
   padding-right: 13px;
@@ -285,17 +286,10 @@ tooltip label {
   background-image: url("images/workspaces/circles.png");
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 5px;
 }
 
-.ws-10 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/3bars.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
+/* Bar1 */
 .ws-11 {
   padding-left: 13px;
   padding-right: 13px;
@@ -372,18 +366,10 @@ tooltip label {
   padding-left: 13px;
   padding-right: 13px;
   border-top: 2px solid;
-  background-image: url("images/workspaces/random.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.ws-20 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
   background-image: url("images/workspaces/3bars.png");
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 5px;
 }
 
 
