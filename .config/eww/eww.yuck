@@ -3,8 +3,8 @@
 (include "sidebar.yuck")
 (include "notifications.yuck")
 
-(defpoll clock_time :interval "1s" "date '+%a %d %b %r'")
-(defpoll clock_date :interval "1h" "date '+%b %d, %Y'")
+(defpoll clock_time :interval "1s" "date '+%r'")
+(defpoll clock_date :interval "1h" "date '+%b %d'")
 (defpoll calendar_day :interval "2h" "date '+%d'")
 (defpoll calendar_year :interval "2h" "date '+%Y'")
 (defpoll volume_percent :interval "1s"  "scripts/sbvol --get")
@@ -104,30 +104,14 @@
             :tooltip "brightness"))))
 
 (defwidget volume []
-  (eventbox 
-    :onhover "${EWW_CMD} update vol_reveal=true"
-	:onhoverlost "${EWW_CMD} update vol_reveal=false"
-    (box
-        :class "module-2"
-        :space-evenly "false"
-        :orientation "h"
-        :spacing "3" 
-	        (revealer 
-	            :transition "slideright"
-			    :reveal vol_reveal
-			    :duration "350ms"
-	            (scale  
-	                :class "volbar"
-			        :value volume_percent
-			        :orientation "h"
-			        :tooltip "${volume_percent}%"
-			        :max 100
-			        :min 0
-			        :onchange "amixer -D pulse sset Master {}% && dunstify {}% -h int:value:{} -r 69 -t 1000"))
-	        (button
-	            :onclick "scripts/pop audio_ctl"
-	            :class "volume_icon"
-	            "墳"))))
+    (eventbox
+        :class "volume"
+        :onscroll "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%$(echo {} | sed -e 's/down/-/g' -e 's/up/+/g')"
+        :onclick "pavucontrol &"
+        (box
+            (label :class "volume_icon" :text "墳")
+            (label :class "volume_text" :text "${volume_percent}%")
+        )))
 
 (defwidget music []
   (box :class "music"
@@ -186,7 +170,7 @@
         (circular-progress
             :value {EWW_CPU.avg}
             :class "cpubar"
-            :thickness 5
+            :thickness 3
             (button
                 :onclick "scripts/pop system"
                 :class "iconcpu"
@@ -201,7 +185,7 @@
         (circular-progress 
             :value {EWW_RAM.used_mem_perc}
             :class "membar"
-            :thickness 5
+            :thickness 3
             (button 
                 :onclick "scripts/pop system"
                 :class "iconmem"
@@ -210,14 +194,14 @@
 
 (defwidget clock_module []
   (eventbox
+    :onclick "scripts/pop calendar"
       (box
           :class "module"
           :space-evenly "false"
           :orientation "h"
           :spacing "0" 
-          (button
-              :class "clock_time_class"
-              :onclick "scripts/pop calendar" clock_time))))
+          (label :class "clock_date_class" :text clock_date)
+          (label :class "clock_time_class" :text clock_time))))
   
 (defwidget notif_button []
   (box

@@ -1,9 +1,9 @@
 /** EWW.SCSS
 Created by saimoom **/
 *{
-	all: unset;
-	font-family: feather;
-	font-family: mononoki Nerd Font;
+    all: unset;
+    font-family: Product Sans;
+    font-size: 1.2rem;
 }
 
 $background: rgba(00, 00, 00, 0.7);
@@ -47,7 +47,6 @@ $white:     #FDFDFD;
 /** tooltip!! **/
 tooltip.background {
     background-color: $background;
-    font-size: 18;
     border-radius: 10px;
     color: $white;
 }
@@ -59,18 +58,12 @@ tooltip label {
 
 ///////////////////////////////////////////////////////////// Widgets
 
-.clock_time_class, .clock_minute_class {
-    font-size: 14;
-}
 .clock_date_class {
-    font-size: 14;
-    margin: 0px 20px 0px -1px;
-    color: $red;
+    color: #FF9E64;
 }
 .clock_time_class {
-    color: $white;
-    font-weight: bold;
-    margin: 0px 20px 0px 5px;
+    color: #9ECE6A;
+    margin: 0px 15px 0px 10px;
 }
 
 .notif_button {
@@ -80,12 +73,12 @@ tooltip label {
 }
 
 .cpubar {
-    color: $green;
+    color: #9778D0;
     background-color: $widget-background;
     border-radius: 10px;
 }
 .membar {
-    color: $orange;
+    color: #7AA2F7;
     background-color: $widget-background;
     border-radius: 10px;
 }
@@ -103,12 +96,13 @@ tooltip label {
     border-radius: 10px;
 }
 .volume_icon {
-    font-size: 18;
-    color: $blue;
-  margin: 0px 10px 0px 10px;
+    color: #0DB9D7;
+    margin: 0px 10px 0px 10px;
+}
+.volume_text {
+    color: #0DB9D7;
 }
 .musicicon {
-    font-size: 18;
     color: #9AB5C5;
     margin: 0px 8px 0px -15px;
     padding: 0px 10px 0px 10px;
@@ -117,12 +111,12 @@ tooltip label {
 .module_essid {
     font-size: 18;
     color: $blue;
-  margin: 0px 10px 0px 0px;
+    margin: 0px 10px 0px 0px;
 }
 .module-wif {
     font-size: 22;
     color: $blue;
-  margin: 0px 10px 0px 5px;
+    margin: 0px 10px 0px 5px;
 }
 
 .iconlauncher {
@@ -135,22 +129,21 @@ tooltip label {
     font-size: 24px;
 }
 .iconcpu {
-    color: $green;
+    color: #9778D0;
 }
 .iconmem {
-    color: $orange;
+    color: #7AA2F7;
 }
 .iconbat {
     color: $purple;
 }
 .iconbat, .iconmem, .iconcpu {
-    font-size: 15;
     margin: 10px;
 }
 .bright_icon {
     font-size: 22;
     color: $orange;
-  margin: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
 }
 
 .separ {
@@ -166,18 +159,18 @@ tooltip label {
 
 .cpu_module {
     background-color: rgba(00, 00, 00, 0.0);
-	border-radius: 16px;
-  margin: 0px 10px 0px 3px;
+    border-radius: 16px;
+    margin: 0px 10px 0px 3px;
   }
 .mem_module {
     background-color: rgba(00, 00, 00, 0.0);
-	border-radius: 16px;
-  margin: 0px 10px 0px 3px;
+    border-radius: 16px;
+    margin: 0px 10px 0px 3px;
   }
 .bat_module {
     background-color: rgba(00, 00, 00, 0.0);
-	border-radius: 16px;
-  margin: 0px 10px 0px 10px;
+    border-radius: 16px;
+    margin: 0px 10px 0px 10px;
   }
 
 ///////////////////////////////////////////////////////////// Workspaces
@@ -208,168 +201,168 @@ tooltip label {
 
 /* Bar0 */
 .ws-1 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/terminal.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/terminal.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-2 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/firefox.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/firefox.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-3 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/document.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/document.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-4 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/files.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/files.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-5 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/youtube.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/youtube.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-6 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/steam.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/steam.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-7 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/random.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/random.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-8 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/stats.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/stats.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-9 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/circles.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/circles.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
 }
 
 /* Bar1 */
 .ws-11 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/discord.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/discord.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-12 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/calendar.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/calendar.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-13 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/document.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/document.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-14 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/files.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/files.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-15 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/youtube.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/youtube.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-16 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/terminal.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/terminal.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-17 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/stats.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/stats.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-18 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/circles.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/circles.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ws-19 {
-  padding-left: 13px;
-  padding-right: 13px;
-  border-top: 2px solid;
-  background-image: url("images/workspaces/3bars.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    background-image: url("images/workspaces/3bars.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
 }
 
 
@@ -400,25 +393,25 @@ calender {
     color: $blue;
 }
 calendar:selected {
-  color: $blue;
+    color: $blue;
 }
 
 calendar.header {
-color: $blue;
-font-weight: bold;
+    color: $blue;
+    font-weight: bold;
 }
 
 calendar.button {
-color: $green;
+    color: $green;
 }
 
 calendar.highlight {
-color: $blue;
-font-weight: bold;
+    color: $blue;
+    font-weight: bold;
 }
 
 calendar:indeterminate {
-color: $black;
+    color: $black;
 }
 
 
@@ -463,160 +456,159 @@ color: $black;
     color: $orange;
 }
 .sys_bat_box {
-	border-radius: 16px;
+    border-radius: 16px;
     margin: 15px 10px 10px 20px;
   }
 .sys_mem_box {
-	border-radius: 16px;
+    border-radius: 16px;
     margin: 10px 10px 15px 20px;
   }
 
 
 .music {
-	color: $blue;
-	font-size : 14px;
-	font-weight : bold;
+    color: $blue;
+    font-size : 14px;
 }
 
 .app-name {
-	color: $blue;
-	font-size : 14px;
-	font-weight : bold;
-	margin : 10px 0px 0px 0px;
+    color: $blue;
+    font-size : 14px;
+    font-weight : bold;
+    margin : 10px 0px 0px 0px;
 }
 
 .app-icon {
-	margin : 8px 10px 0px 0px;
+    margin : 8px 10px 0px 0px;
 }
 
 .app-button {
-	color: $blue;
-	font-size : 30px;
-	font-weight : bold;
-	margin : 0px 15px 0px 15px;
+    color: $blue;
+    font-size : 30px;
+    font-weight : bold;
+    margin : 0px 15px 0px 15px;
 }
 
 .launcher-icon {
-	margin : 0px 0px 0px 13px;
+    margin : 0px 0px 0px 13px;
 }
 
 .audio-box {
     background-color: $background;
-	border-radius: 16px;
+    border-radius: 16px;
 }
 .speaker_icon {
-	background-size: cover;
+    background-size: cover;
     background-image: url('images/speaker.png');
-	background-position: center;
-	min-height: 70px;
-	min-width: 75px;
-	margin: 10px 20px 5px 20px;
-	border-radius: 12px;
+    background-position: center;
+    min-height: 70px;
+    min-width: 75px;
+    margin: 10px 20px 5px 20px;
+    border-radius: 12px;
 }
 
 .speaker_text {
-	color: $blue;
-	font-size : 26px;
-	font-weight : bold;
-	margin: 20px 0px 0px 0px;
+    color: $blue;
+    font-size : 26px;
+    font-weight : bold;
+    margin: 20px 0px 0px 0px;
 }
 
 .speaker_bar scale trough highlight {
-	all: unset;
+    all: unset;
     background-image: linear-gradient(to right, #afcee0 30%, #92B6F4 50%, #77a5bf 100% *50);
-	border-radius: 24px;
+    border-radius: 24px;
 }
 .speaker_bar scale trough {
-	all: unset;
-	background-color: $widget-background;
+    all: unset;
+    background-color: $widget-background;
     box-shadow: 0 6px 5px 2px $shadow;
-	border-radius: 24px;
-	min-height: 13px;
-	min-width: 120px;
-	margin : 0px 0px 5px 0px;
+    border-radius: 24px;
+    min-height: 13px;
+    min-width: 120px;
+    margin : 0px 0px 5px 0px;
 }
 
 
 
 
 .mic_icon {
-	background-size: cover;
+    background-size: cover;
     background-image: url('images/mic.png');
-	background-position: center;
-	min-height: 70px;
-	min-width: 75px;
-	margin: 5px 20px 20px 20px;
-	border-radius: 12px;
+    background-position: center;
+    min-height: 70px;
+    min-width: 75px;
+    margin: 5px 20px 20px 20px;
+    border-radius: 12px;
 }
 
 .mic_text {
-	color: $blue;
-	font-size : 26px;
-	font-weight : bold;
-	margin: 0px 0px 0px 0px;
+    color: $blue;
+    font-size : 26px;
+    font-weight : bold;
+    margin: 0px 0px 0px 0px;
 }
 
 .mic_bar scale trough highlight {
-	all: unset;
+    all: unset;
     background-image: linear-gradient(to right, #afcee0 30%, #92B6F4 50%, #77a5bf 100% *50);
-	border-radius: 24px;
+    border-radius: 24px;
 }
 .mic_bar scale trough {
-	all: unset;
+    all: unset;
     box-shadow: 0 6px 5px 2px $shadow;
-	background-color: $widget-background;
-	border-radius: 24px;
-	min-height: 13px;
-	min-width: 120px;
-	margin : 0px 0px 20px 0px;
+    background-color: $widget-background;
+    border-radius: 24px;
+    min-height: 13px;
+    min-width: 120px;
+    margin : 0px 0px 20px 0px;
 }
 
 .audio_sep {
     color: $black;
     font-size: 18;
-	margin : 0px 0px 0px 0px;
+    margin : 0px 0px 0px 0px;
 }
 
 // Music
 .music-player {
-	all: unset;
+    all: unset;
     background-color: $widget-background;
-	padding: 0px 6px 0px 6px;
-	border-radius: 12px;
+    padding: 0px 6px 0px 6px;
+    border-radius: 12px;
     box-shadow: 0px 0px 6px 6px $shadow;}
 
 .album_art {
-	background-size: cover;
-	background-position: center;
-	border-radius: 12px;
-	margin: 2rem 2rem 2rem 2rem;
-	padding: 9rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 9rem;
 }
 
 .song {
     font-family: JetBrainsMono Nerd Font Mono;
-	font-weight: bold;
-	color: $white;
-	font-size: 1.2em;
+    font-weight: bold;
+    color: $white;
+    font-size: 1.2em;
     margin-top: -20px;
 }
 .artist {
-	font-family: JetBrainsMono Nerd Font;
-	font-style: italic;
-	font-size: 1.1em;
-	color: $blue;
+    font-family: JetBrainsMono Nerd Font;
+    font-style: italic;
+    font-size: 1.1em;
+    color: $blue;
 }
 .btn_prev, .btn_play, .btn_next {
-  font-family: JetBrainsMono Nerd Font Mono;
-  color: $purple;
-  font-size: 25px;
-  margin-bottom: 20px;
+    font-family: JetBrainsMono Nerd Font Mono;
+    color: $purple;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .music-player  scale trough highlight {
-	all: unset;
-	border-radius: 10px;
-	background-color: $blue;
+    all: unset;
+    border-radius: 10px;
+    background-color: $blue;
 }
 
 ///////////////////////////////////////////////////////////// weather
@@ -631,30 +623,30 @@ color: $black;
 
 .iconweather {
     font-family: JetBrainsMono Nerd Font;
-	font-size : 44px;
-	font-weight : normal;
-	margin : 0px 0px 20px 0px;
+    font-size : 44px;
+    font-weight : normal;
+    margin : 0px 0px 20px 0px;
 }
 
 .label_temp {
-	color : $blue;
-	font-size : 35px;
-	font-weight : bold;
-	margin : 0px 0px 0px 0px;
+    color : $blue;
+    font-size : 35px;
+    font-weight : bold;
+    margin : 0px 0px 0px 0px;
     font-family: Furamono Nerd Font;
 }
 
 .label_stat {
-	color : $blue;
-	font-size : 38px;
-	font-weight : bold;
+    color : $blue;
+    font-size : 38px;
+    font-weight : bold;
 }
 
 .label_quote {
-	color : $blue;
-	font-size : 18px;
-  padding-bottom: 10px;
-	font-weight : normal;
+    color : $blue;
+    font-size : 18px;
+    padding-bottom: 10px;
+    font-weight : normal;
 }
 
 .date {
@@ -664,9 +656,8 @@ color: $black;
     padding: 33px 27px 27px 27px;
     border-radius: 12px;
     color: $blue;
-	font-size : 18px;
-	font-style : italic;
-	font-family: Cartograph CF;
+    font-size : 18px;
+    font-family: JetBrainsMono Nerd Font Mono;
     box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, .4);
 }
 
@@ -686,13 +677,13 @@ color: $black;
 
 
 scale trough {
-  all: unset;
-  background-color: $widget-background;
-  box-shadow: 0 2px 3px 2px $shadow;
-  border-radius: 16px;
-  min-height: 10px;
-  min-width: 70px;
-  margin: 0px 5px 0px 10px;
+    all: unset;
+    background-color: $widget-background;
+    box-shadow: 0 2px 3px 2px $shadow;
+    border-radius: 16px;
+    min-height: 10px;
+    min-width: 70px;
+    margin: 0px 5px 0px 10px;
 }
 
 .scale highlight {
@@ -716,28 +707,28 @@ scale trough {
 }
 
 .poweroff, .reboot, .firmware, .exit, .restart {
-  margin: 0px 16px 0px 16px;
-  padding: 2px 15px 2px 9px;
-	font-family: mononoki Nerd Font;
-  border-radius: 25px;
-  font-size: 24px;
-  color: $black;
+    margin: 0px 16px 0px 16px;
+    padding: 2px 15px 2px 9px;
+    font-family: mononoki Nerd Font;
+    border-radius: 25px;
+    font-size: 24px;
+    color: $black;
 }
 
 .poweroff {
-  background-color: $red;
+    background-color: $red;
 }
 .reboot {
-  background-color: $green;
+    background-color: $green;
 }
 .firmware {
-  background-color: $orange;
+    background-color: $orange;
 }
 .exit {
-  background-color: $purple;
+    background-color: $purple;
 }
 .restart {
-  background-color: $blue;
+    background-color: $blue;
 }
 
 .fetch {
@@ -750,51 +741,51 @@ scale trough {
 }
 
 .wm {
-  font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
-  color: $red;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    color: $red;
 }
 
 .host {
-  font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
-  color: $purple;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    color: $purple;
 }
 
 .uptime {
-  font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
-  color: $orange;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    color: $orange;
 }
 
 .packages {
-  font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
-  color: $blue;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    color: $blue;
 }
 
 .kernal {
-  font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
-  color: $green;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    color: $green;
 }
 
 .notification {
-	all: unset;
+    all: unset;
     background-color: $widget-background;
-	padding: 20px 25px 20px 17px;
+    padding: 20px 25px 20px 17px;
     margin: 0px 15px 0px 15px;
-	border-radius: 12px;
+    border-radius: 12px;
     border-width: 2px;
     border-style: solid;
     border-color: $red;}
 
 .notification-header {
-	all: unset;
+    all: unset;
     background-color: $widget-background;
-	padding: 20px 25px 20px 17px;
+    padding: 20px 25px 20px 17px;
     margin: 20px 15px 10px 15px;
-	border-radius: 12px;
+    border-radius: 12px;
     border-width: 2px;
     border-style: solid;
     border-color: $green;}
