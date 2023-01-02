@@ -118,13 +118,13 @@
        :orientation "h"
        :space-evenly false
        :tooltip "${music}"
-       (button :class "musicicon" :onclick "mpc toggle" barplaypause)
+       (button :class barplaypause :onclick "mpc toggle" " ")
            (label
            :limit-width 50
            :show_truncated true
            :text music)))
 
-(defpoll barplaypause :interval "1s" "scripts/music baricon")
+(defpoll barplaypause :interval "1s" "if [[ $(mpc | grep playing) ]]; then echo musicicon; else echo nomusicicon; fi")
 
 (defwidget wifi [] 
   (eventbox 
