@@ -139,17 +139,20 @@ tooltip label {
     color: $white;
     font-size: 24px;
 }
-.iconcpu {
+.iconcpu, .cputext {
     color: #9778D0;
 }
-.iconmem {
+.iconmem, .memtext {
     color: #7AA2F7;
+}
+.cputext, .memtext {
+    margin-left: 2px;
 }
 .iconbat {
     color: $purple;
 }
 .iconbat, .iconmem, .iconcpu {
-    margin: 10px;
+    margin: 6px 8px 8px 8px;
 }
 .bright_icon {
     font-size: 22;
@@ -171,12 +174,12 @@ tooltip label {
 .cpu_module {
     background-color: rgba(00, 00, 00, 0.0);
     border-radius: 16px;
-    margin: 0px 10px 0px 3px;
+    margin: 2px 3px 2px 3px;
   }
 .mem_module {
     background-color: rgba(00, 00, 00, 0.0);
     border-radius: 16px;
-    margin: 0px 10px 0px 3px;
+    margin: 2px 3px 2px 3px;
   }
 .bat_module {
     background-color: rgba(00, 00, 00, 0.0);
