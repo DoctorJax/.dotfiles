@@ -17,7 +17,6 @@
 (deflisten workspace1 "scripts/workspace1")
 (deflisten appname "scripts/appname")
 (defpoll music :interval "2s" "mpc -f '%artist% - %title%' | head -n1 | grep '-'")
-(defpoll bars :interval "1s" "scripts/bars")
 
 (defvar vol_reveal false)
 (defvar br_reveal false)
@@ -223,8 +222,6 @@
     :hexpand "false"
     (label
         :class "separ"
-        :wrap baropen
-        :tooltip bars
         :text "|")))
 
 (defwidget gap []
@@ -312,26 +309,20 @@
 
 (defwidget bar0 []
     (eventbox
-        :onhover "${EWW_CMD} update bar0=true && ${EWW_CMD} update baropen=true"
-        :onhoverlost "${EWW_CMD} update bar0=false && ${EWW_CMD} update baropen=false"
         (revealer
             :transition "slidedown"
-            :reveal bar0
+            :reveal bar
             :duration "150ms"
         (bar_layout0))))
-(defvar bar0 false)
-(defvar baropen false)
+(defvar bar false)
 
 (defwidget bar1 []
     (eventbox
-        :onhover "${EWW_CMD} update bar1=true && ${EWW_CMD} update baropen=true"
-        :onhoverlost "${EWW_CMD} update bar1=false && ${EWW_CMD} update baropen=false"
         (revealer
             :transition "slidedown"
-            :reveal bar1
+            :reveal bar
             :duration "150ms"
         (bar_layout1))))
-(defvar bar1 false)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define widget groups
 
