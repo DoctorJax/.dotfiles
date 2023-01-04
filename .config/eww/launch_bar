@@ -16,10 +16,10 @@ fi
 ## Open widgets 
 NB_MONITORS=($(hyprctl monitors -j | jq -r '.[] | .id'))
 for id in "${NB_MONITORS[@]}"; do
-    bar="bar$id"
     hyprctl dispatch focusmonitor "$id"
-    ${EWW} open "$bar" 
-    [[ $id == 0 ]] && ${EWW} open-many sidebar notifications
+    ${EWW} open "bar$id"
+    ${EWW} open "workspacebar$id"
+    [[ $id == 0 ]] && ${EWW} open notifications
 done
 
     hyprctl dispatch focusmonitor "$focusmon"

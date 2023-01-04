@@ -119,7 +119,7 @@
        :tooltip "${music}"
        (button :class barplaypause :onclick "mpc toggle" " ")
            (label
-           :limit-width 50
+           :limit-width 80
            :show_truncated true
            :text music)))
 
@@ -249,7 +249,16 @@
      :space-evenly false
      :halign "center"
      :class "center_modules"
-    (workspaces)))
+    (music)
+    (sep)
+    (volume)
+    (sep)
+    (cpu)
+    (mem)
+    (sep)
+    (clock_module)
+    (notif_button)
+    ))
 
 (defwidget right []
     (box
@@ -266,23 +275,11 @@
     (notif_button)
 ))
 
-(defwidget bar_layout0 []
-  (centerbox 
+(defwidget bar_layout []
+  (box
     :class "bar_class"
     :orientation "h"
-    :spacing "30"
-    (left)
-    (workspaces0)
-    (right)
-    ))
-
-(defwidget bar_layout1 []
-  (centerbox
-    :class "bar_class"
-    :orientation "h"
-    (left)
-    (workspaces1)
-    (right)
+    (center)
     ))
 
 (defwindow bar0
@@ -290,39 +287,55 @@
     :geometry (geometry
         :x "0px"
         :y "0px"
-        :width "90%"
+        :width "0px"
         :height "0px"
-        :anchor "top center")
+        :anchor "bottom center")
     :stacking "fg"
-    (bar0))
+    (bar))
 
 (defwindow bar1
     :monitor 1
     :geometry (geometry
         :x "0px"
         :y "0px"
-        :width "90%"
+        :width "0px"
+        :height "0px"
+        :anchor "bottom center")
+    :stacking "fg"
+    (bar))
+
+(defwidget bar []
+    (eventbox
+        (revealer
+            :transition "slideup"
+            :reveal bar
+            :duration "150ms"
+        (bar_layout))))
+(defvar bar false)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; workspace bar
+
+(defwindow workspacebar0
+    :monitor 0
+    :geometry (geometry
+        :x "0px"
+        :y "0px"
+        :width "0px"
         :height "0px"
         :anchor "top center")
     :stacking "fg"
-    (bar1))
+    (workspaces0))
 
-(defwidget bar0 []
-    (eventbox
-        (revealer
-            :transition "slidedown"
-            :reveal bar
-            :duration "150ms"
-        (bar_layout0))))
-(defvar bar false)
-
-(defwidget bar1 []
-    (eventbox
-        (revealer
-            :transition "slidedown"
-            :reveal bar
-            :duration "150ms"
-        (bar_layout1))))
+(defwindow workspacebar1
+    :monitor 1
+    :geometry (geometry
+        :x "0px"
+        :y "0px"
+        :width "0px"
+        :height "0px"
+        :anchor "top center")
+    :stacking "fg"
+    (workspaces1))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define widget groups
 

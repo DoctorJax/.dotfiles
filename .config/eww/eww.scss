@@ -23,8 +23,8 @@ $white:     #FDFDFD;
 ///////////////////////////////////////////////////////////// General
 .bar_class {
     background-color: $background;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .module {
     margin: 0px 0px 0px 0px;
@@ -97,7 +97,6 @@ tooltip label {
 }
 .volume_icon {
     color: #0DB9D7;
-    margin: 0px 10px 0px 10px;
 }
 .volume_text {
     color: #0DB9D7;
@@ -189,17 +188,16 @@ tooltip label {
 
 ///////////////////////////////////////////////////////////// Workspaces
 .works {
-    font-size: 15px;
-    font-weight: normal;
     margin: 0px 0px 0px 0px;
-    background-color: rgba(00, 00, 00, 0.0);
-    min-height: 32px;
 }
 
 .workspacebuttons {
-    margin: 0px -4px 0px 0px;
+    all: unset;
     color: $grey;
-    background-size: 70%;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top: 2px solid;
+    margin: 0px 0px -22px 0px;
 }
 
 /* Occupied */
@@ -210,174 +208,173 @@ tooltip label {
 /* Focused */
 .focused {
     color: $purple;
-    background-size: 100%;
 }
 
 /* Bar0 */
-.ws-1 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/terminal.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-2 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/firefox.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-3 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/document.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-4 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/files.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-5 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/youtube.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-6 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/steam.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-7 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/random.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-8 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/stats.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-9 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/circles.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 5px;
-}
-
-/* Bar1 */
-.ws-11 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/discord.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-12 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/calendar.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-13 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/document.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-14 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/files.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-15 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/youtube.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-16 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/terminal.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-17 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/stats.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-18 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/circles.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ws-19 {
-    padding-left: 13px;
-    padding-right: 13px;
-    border-top: 2px solid;
-    background-image: url("images/workspaces/3bars.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 5px;
-}
+//.ws-1 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/terminal.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-2 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/firefox.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-3 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/document.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-4 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/files.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-5 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/youtube.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-6 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/steam.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-7 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/random.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-8 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/stats.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-9 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/circles.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//    margin-right: 5px;
+//}
+//
+///* Bar1 */
+//.ws-11 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/discord.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-12 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/calendar.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-13 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/document.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-14 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/files.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-15 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/youtube.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-16 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/terminal.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-17 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/stats.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-18 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/circles.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//}
+//
+//.ws-19 {
+//    padding-left: 13px;
+//    padding-right: 13px;
+//    border-top: 2px solid;
+//    background-image: url("images/workspaces/3bars.png");
+//    background-repeat: no-repeat;
+//    background-position: center;
+//    margin-right: 5px;
+//}
 
 
 
@@ -481,6 +478,7 @@ calendar:indeterminate {
 
 .music {
     color: $blue;
+    margin-left: 10px;
 }
 
 .app-name {

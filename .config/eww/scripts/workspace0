@@ -52,7 +52,7 @@ fi
 module() {
 #output eww widget
 echo 	"(eventbox :onscroll \"echo {} | sed -e 's/up/-1/g' -e 's/down/+1/g' | xargs hyprctl dispatch workspace\" \
-          (box	:class \"works\"	:orientation \"h\" :spacing 5 :space-evenly \"false\" :valign \"center\"	\
+          (box	:class \"works\"	:orientation \"h\" :spacing 1 :space-evenly \"false\" \
               (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 1\'\" :onrightclick \"hyprctl dispatch workspace 1\" :class \"ws-1 $o1 $f1 workspacebuttons\" \" \") \
               (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 2\'\" :onrightclick \"hyprctl dispatch workspace 2\" :class \"ws-2 $o2 $f2 workspacebuttons\" \" \") \
               (button :onclick \"hyprctl dispatch exec \'~/.local/share/cargo/bin/hyprsome workspace 3\'\" :onrightclick \"hyprctl dispatch workspace 3\" :class \"ws-3 $o3 $f3 workspacebuttons\" \" \") \
