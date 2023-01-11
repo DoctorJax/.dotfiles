@@ -3,7 +3,7 @@
 (include "notifications.yuck")
 
 (defpoll clock_time :interval "1s" "date '+%r'")
-(defpoll clock_date :interval "1h" "date '+%b %d'")
+(defpoll clock_date :interval "1h" "date '+%a %b %d'")
 (defpoll calendar_day :interval "2h" "date '+%d'")
 (defpoll calendar_year :interval "2h" "date '+%Y'")
 (defpoll music :interval "2s" "mpc -f '%artist% - %title%' | head -n1 | grep '-'")
