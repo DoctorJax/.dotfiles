@@ -15,17 +15,19 @@ timestamp(){
     then
         pickLocation="$2"
         echo "$pickLocation" > /tmp/.screenshot.sh.tmp
+        exit
     fi
 
     if [[ -z "$pickLocation" ]]
     then
         pickLocation=$(zenity --file-selection --directory)
         echo "$pickLocation" > /tmp/.screenshot.sh.tmp
+        exit
     fi
 
     case "$XDG_SESSION_TYPE" in
         x11) maim -u -s "$pickLocation"/"$(date +%m-%d-%Y_%T).png" && notify-send -t 2000 -a System "Screenshot.sh" "Saved to: $pickLocation" ;;
-        wayland) grimblast save area - >> "$pickLocation"/"$(date +%m-%d-%Y_%T).png" && notify-send -t 2000 -a System "Screenshot.sh" "Saved to: $pickLocation" ;;
+        wayland) grimblast save area - > "$pickLocation"/"$(date +%m-%d-%Y_%T).png" && notify-send -t 2000 -a System "Screenshot.sh" "Saved to: $pickLocation" ;;
         *) echo "Uh, nothing found? Goodluck"; exit 0 ;;
     esac
 }
