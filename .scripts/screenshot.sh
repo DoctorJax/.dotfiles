@@ -2,12 +2,10 @@
 
 copyscreenshot(){
     case "$XDG_SESSION_TYPE" in
-        x11) maim -u -s -n -m 1 | xclip -selection clipboard -t image/png ;;
-        wayland) grim -g "$(slurp)" - | wl-copy ;;
+        x11) maim -u -s -n -m 1 | xclip -selection clipboard -t image/png && notify-send -t 2000 -a System "Screenshot.sh" "Copied to clipboard";;
+        wayland) grimblast --notify copy area ;;
         *) echo "Uh, nothing found? Goodluck"; exit 0 ;;
     esac
-
-    notify-send -t 2000 -a System "Screenshot.sh" "Copied to clipboard"
 }
 
 timestamp(){
@@ -26,12 +24,10 @@ timestamp(){
     fi
 
     case "$XDG_SESSION_TYPE" in
-        x11) maim -u -s "$pickLocation"/"$(date +%m-%d-%Y_%T).png" ;;
-        wayland) grim -g "$(slurp)" "$pickLocation"/"$(date +%m-%d-%Y_%T).png" ;;
+        x11) maim -u -s "$pickLocation"/"$(date +%m-%d-%Y_%T).png" && notify-send -t 2000 -a System "Screenshot.sh" "Saved to: $pickLocation" ;;
+        wayland) grimblast save area - >> "$pickLocation"/"$(date +%m-%d-%Y_%T).png" && notify-send -t 2000 -a System "Screenshot.sh" "Saved to: $pickLocation" ;;
         *) echo "Uh, nothing found? Goodluck"; exit 0 ;;
     esac
-
-    notify-send -t 2000 -a System "Screenshot.sh" "Saved to: $pickLocation"
 }
 
 case "$1" in
