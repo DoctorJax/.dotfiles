@@ -4,7 +4,7 @@
 EWW="eww"
 focusmon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')
 
-# Kill eww so that it reloads certain things
+## Kill eww so that it reloads
 killall eww
 
 ## Run eww daemon if not running already
@@ -12,6 +12,9 @@ if [[ ! $(pidof eww) ]]; then
 	${EWW} daemon
 	sleep 1
 fi
+
+## Send a notification so the notification sidepanel can get it
+notify-send -t 500 "EWW" "Hi"
 
 ## Open widgets 
 NB_MONITORS=($(hyprctl monitors -j | jq -r '.[] | .id'))
