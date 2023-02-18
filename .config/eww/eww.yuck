@@ -152,8 +152,6 @@
 
 (defwidget bar []
     (eventbox
-        :onhover "${EWW_CMD} update bar=true"
-        :onhoverlost "${EWW_CMD} update bar=false"
         (revealer
             :transition "slideup"
             :reveal bar

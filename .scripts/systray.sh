@@ -25,9 +25,18 @@ bars() {
     fi
 }
 
+notif() {
+    if [[ $(eww state | grep 'rightside: false') ]]; then
+        eww update rightside=true
+    else
+        eww update rightside=false
+    fi
+}
+
 case "$1" in
     -s ) starttray ;;
     -k ) killtray ;;
     -t ) toggle ;;
     -b ) bars ;;
+    -n ) notif ;;
 esac

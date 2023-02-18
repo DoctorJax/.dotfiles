@@ -11,8 +11,7 @@
 (defwidget notif-panel [] 
 	(eventbox 
 	    :halign "start"
-	    :onhoverlost "${EWW_CMD} update rightside=false"
-		(revealer 
+		(revealer
 		    :transition "slideleft"
 		    :reveal rightside 
 		    :duration "150ms"
