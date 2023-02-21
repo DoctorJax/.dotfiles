@@ -17,8 +17,8 @@ pgrep -x mpd-mpris > /dev/null || mpd-mpris &
 # Run Once
 /home/jackson/.local/bin/streamdeck.sh &
 
-pgrep -x mailspring > /dev/null || mailspring --background &
-pgrep -x signal-desktop > /dev/null || signal-desktop --start-in-tray --ozone-platform=wayland &
+pgrep -x mailspring > /dev/null || mailspring &
+pgrep -x signal-desktop > /dev/null || signal-desktop --ozone-platform=wayland &
 pgrep -x DiscordCanary > /dev/null || discord-canary --enable-features=UseOzonePlatform --ozone-platform=wayland --ignore-gpu-blocklist &
 
 # Polkit
