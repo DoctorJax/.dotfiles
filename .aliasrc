@@ -3,6 +3,10 @@ export EDITOR="emacsclient -t -a=\"\""
 export PF_SOURCE="$HOME/.config/pfetch/pfetchrc"
 export PATH="$PATH:$HOME/.scripts:$HOME/.local/bin:$HOME/.local/share/cargo/bin:$HOME/.local/share/go/bin"
 
+# NNN stuff
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_PLUG='v:preview-tui'
+
 # # ex - archive extractor
 # # usage: ex <file>
 ex ()
