@@ -18,10 +18,12 @@ quickempty() {
     for id in "${NB_MONITORS[@]}"; do
         hyprctl dispatch focusmonitor "$id"
         focusedname=$(hyprctl monitors -j | jq -r ".[] | select(.focused) .name")
-        haswindows=$(hyprctl workspaces -j | jq -r ".[] | select((.monitor == \"$focusedname\") and .windows > 0) .id" | sort | tail -1)
+        haswindows=$(hyprctl workspaces -j | jq -r ".[] | select((.monitor == \"$focusedname\") and .windows) .id" | sort | tail -1)
 
-        plusone=$((haswindows + 1))
-        hyprctl dispatch workspace "$plusone"
+        if [[ $(hyprctl workspaces -j | jq -r ".[] | select(.id == $haswindows) .windows") != "0" ]]; then
+            plusone=$((haswindows + 1))
+            hyprctl dispatch workspace "$plusone"
+        fi
 
         ydotoold &
         sleep 0.1
