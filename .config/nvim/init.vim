@@ -3,7 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
-Plug 'itchyny/lightline.vim' | Plug 'vifm/vifm.vim' | Plug 'vimwiki/vimwiki'
+Plug 'itchyny/lightline.vim' | Plug 'vifm/vifm.vim'
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 call plug#end()
