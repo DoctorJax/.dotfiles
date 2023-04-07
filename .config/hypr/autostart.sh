@@ -15,7 +15,7 @@ pgrep -x mpd > /dev/null || mpd /home/jackson/.config/mpd/mpd.conf &
 pgrep -x mpd-mpris > /dev/null || mpd-mpris &
 
 # Run Once
-/home/jackson/.local/bin/streamdeck.sh &
+pgrep -x companion.sh > /dev/null || /home/jackson/.scripts/companion.sh &
 
 pgrep -x mailspring > /dev/null || mailspring &
 pgrep -x signal-desktop > /dev/null || signal-desktop --ozone-platform=wayland &
