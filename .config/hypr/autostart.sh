@@ -8,7 +8,7 @@ dunst &
 headsetcontrol -l 0 &
 
 # Steam was being a pain
-xrandr --output HDMI-A-2 --primary &
+xrandr --output HDMI-A-1 --primary &
 
 # MPD Stuff
 pgrep -x mpd > /dev/null || mpd /home/jackson/.config/mpd/mpd.conf &
