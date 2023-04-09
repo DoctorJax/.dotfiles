@@ -8,7 +8,7 @@ dunst &
 headsetcontrol -l 0 &
 
 # Steam was being a pain
-xrandr --output XWAYLAND0 --primary &
+xrandr --output HDMI-A-2 --primary &
 
 # MPD Stuff
 pgrep -x mpd > /dev/null || mpd /home/jackson/.config/mpd/mpd.conf &
@@ -19,7 +19,7 @@ pgrep -x companion.sh > /dev/null || /home/jackson/.scripts/companion.sh &
 
 pgrep -x mailspring > /dev/null || mailspring &
 pgrep -x signal-desktop > /dev/null || signal-desktop --ozone-platform=wayland &
-pgrep -x DiscordCanary > /dev/null || discord-canary --enable-features=UseOzonePlatform --ozone-platform=wayland --ignore-gpu-blocklist &
+pgrep -x DiscordCanary > /dev/null || discord-canary --enable-features=UseOzonePlatform --ozone-platform=wayland &
 
 # Polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval "$(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)" &

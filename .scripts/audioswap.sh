@@ -1,7 +1,7 @@
 #!/bin/bash
 
 headphones_sink="alsa_output.usb-Corsair_CORSAIR_VOID_ELITE_Wireless_Gaming_Dongle-00.analog-stereo"
-earbuds_sink="alsa_output.pci-0000_1f_00.3.analog-stereo"
+earbuds_sink="alsa_output.pci-0000_22_00.3.analog-stereo"
 speaker_sink="alsa_output.usb-Dell_Dell_AC511_USB_SoundBar-00.analog-stereo"
 
 headphones() {
