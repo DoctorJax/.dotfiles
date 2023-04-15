@@ -2,7 +2,39 @@
 
 pgrep -x companion > /dev/null || companion &
 
+while :; do
+  # Get the first line with aggregate of all CPUs
+  cpu_now=($(head -n1 /proc/stat))
+  # Get all columns but skip the first (which is the "cpu" string)
+  cpu_sum="${cpu_now[@]:1}"
+  # Replace the column seperator (space) with +
+  cpu_sum=$((${cpu_sum// /+}))
+  # Get the delta between two reads
+  cpu_delta=$((cpu_sum - cpu_last_sum))
+  # Get the idle time Delta
+  cpu_idle=$((cpu_now[4]- cpu_last[4]))
+  # Calc time spent working
+  cpu_used=$((cpu_delta - cpu_idle))
+  # Calc percentage
+  cpu_usage=$((100 * cpu_used / cpu_delta))
+
+  # Keep this as last for our next read
+  cpu_last=("${cpu_now[@]}")
+  cpu_last_sum=$cpu_sum
+
+  curl "localhost:8888/set/custom-variable/CPU?value=$cpu_usage"
+
+  ram_usage=$(free -m | awk '/Mem/ { print $3 }')
+  curl "localhost:8888/set/custom-variable/RAM?value=$ram_usage"
+
+  # Wait a second before the next read
+  sleep 1
+done&
+
 pactl subscribe | rg --line-buffered "change" | while read -r _; do
+    volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)}')
+    curl "localhost:8888/set/custom-variable/volume?value=$volume"
+
     if [[ $(mpc | grep -ow 'playing') = "playing" ]]; then
         curl "localhost:8888/set/custom-variable/music?value=playing"
     else
