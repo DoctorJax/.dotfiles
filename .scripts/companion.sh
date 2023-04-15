@@ -35,6 +35,9 @@ pactl subscribe | rg --line-buffered "change" | while read -r _; do
     volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)}')
     curl "localhost:8888/set/custom-variable/volume?value=$volume"
 
+    mpd_volume=$(mpc | tail -n1 | awk -F ' ' '{ print $2 }')
+    curl "localhost:8888/set/custom-variable/mpd_volume?value=$mpd_volume"
+
     if [[ $(mpc | grep -ow 'playing') = "playing" ]]; then
         curl "localhost:8888/set/custom-variable/music?value=playing"
     else
