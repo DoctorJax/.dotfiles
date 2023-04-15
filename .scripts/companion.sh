@@ -24,7 +24,7 @@ while :; do
 
   curl "localhost:8888/set/custom-variable/CPU?value=$cpu_usage"
 
-  ram_usage=$(free -m | awk '/Mem/ { print $3 }')
+  ram_usage=$((($(free -m | awk '/Mem/ { print $3 }')*100/$(free -m | awk '/Mem/ { print $2 }'))))
   curl "localhost:8888/set/custom-variable/RAM?value=$ram_usage"
 
   # Wait a second before the next read
