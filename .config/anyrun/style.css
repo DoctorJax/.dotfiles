@@ -1,25 +1,42 @@
-#window {
-  background-color: rgba(0, 0, 0, 0);
+window {
+  background: rgba(0, 0, 0, 0);
+}
+
+#match.activatable {
+  padding: 6px;
+  border-radius: 12px;
+  color: white;
+  margin: 2px 1px 2px 1px;
+}
+
+#match.activatable:selected {
+  background: #9a7ecc;
+  color: black;
+}
+
+#match-title {
+  color: inherit;
+}
+
+#plugin {
+  background: #1a1b26;
+  color: #1a1b26;
+}
+
+#entry {
+  color: white;
+  box-shadow: none;
+  border-radius: 12px;
+  border: 2px solid #9a7ecc;
 }
 
 box#main {
-  border-radius: 10px;
-  background-color: @theme_bg_color;
+  background: #1a1b26;
+  border: 2px solid #414868;
+  border-radius: 12px;
+  padding: 8px;
 }
 
-list#main {
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 10px;
-}
-
-list#plugin {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-label#match-desc {
-  font-size: 10px;
-}
-
-label#plugin {
-  font-size: 14px;
+row:first-child {
+  margin-top: 6px;
 }
