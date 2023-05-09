@@ -8,6 +8,22 @@ random() {
     printf "Random background has been chosen."
 }
 
+randomLandscape() {
+    randomwall="$(find ~/Wallpapers/landscape -name '*.[jp][pn]g' -type f | shuf -n 1)"
+    feh --bg-fill -z "$randomwall"
+    pkill swaybg
+    swaybg --image "$randomwall" -m fill &
+    printf "Random background has been chosen."
+}
+
+randomAnime() {
+    randomwall="$(find ~/Wallpapers/anime -name '*.[jp][pn]g' -type f | shuf -n 1)"
+    feh --bg-fill -z "$randomwall"
+    pkill swaybg
+    swaybg --image "$randomwall" -m fill &
+    printf "Random background has been chosen."
+}
+
 restore() {
     restorewall=$(awk '{ print $4 }' "$HOME"/.fehbg | sed "s/'//g")
     "$HOME"/.fehbg
@@ -30,7 +46,9 @@ help() {
 
 case "$1" in
     -i) restore ;;
-    -r) random ;;
+    -r ) random ;;
+    -rl) randomLandscape ;;
+    -ra) randomAnime ;;
     -s) setbg ;;
     -h) help ;;
 esac
