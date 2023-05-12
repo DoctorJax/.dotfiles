@@ -37,6 +37,8 @@ quickempty() {
     done
 
     hyprctl dispatch focusmonitor "$focusmon"
+
+    killall swaybg
 }
 
 case "$1" in
