@@ -20,10 +20,10 @@ speaker() {
 }
 
 togglesink() {
-    if [[ $(pactl list sinks | grep -Eo "Dell" | head -1) = "Dell" ]]; then
-        speaker
+    if [[ $(pactl list sinks | grep -Eo "CORSAIR" | head -1) = "CORSAIR" ]]; then
+        headphones
     else
-        pactl get-default-sink | grep $headphones_sink && earbuds || headphones
+        pactl get-default-sink | grep $speaker_sink && earbuds || speaker
     fi
 }
 
