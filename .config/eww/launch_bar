@@ -13,9 +13,6 @@ if [[ ! $(pidof eww) ]]; then
 	sleep 1
 fi
 
-## Send a notification so the notification sidepanel can get it
-notify-send -t 500 "EWW" "Hi"
-
 ## Open widgets 
 NB_MONITORS=($(hyprctl monitors -j | jq -r '.[] | .id'))
 for id in "${NB_MONITORS[@]}"; do
