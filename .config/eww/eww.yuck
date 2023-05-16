@@ -88,7 +88,7 @@
     :space-evenly "false"
     :orientation "h"
     (button
-        :onclick "if ${EWW_CMD} state | grep 'rightside: false' ; then ${EWW_CMD} update rightside=true ; else ${EWW_CMD} update rightside=false ; fi"
+        :onclick "swaync-client -t"
       (label :text ""))))
   
 (defwidget sep []
