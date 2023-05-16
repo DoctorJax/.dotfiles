@@ -103,6 +103,8 @@
 }
 
 .image {
+  border: 1px solid #282a36;
+  border-radius: 12px;
 }
 
 .body-image {
