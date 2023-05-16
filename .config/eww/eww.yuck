@@ -1,7 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; variables
 
-(include "notifications.yuck")
-
 (defpoll clock_time :interval "1s" "date '+%r'")
 (defpoll clock_date :interval "1h" "date '+%a %b %d'")
 (defpoll calendar_day :interval "2h" "date '+%d'")

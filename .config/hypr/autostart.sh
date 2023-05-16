@@ -1,7 +1,7 @@
 # Fancy Stuff
 /home/jackson/.config/eww/launch_bar &
 /home/jackson/.scripts/wallpapers.sh -i &
-dunst &
+swaync &
 
 # Useful Stuff
 /usr/bin/emacs --daemon &
