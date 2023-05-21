@@ -17,7 +17,7 @@ pgrep -x mpd-mpris > /dev/null || mpd-mpris &
 # Run Once
 pgrep -x companion.sh > /dev/null || /home/jackson/.scripts/companion.sh &
 
-pgrep -x mailspring > /dev/null || mailspring &
+pgrep -x thunderbird > /dev/null || thunderbird &
 pgrep -x signal-desktop > /dev/null || signal-desktop --ozone-platform=wayland &
 pgrep -x DiscordCanary > /dev/null || discord-canary --enable-features=UseOzonePlatform --ozone-platform=wayland &
 
