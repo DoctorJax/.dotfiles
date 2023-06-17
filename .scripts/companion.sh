@@ -1,6 +1,12 @@
 #!/usr/bin/bash
 
+set -e
+
 pgrep -x companion > /dev/null || companion &
+
+pgrep -x radeontop > /dev/null || radeontop -t 50 -d /tmp/companion.sh.gpu_usage.tmp &
+
+sleep 5
 
 while :; do
   # Get the first line with aggregate of all CPUs
@@ -26,6 +32,9 @@ while :; do
 
   ram_usage=$((($(free -m | awk '/Mem/ { print $3 }')*100/$(free -m | awk '/Mem/ { print $2 }'))))
   curl "localhost:8888/set/custom-variable/RAM?value=$ram_usage"
+
+  gpu_usage=$(tail -n 1 /tmp/companion.sh.gpu_usage.tmp | grep -o "gpu.*" | sed 's/%,.*//;s/gpu //')
+  curl "localhost:8888/set/custom-variable/GPU?value=$gpu_usage"
 
   # Wait a second before the next read
   sleep 1
