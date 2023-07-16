@@ -22,17 +22,15 @@ loadstreambeats() {
     notify-send -t 2000 -a System "MPD" "Playlist: StreamBeats"
 }
 
-reloadfavorites() {
+randomplaylist() {
     cd ~/Music
     mpc clear
-    mpc rm favorites
     mpc update
     mpc add $(\ls)
-    mpc save favorites
     mpc shuffle
     mpc play
     cd ~
-    notify-send -t 2000 -a System "MPD" "Playlist: Favorites"
+    notify-send -t 2000 -a System "MPD" "Playlist: Random"
 }
 
 selectplaylist() {
@@ -51,11 +49,22 @@ selectplaylist() {
         fzfmenu=($(\ls -a $musicdir | fzf --prompt="$selectedartists : " --border=rounded --margin=5% --color=dark --height 100% --reverse --header="                    MUSIC " --info=hidden --header-first))
     done
     mpc clear
+    mpc rm favorites
     mpc update
     mpc add $selectedartists
+    mpc shuffle
+    mpc save favorites
     mpc play
     cd ~
     notify-send -t 2000 -a System "MPD" "Specifically Selected: $selectedartists"
+}
+
+reselect() {
+    mpc clear
+    mpc load favorites
+    mpc shuffle
+    mpc play
+    notify-send -t 2000 -a System "MPD" "Playing Previous Selection"
 }
 
 case "$1" in
@@ -63,6 +72,7 @@ case "$1" in
     -d) down ;;
     -p) player ;;
     -s) loadstreambeats ;;
-    -f) reloadfavorites ;;
+    -f) randomplaylist ;;
     -sp) selectplaylist ;;
+    -r) reselect ;;
 esac
