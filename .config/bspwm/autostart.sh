@@ -17,7 +17,7 @@ pgrep -x mpd-mpris > /dev/null || mpd-mpris &
 /home/jackson/.scripts/keepscreenon.sh &
 
 # Run Once
-pgrep -x streamdeck.sh > /dev/null || /home/jackson/.local/bin/streamdeck.sh &
+pgrep -x companion.sh > /dev/null || /home/jackson/.scripts/companion.sh &
 
 pgrep -x mailspring > /dev/null || mailspring &
 pgrep -x discord-canary > /dev/null || discord-canary &

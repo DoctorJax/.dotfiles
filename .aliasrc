@@ -69,6 +69,6 @@ alias m='maim -u -s $(date +%m-%d-%Y_%T).png'
 alias g='grim -g "$(slurp)" $(date +%m-%d-%Y_%T).png'
 alias c='clifm'
 
-alias ytogg='yt-dlp -x --audio-format vorbis'
+alias ytogg='yt-dlp -x --audio-format vorbis --embed-metadata --embed-thumbnail'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
