@@ -2,7 +2,7 @@
 
 set -e
 
-killall companion
+killall companion || true
 
 sleep 5
 
