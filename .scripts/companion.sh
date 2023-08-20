@@ -2,9 +2,11 @@
 
 set -e
 
+killall companion
+
 sleep 5
 
-pgrep -x companion > /dev/null || companion &
+companion &
 
 pgrep -x radeontop > /dev/null || radeontop -t 50 -d /tmp/companion.sh.gpu_usage.tmp &
 
