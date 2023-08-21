@@ -54,15 +54,15 @@ module() {
 #output eww widget
 echo 	"(eventbox :onscroll \"echo {} | sed -e 's/up/-1/g' -e 's/down/+1/g' | xargs hyprctl dispatch workspace\" \
           (box	:class \"works\"	:orientation \"h\" :spacing 0 :space-evenly \"false\" \
-              (button :onclick \"hyprctl dispatch split-workspace 1\" :class \"ws-11 $o11 $f11 workspacebuttons\" \" \") \
-              (button :onclick \"hyprctl dispatch split-workspace 2\" :class \"ws-12 $o12 $f12 workspacebuttons\" \" \") \
-              (button :onclick \"hyprctl dispatch split-workspace 3\" :class \"ws-13 $o13 $f13 workspacebuttons\" \" \") \
-              (button :onclick \"hyprctl dispatch split-workspace 4\" :class \"ws-14 $o14 $f14 workspacebuttons\" \" \") \
-              (button :onclick \"hyprctl dispatch split-workspace 5\" :class \"ws-15 $o15 $f15 workspacebuttons\" \" \") \
-              (button :onclick \"hyprctl dispatch split-workspace 6\" :class \"ws-16 $o16 $f16 workspacebuttons\" \" \") \
-              (button :onclick \"hyprctl dispatch split-workspace 7\" :class \"ws-17 $o17 $f17 workspacebuttons\" \" \") \
-              (button :onclick \"hyprctl dispatch split-workspace 8\" :class \"ws-18 $o18 $f18 workspacebuttons\" \" \") \
-              (button :onclick \"hyprctl dispatch split-workspace 9\" :class \"ws-19 $o19 $f19 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 1\" :class \"ws-11 $o11 $f11 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 2\" :class \"ws-12 $o12 $f12 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 3\" :class \"ws-13 $o13 $f13 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 4\" :class \"ws-14 $o14 $f14 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 5\" :class \"ws-15 $o15 $f15 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 6\" :class \"ws-16 $o16 $f16 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 7\" :class \"ws-17 $o17 $f17 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 8\" :class \"ws-18 $o18 $f18 workspacebuttons\" \" \") \
+              (button :onclick \"hyprctl dispatch exec '~/.config/hypr/hyprworkspace.sh workspace' 9\" :class \"ws-19 $o19 $f19 workspacebuttons\" \" \") \
           )\
         )"
 }
