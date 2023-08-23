@@ -15,8 +15,7 @@ Xft.lcdfilter: lcdfilter
 
 XTerm*renderFont: true
 XTerm*faceName: xft:Meslo LG S Nerd Font:size=12, \
-                xft:JoyPixels:size=12, \
-                xft:Monospace:style=Medium:size=12   
+                xft:JoyPixels:size=12
 XTerm*faceSize: 12
 XTerm*utf8: 2
 XTerm*locale: true
