@@ -6,6 +6,7 @@ speaker_sink="alsa_output.usb-Dell_Dell_AC511_USB_SoundBar-00.analog-stereo"
 
 headphones() {
     pactl set-default-sink $headphones_sink
+    headsetcontrol -l 0
     notify-send -t 2000 -a System "Audio Swap" "Default Sink: Headphones"
 }
 

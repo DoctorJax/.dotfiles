@@ -5,7 +5,6 @@ swaync &
 
 # Useful Stuff
 /usr/bin/emacs --daemon &
-headsetcontrol -l 0 &
 
 # Steam was being a pain
 xrandr --output HDMI-A-1 --primary &
