@@ -2,7 +2,7 @@
 
 set -e
 
-killall companion || true
+pkill -f /usr/lib/bitfocus-companion || true
 
 sleep 5
 

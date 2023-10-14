@@ -9,12 +9,14 @@
 
 (deflisten workspace0 "scripts/workspace0")
 (deflisten workspace1 "scripts/workspace1")
+(deflisten workspace2 "scripts/workspace2")
 (deflisten volume_percent "scripts/volume")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; widgets
 
 (defwidget workspaces0 [] (literal :content workspace0))
 (defwidget workspaces1 [] (literal :content workspace1))
+(defwidget workspaces2 [] (literal :content workspace2))
 
 (defwidget volume []
     (eventbox
@@ -148,6 +150,17 @@
     :stacking "fg"
     (bar))
 
+(defwindow bar2
+    :monitor 2
+    :geometry (geometry
+        :x "0px"
+        :y "0px"
+        :width "0px"
+        :height "0px"
+        :anchor "bottom center")
+    :stacking "fg"
+    (bar))
+
 (defwidget bar []
     (eventbox
         (revealer
@@ -180,6 +193,17 @@
         :anchor "top center")
     :stacking "fg"
     (workspaces1))
+
+(defwindow workspacebar2
+    :monitor 2
+    :geometry (geometry
+        :x "0px"
+        :y "0px"
+        :width "0px"
+        :height "0px"
+        :anchor "top center")
+    :stacking "fg"
+    (workspaces2))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; calendar
 
