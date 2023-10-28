@@ -36,7 +36,6 @@
        (button :class barplaypause :onclick "mpc toggle" " ")
            (label
            :limit-width 80
-           :show_truncated true
            :text music)))
 
 (defwidget cpu []

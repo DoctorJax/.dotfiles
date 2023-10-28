@@ -19,7 +19,6 @@ for id in "${NB_MONITORS[@]}"; do
     hyprctl dispatch focusmonitor "$id"
     ${EWW} open "bar$id"
     ${EWW} open "workspacebar$id"
-    [[ $id == 0 ]] && ${EWW} open notifications
 done
 
     hyprctl dispatch focusmonitor "$focusmon"
