@@ -1,27 +1,48 @@
 #!/usr/bin/bash
 
-update() {
-    cd "$HOME"/Downloads
+DISCORD_PATH="$HOME/.local/bin/.discord-canary"
 
-    wget 'https://github.com/GooseMod/OpenAsar/releases/download/nightly/app.asar'
-    sudo mv app.asar /opt/discord-canary/resources/app.asar
+update() {
+    pkill -9 DiscordCanary
+
+    cd "$DISCORD_PATH"
+
+    rm -r DiscordCanary discord-canary.tar.gz
+
+    wget "https://discord.com/api/download/canary?platform=linux&format=tar.gz" -O discord-canary.tar.gz
+
+    tar xvf discord-canary.tar.gz
+
+    ./DiscordCanary/DiscordCanary &
+
+    sleep 6
 
     pkill -9 DiscordCanary
-    sleep 1
-    discord-canary --enable-features=UseOzonePlatform --ozone-platform=wayland > /dev/null &
+
+    updateopenasar
+
+    theme
+}
+
+updateopenasar() {
+    cd "$DISCORD_PATH"
+
+    wget 'https://github.com/GooseMod/OpenAsar/releases/download/nightly/app.asar'
+    mv app.asar "$DISCORD_PATH"/DiscordCanary/resources/app.asar
+
+    pkill -9 DiscordCanary
 }
 
 theme() {
-    echo '{"openasar":{"setup":true,"noTyping":true,"quickstart":true,"css":"@import url(\"https://dyzean.github.io/Tokyo-Night/tokyo-night.theme.css\");"}}' > "$HOME"/.config/discordcanary/settings.json
+    cp "$DISCORD_PATH"/settings.json "$HOME"/.config/discordcanary/settings.json
 
     pkill -9 DiscordCanary
-    sleep 1
-    discord-canary --enable-features=UseOzonePlatform --ozone-platform=wayland > /dev/null &
 }
 
 case "$1" in
+    -uo) updateopenasar ;;
     -u) update ;;
     -t) theme ;;
-    -a) update; theme ;;
+    -a) update ;;
     *) update ;;
 esac

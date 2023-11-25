@@ -3,6 +3,12 @@
 headphones_sink="alsa_output.usb-Corsair_CORSAIR_VOID_ELITE_Wireless_Gaming_Dongle-00.analog-stereo"
 earbuds_sink="alsa_output.pci-0000_22_00.3.analog-stereo"
 speaker_sink="alsa_output.usb-Dell_Dell_AC511_USB_SoundBar-00.analog-stereo"
+wireless_earbuds_sink="alsa_output.usb-Harman_International_Inc_JBL_Quantum_TWS_0000000000000000-00.analog-stereo"
+
+wireless_earbuds() {
+    pactl set-default-sink $wireless_earbuds_sink
+    notify-send -t 2000 -a System "Audio Swap" "Default Sink: Wireless Earbuds"
+}
 
 headphones() {
     pactl set-default-sink $headphones_sink
@@ -21,8 +27,10 @@ speaker() {
 }
 
 togglesink() {
-    if [[ $(pactl list sinks | grep -Eo "CORSAIR" | head -1) = "CORSAIR" ]]; then
+    if [[ $(pactl list sinks | grep -Eo "$headphones_sink" | head -1) = "$headphones_sink" ]]; then
         headphones
+    elif [[ $(pactl list sinks | grep -Eo "$wireless_earbuds_sink" | head -1) = "$wireless_earbuds_sink" ]]; then
+        wireless_earbuds
     else
         pactl get-default-sink | grep $speaker_sink && earbuds || speaker
     fi
@@ -31,6 +39,7 @@ togglesink() {
 case "$1" in
     -h) headphones;;
     -e) earbuds;;
+    -we) wireless_earbuds;;
     -t) togglesink;;
     -s) speaker;;
 esac

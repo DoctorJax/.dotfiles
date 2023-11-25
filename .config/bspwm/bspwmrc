@@ -6,8 +6,9 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Default BSPWM Stuff
-bspc monitor DP-2 -d 1 2 3 4 5 6 7 8 9 10
-bspc monitor HDMI-1 -d 11 12 13 14 15 16 17 18 19 20
+bspc monitor DP-5 -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor HDMI-2 -d 11 12 13 14 15 16 17 18 19 20
+bspc monitor DVI-D-1-0 -d 21 22 23 24 25 26 27 28 29 30
 
 bspc config automatic_scheme alternate
 

@@ -18,7 +18,7 @@ pgrep -x companion.sh > /dev/null || /home/jackson/.scripts/companion.sh &
 
 pgrep -x thunderbird > /dev/null || thunderbird &
 pgrep -x signal-desktop > /dev/null || signal-desktop &
-pgrep -x DiscordCanary > /dev/null || discord-canary --enable-features=UseOzonePlatform --ozone-platform=wayland &
+pgrep -x DiscordCanary > /dev/null || /home/jackson/.local/bin/DiscordCanary --enable-features=UseOzonePlatform --ozone-platform=wayland &
 
 # Polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval "$(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)" &
