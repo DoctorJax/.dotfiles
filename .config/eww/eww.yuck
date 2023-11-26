@@ -101,6 +101,12 @@
         :class "separ"
         :text "|")))
 
+;(defwidget tray []
+;  (box
+;    :space-evenly "false"
+;    :orientation "h"
+;    (systray :class "systray" :icon-size 18 :pack-direction "left")))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; define bar config
 
 (defwidget center []
@@ -117,7 +123,7 @@
     (mem)
     (sep)
     (clock_module)
-    (notif_button)
+    ;(tray)
     ))
 
 (defwidget bar_layout []

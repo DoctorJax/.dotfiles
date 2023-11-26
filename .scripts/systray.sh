@@ -1,5 +1,7 @@
 #!/bin/bash
 
+EWW="eww"
+
 starttray() {
     killtray
     waybar
@@ -18,18 +20,18 @@ toggle() {
 }
 
 bars() {
-    if [[ $(eww state | grep 'bar: false') ]]; then
-        eww update bar=true
+    if [[ $(${EWW} state | grep 'bar: false') ]]; then
+        ${EWW} update bar=true
     else
-        eww update bar=false
+        ${EWW} update bar=false
     fi
 }
 
 notif() {
-    if [[ $(eww state | grep 'rightside: false') ]]; then
-        eww update rightside=true
+    if [[ $(${EWW} state | grep 'rightside: false') ]]; then
+        ${EWW} update rightside=true
     else
-        eww update rightside=false
+        ${EWW} update rightside=false
     fi
 }
 
