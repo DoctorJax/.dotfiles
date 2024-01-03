@@ -5,6 +5,7 @@ swaync &
 
 # Useful Stuff
 /usr/bin/emacs --daemon &
+nm-applet &
 
 # Steam was being a pain
 xrandr --output HDMI-A-1 --primary &
