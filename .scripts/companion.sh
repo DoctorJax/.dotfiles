@@ -50,7 +50,7 @@ while :; do
 
   curl "localhost:8888/set/custom-variable/keybat?value=$key_bat"
   curl "localhost:8888/set/custom-variable/mousebat?value=$mouse_bat"
-  sleep 5m
+  sleep 2m
 done&
 
 pactl subscribe | rg --line-buffered "change" | while read -r _; do
