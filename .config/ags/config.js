@@ -70,14 +70,14 @@ function WorkBar(monitor) {
 
 /////// Date and time
 const Date = () => Widget.Label({
-    class_name: 'date',
+    class_name: 'date module',
     setup: self => self
         .poll(60000, self => execAsync(['date', '+%a %b %d'])
             .then(date => self.label = date)),
 });
 
 const Clock = () => Widget.Label({
-    class_name: 'clock',
+    class_name: 'clock module',
     setup: self => self
         .poll(1000, self => execAsync(['date', '+%H:%M:%S'])
             .then(date => self.label = date)),
@@ -85,7 +85,7 @@ const Clock = () => Widget.Label({
 
 /////// Media and volume
 const Media = () => Widget.Button({
-    class_name: 'media',
+    class_name: 'media module',
     on_primary_click: () => Mpris.getPlayer('')?.playPause(),
     on_scroll_up: () => Mpris.getPlayer('')?.next(),
     on_scroll_down: () => Mpris.getPlayer('')?.previous(),
@@ -99,37 +99,43 @@ const Media = () => Widget.Button({
     }, 'player-changed'),
 });
 
-const Volume = () => Widget.Box({
-    class_name: 'volume',
-    children: [
-        Widget.Icon().hook(Audio, self => {
-            if (!Audio.speaker)
-                return;
+const Volume = () => Widget.EventBox({
+    class_name: 'volume module',
+    on_scroll_up: () => execAsync('wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+'),
+    on_scroll_down: () => execAsync('wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-'),
+    child: Widget.Box({
+            spacing: 5,
+            children: [
+                Widget.Icon().hook(Audio, self => {
+                    if (!Audio.speaker)
+                        return;
 
-            const category = {
-                101: 'overamplified',
-                67: 'high',
-                34: 'medium',
-                1: 'low',
-                0: 'muted',
-            };
+                    const category = {
+                        101: 'overamplified',
+                        67: 'high',
+                        34: 'medium',
+                        1: 'low',
+                        0: 'muted',
+                    };
 
-            const icon = Audio.speaker.is_muted ? 0 : [101, 67, 34, 1, 0].find(
-                threshold => threshold <= Audio.speaker.volume * 100);
+                    const icon = Audio.speaker.is_muted ? 0 : [101, 67, 34, 1, 0].find(
+                        threshold => threshold <= Audio.speaker.volume * 100);
 
-            self.icon = `audio-volume-${category[icon]}-symbolic`;
-        }, 'speaker-changed'),
-        Widget.Label({
-            setup: self => self
-                .hook(Audio, label => {
-                    if (Audio.speaker)
-                        label.label = `${Math.floor(Audio.speaker.volume * 100)}%`;
+                    self.icon = `audio-volume-${category[icon]}-symbolic`;
                 }, 'speaker-changed'),
-        }),
-    ],
+                Widget.Label({
+                    setup: self => self
+                        .hook(Audio, label => {
+                            if (Audio.speaker)
+                                label.label = `${Math.floor(Audio.speaker.volume * 100)}%`;
+                        }, 'speaker-changed'),
+                }),
+            ],
+    }),
 });
 
 const SysTray = () => Widget.Box({
+    class_name: 'systray module',
     children: SystemTray.bind('items').transform(items => {
         return items.map(item => Widget.Button({
             child: Widget.Icon({ binds: [['icon', item, 'icon']] }),
@@ -140,12 +146,56 @@ const SysTray = () => Widget.Box({
     }),
 });
 
+const Separator = () => Widget.Label({
+    class_name: 'separator module',
+    label: '|',
+});
+
+/////// CPU and RAM
+const divide = ([total, free]) => free / total
+
+const cpu = Variable(0, {
+    poll: [2000, 'top -b -n 1', out => divide([100, out.split('\n')
+        .find(line => line.includes('Cpu(s)'))
+        .split(/\s+/)[1]
+        .replace(',', '.')])],
+})
+
+const ram = Variable(0, {
+    poll: [2000, 'free', out => divide(out.split('\n')
+        .find(line => line.includes('Mem:'))
+        .split(/\s+/)
+        .splice(1, 2))],
+})
+
+const cpuProgress = () => Widget.CircularProgress({
+    class_name: 'cpu circle module',
+    value: cpu.bind(),
+    startAt: 0.75,
+    child: Widget.Label({
+        label: '󰍛'
+    })
+})
+
+const ramProgress = () => Widget.CircularProgress({
+    class_name: 'ram circle module',
+    value: ram.bind(),
+    startAt: 0.75,
+    child: Widget.Label({
+        label: '󰘚'
+    })
+})
+
 /////// layout of the bar
 const Center = () => Widget.Box({
-    spacing: 8,
     children: [
         Media(),
+        Separator(),
         Volume(),
+        Separator(),
+        cpuProgress(),
+        ramProgress(),
+        Separator(),
         Date(),
         Clock(),
         SysTray(),
@@ -178,7 +228,9 @@ monitorFile(
 export default {
     style: App.configDir + '/style.css',
     windows: [
-        Bar(),
+        Bar(0),
+        Bar(1),
+        Bar(2),
         WorkBar(0),
         WorkBar(1),
         WorkBar(2),

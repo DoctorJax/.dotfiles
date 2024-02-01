@@ -1,31 +1,62 @@
+*{
+    all: unset;
+    font-family: Product Sans, mononoki Nerd Font;
+    font-size: 1.2rem;
+}
+
+/* Windows */
 window.bar {
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
+    background-color: rgba(00, 00, 00, 0.7);
+    color: #FDFDFD;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 window.workbar {
-    background-color: @theme_bg_color;
+    background-color: #000000;
 }
 
-button {
-    min-width: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: transparent;
+/* Modules */
+.module {
+    padding: 5px 5px 5px 5px;
 }
 
-button:active {
-    background-color: @theme_selected_bg_color;
+.date {
+    color: #FF9E64;
 }
 
-button:hover {
-    border-bottom: 3px solid @theme_fg_color;
+.clock {
+    color: #9ECE6A;
 }
 
-label {
-    font-weight: bold;
+.volume {
+    color: #0DB9D7;
 }
 
+.media {
+    color: #8897F4;
+}
+
+.separator {
+    color: #606060;
+}
+
+.circle {
+    font-size: 4px;
+    min-height: 10px;
+    min-width: 40px;
+    background-color: #1B1B1B;
+}
+
+.cpu {
+    color: #9778D0;
+}
+
+.ram {
+    color: #7AA2F7;
+}
+
+/* Workspaces */
 .ws-button-label {
     padding-left: 13px;
     padding-right: 13px;
