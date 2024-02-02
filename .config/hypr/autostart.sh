@@ -1,6 +1,6 @@
 # Fancy Stuff
-/home/jackson/.config/eww/launch_bar &
 /home/jackson/.scripts/wallpapers.sh -i &
+ags &
 swaync &
 
 # Useful Stuff

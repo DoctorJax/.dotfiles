@@ -20,19 +20,7 @@ toggle() {
 }
 
 bars() {
-    if [[ $(${EWW} state | grep 'bar: false') ]]; then
-        ${EWW} update bar=true
-    else
-        ${EWW} update bar=false
-    fi
-}
-
-notif() {
-    if [[ $(${EWW} state | grep 'rightside: false') ]]; then
-        ${EWW} update rightside=true
-    else
-        ${EWW} update rightside=false
-    fi
+    ags -t bar-$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')
 }
 
 case "$1" in
@@ -40,5 +28,4 @@ case "$1" in
     -k ) killtray ;;
     -t ) toggle ;;
     -b ) bars ;;
-    -n ) notif ;;
 esac

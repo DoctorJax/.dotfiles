@@ -80,23 +80,15 @@ const Clock = () => Widget.Label({
     class_name: 'clock module',
     setup: self => self
         .poll(1000, self => execAsync(['date', '+%H:%M:%S'])
-            .then(date => self.label = date)),
+            .then(clock => self.label = clock)),
 });
 
-/////// Media and volume
-const Media = () => Widget.Button({
-    class_name: 'media module',
-    on_primary_click: () => Mpris.getPlayer('')?.playPause(),
-    on_scroll_up: () => Mpris.getPlayer('')?.next(),
-    on_scroll_down: () => Mpris.getPlayer('')?.previous(),
-    child: Widget.Label('-').hook(Mpris, self => {
-        if (Mpris.players[0]) {
-            const { track_artists, track_title } = Mpris.players[0];
-            self.label = `${track_artists.join(', ')} - ${track_title}`;
-        } else {
-            self.label = 'Nothing is playing';
-        }
-    }, 'player-changed'),
+/////// Music and volume
+const Music = () => Widget.Label({
+    class_name: 'music module',
+    setup: self => self
+        .poll(2000, self => execAsync(['bash', '-c', 'mpc -f "%artist% - %title%" | head -n1 | grep "-"'])
+            .then(music => self.label = music)),
 });
 
 const Volume = () => Widget.EventBox({
@@ -189,7 +181,7 @@ const ramProgress = () => Widget.CircularProgress({
 /////// layout of the bar
 const Center = () => Widget.Box({
     children: [
-        Media(),
+        Music(),
         Separator(),
         Volume(),
         Separator(),
@@ -209,6 +201,7 @@ const Bar = (monitor = 0) => Widget.Window({
     anchor: ['bottom'],
     exclusivity: 'ignore',
     layer: 'overlay',
+    visible: false,
     child: Widget.CenterBox({
         center_widget: Center(),
     }),
@@ -234,9 +227,5 @@ export default {
         WorkBar(0),
         WorkBar(1),
         WorkBar(2),
-
-        // you can call it, for each monitor
-        // Bar(0),
-        // Bar(1)
     ],
 };
