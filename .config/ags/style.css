@@ -1,5 +1,4 @@
 *{
-    all: unset;
     font-family: Product Sans, mononoki Nerd Font;
     font-size: 1.2rem;
 }
@@ -54,6 +53,10 @@ window.workbar {
 
 .ram {
     color: #7AA2F7;
+}
+
+.systray-button {
+    all: unset;
 }
 
 /* Workspaces */

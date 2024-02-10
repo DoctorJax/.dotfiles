@@ -130,6 +130,7 @@ const SysTray = () => Widget.Box({
     class_name: 'systray module',
     children: SystemTray.bind('items').transform(items => {
         return items.map(item => Widget.Button({
+            class_name: 'systray-button',
             child: Widget.Icon({ binds: [['icon', item, 'icon']] }),
             on_primary_click: (_, event) => item.activate(event),
             on_secondary_click: (_, event) => item.openMenu(event),
