@@ -45,11 +45,8 @@ while :; do
 done&
 
 while :; do
-  key_bat=$(solaar show 1 | tail -n1 | awk '{ print $2 }')
-  mouse_bat=$(solaar show 2 | tail -n1 | awk '{ print $2 }' | sed 's/,//')
-
+  key_bat=$(solaar --hidraw /dev/hidraw10 show | grep -a "Battery" | tail -n1 | awk '{ print $2 }')
   curl "localhost:8888/set/custom-variable/keybat?value=$key_bat"
-  curl "localhost:8888/set/custom-variable/mousebat?value=$mouse_bat"
   sleep 2m
 done&
 
