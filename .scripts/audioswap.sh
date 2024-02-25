@@ -1,8 +1,13 @@
 #!/bin/bash
 
+#headphones_sink="alsa_output.usb-Corsair_CORSAIR_VOID_ELITE_Wireless_Gaming_Dongle-00.analog-stereo"
+#earbuds_sink="alsa_output.pci-0000_0e_00.6.analog-stereo"
+#speaker_sink="alsa_output.usb-Dell_Dell_AC511_USB_SoundBar-00.3.analog-stereo"
+#wireless_earbuds_sink="alsa_output.usb-Harman_International_Inc_JBL_Quantum_TWS_0000000000000000-00.analog-stereo"
+
 headphones_sink="alsa_output.usb-Corsair_CORSAIR_VOID_ELITE_Wireless_Gaming_Dongle-00.analog-stereo"
-earbuds_sink="alsa_output.pci-0000_0e_00.6.analog-stereo"
-speaker_sink="alsa_output.usb-Dell_Dell_AC511_USB_SoundBar-00.3.analog-stereo"
+earbuds_sink=$(pactl list sinks | grep "Name: " | awk '{ print $2 }' | grep "pci")
+speaker_sink=$(pactl list sinks | grep "Name: " | awk '{ print $2 }' | grep "Dell")
 wireless_earbuds_sink="alsa_output.usb-Harman_International_Inc_JBL_Quantum_TWS_0000000000000000-00.analog-stereo"
 
 wireless_earbuds() {
