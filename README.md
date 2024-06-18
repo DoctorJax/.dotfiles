@@ -9,3 +9,5 @@ DistroTube | I'm using his wallpapers too, but don't feel like dealing with copy
 TheTrashPenguin | where my qtile configs came from | https://github.com/TheTrashPenguin/Dotfiles
 manilarome | when I originally started with awesomeWM this is where I got a lot of stuff | https://github.com/manilarome/the-glorious-dotfiles
 taylor85345 (BeardedWarrior) | stole his eww config and configured it to my liking | https://github.com/taylor85345/hyprland-dotfiles
+
+There's been plenty more after these, but it's been so long since changing things I don't know who I stole from anymore lol
